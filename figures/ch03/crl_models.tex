@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subfig}
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\usepackage[legalpaper, landscape, margin=0.5cm]{geometry}
+
+\thispagestyle{empty}
+% \renewcommand{\thesubfigure}{\roman{subfigure}}
+\begin{document}
+
+\begin{figure}[h]
+        \centering
+        \subfloat[single lens equivalent]{\includegraphics[height=4.3cm]{illu/figures/ch03/model_01.pdf}}\\
+        \subfloat[CRL multi-slicing]{\includegraphics[height=4.6cm]{illu/figures/ch03/model_02.pdf}}\hspace{0.85cm}
+        \subfloat[CRL multi-slicing with figure errors added]{\includegraphics[height=4.6cm]{illu/figures/ch03/model_03.pdf}}
+\end{figure}
+\end{document}

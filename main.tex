@@ -1,0 +1,182 @@
+\RequirePackage{silence}
+\WarningFilter{titlesec}{Non standard sectioning command}
+\WarningFilter{scrreprt}{Usage of package}
+\WarningFilter{scrreprt}{Activating an ugly workaround}
+
+% **************************************************
+% Document Class Definition
+% **************************************************
+\documentclass[%
+	paper=A4,					% paper size --> A4 is default in Germany
+	twoside=true,				% onesite or twoside printing
+	openany,					% openright - doublepage cleaning ends up right side
+% 	parskip= full,				% spacing value / method for paragraphs
+	parskip= half-,				% spacing value / method for paragraphs
+	chapterprefix=true,			% prefix for chapter marks
+	10.5pt,						% font size
+	headings=normal,			% size of headings
+%  	bibliography=totoc,			% include bib in toc
+	listof=totoc,				% include listof entries in toc
+	titlepage=on,				% own page for each title page
+	captions=tableabove,		% display table captions above the float env
+	draft=false,				% value for draft version
+]{scrreprt}%
+
+% **************************************************
+% Information and Commands for Reuse
+% **************************************************
+\newcommand{\thesisTitle}{Investigations of the effect of optical imperfections on partially coherent X-ray beam degradation}
+\newcommand{\thesisSubject}{Physique de la Matière Condensée et du Rayonnement}
+\newcommand{\thesisName}{Rafael Celestre}
+
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
+
+% **************************************************
+% Load and Configure Packages
+% **************************************************
+% \usepackage{glossaries}
+\usepackage{ragged2e}
+\usepackage{textpos}
+% \usepackage[final]{pdfpages}
+\usepackage[utf8]{inputenc}		% defines file's character encoding
+\usepackage[english]{babel} % babel system, adjust the language of the content
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{nameref}
+\usepackage{breakcites}
+\usepackage{wasysym}
+\usepackage{textcomp}
+
+% **************************************************
+% The bibliography configuration
+% see http://ctan.mines-albi.fr/macros/latex/contrib/biblatex/doc/biblatex.pdf
+\PassOptionsToPackage{
+        backend=biber,
+        natbib=true,
+        style = authoryear-comp,
+        hyperref=true,
+        maxbibnames=99,
+        maxcitenames=2,
+        mincitenames=1,
+        giveninits=true,
+        uniquename=init,
+        maxcitenames=2,
+        parentracker=true,
+        url=false,
+        doi=false,
+        isbn=false,
+        eprint=false,
+        backref=false,
+        dashed = true,
+        uniquelist = minyear,
+        sortcites = ynt,
+        sortsets = true,
+        }{biblatex}
+\usepackage{biblatex}
+\DeclareNameAlias{sortname}{family-given} 
+
+% \addbibresource{references/biblio.bib}
+
+\addbibresource{references/ch_2.bib}
+\addbibresource{references/ch_3.bib}
+\addbibresource{references/ch_4.bib}
+% \addbibresource{references/ch_4.bib}
+% \addbibresource{references/ch_4.bib}
+\AtBeginBibliography{\small}
+% **************************************************
+% Other configs
+\usepackage[					% clean thesis style
+	figuresep=colon,%
+	sansserif=false,%
+	hangfigurecaption=false,%
+	hangsection=true,%
+	hangsubsection=true,%
+	colorize=full,%
+	colortheme=bluemagenta,%
+]{cleanthesis}
+
+\hypersetup{					% setup the hyperref-package options
+	pdftitle={\thesisTitle},	% 	- title (PDF meta)
+	pdfsubject={\thesisSubject},% 	- subject (PDF meta)
+	pdfauthor={\thesisName},	% 	- author (PDF meta)
+	plainpages=false,			% 	-
+	colorlinks=false,			% 	- colorise links?
+	pdfborder={0 0 0},			% 	-
+	breaklinks=true,			% 	- allow line break inside links
+	bookmarksnumbered=true,		%
+	bookmarksopen=true			%
+}
+
+% **************************************************
+% Document CONTENT
+% **************************************************
+\begin{document}
+
+% --------------------------
+% rename document parts
+% --------------------------
+\newcommand{\todo}[1]{{\color{red}[TODO: "#1'']}}
+
+\renewcaptionname{english}{\figurename}{Fig.}
+\renewcaptionname{english}{\tablename}{Tab.}
+
+% --------------------------
+% Front matter
+% --------------------------
+\pagenumbering{roman}			% roman page numbing (invisible for empty page style)
+\pagestyle{empty}				% no header or footers
+\input{cover/firstpage}		    % INCLUDE: all titlepages
+\cleardoublepage
+\pagestyle{plain}				% display just page numbers
+\input{misc/abstract_EN}
+\cleardoublepage
+\pagestyle{plain}				% display just page numbers
+\input{misc/abstract_FR}
+\cleardoublepage
+\pagestyle{plain}				% display just page numbers
+\input{misc/acknowledgement}    % INCLUDE: acknowledgement
+\cleardoublepage
+
+\setcounter{tocdepth}{4}		% define depth of toc
+\setcounter{secnumdepth}{2}
+
+% dirty solution to hyperlink unnumbered sections: \hyperlink{sec:name}{Real name... create balloon for keeping tabs on names?}
+% this should be used with: \addcontentsline{toc}{subsubsection}{The subsubsection name}
+% 
+
+\tableofcontents				% display table of contents
+\cleardoublepage
+
+\listoffigures
+\cleardoublepage
+
+\listoftables
+\cleardoublepage
+
+% --------------------------
+% Body matter
+% --------------------------
+\pagenumbering{arabic}			% arabic page numbering
+\setcounter{page}{1}			% set page counter
+\pagestyle{maincontentstyle} 	% fancy header and footer
+
+\input{chapters/ch_1} \cleardoublepage
+\input{chapters/ch_2} \cleardoublepage
+\input{chapters/ch_3} \cleardoublepage
+\input{chapters/ch_4} \cleardoublepage
+\input{chapters/ch_5} \cleardoublepage
+\input{chapters/ch_6} \cleardoublepage
+
+% \input{apendices/Zernike}\cleardoublepage
+\input{apendices/publications}\cleardoublepage
+\input{misc/declaration}
+\clearpage
+\newpage
+\mbox{\thispagestyle{empty}}
+
+\end{document}
