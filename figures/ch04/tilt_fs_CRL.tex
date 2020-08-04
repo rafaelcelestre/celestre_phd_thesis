@@ -1,0 +1,27 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subfig}
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\usepackage[legalpaper, landscape, margin=0.5cm]{geometry}
+
+\thispagestyle{empty}
+% \renewcommand{\thesubfigure}{\roman{subfigure}}
+\begin{document}
+
+\begin{figure}[h]
+        \centering
+        \subfloat[residues]{\includegraphics[height=3cm]{figures/ch04/Be50um_ffs_bfs_tilt_a.pdf}}\hspace{0.1cm}
+        \subfloat[radiography]{\includegraphics[height=3.4cm]{figures/ch04/radio_CRL_barc_ffs_bfs_a_intensity_intensity_2D.pdf}}\hspace{0.1cm}
+        \subfloat[PSF]{\includegraphics[height=5cm]{figures/ch04/cst_CRL_barc_ffs_bfs_a_intensity_intensity_2D.pdf}}\hspace{0.1cm}
+        \subfloat[vertical caustics]{\includegraphics[height=3.5cm]{figures/ch04/cst_CRL_barc_ffs_bfs_a_intensity_cstc_Y_cstc_2D.pdf}}\\
+        \caption*{Symmetric tilt of front- and back- surfaces by $\theta_{x_{\text{front}}}=\theta_{x_{\text{back}}}=1^{\circ}$}
+        \subfloat[residues]{\includegraphics[height=3cm]{figures/ch04/Be50um_ffs_bfs_tilt_b.pdf}}\hspace{0.1cm}
+        \subfloat[radiography]{\includegraphics[height=3.4cm]{figures/ch04/radio_CRL_barc_ffs_bfs_b_intensity_intensity_2D.pdf}}\hspace{0.1cm}
+        \subfloat[PSF]{\includegraphics[height=5cm]{figures/ch04/cst_CRL_barc_ffs_bfs_b_intensity_intensity_2D.pdf}}\hspace{0.1cm}
+        \subfloat[vertical caustics]{\includegraphics[height=3.5cm]{figures/ch04/cst_CRL_barc_ffs_bfs_b_intensity_cstc_Y_cstc_2D.pdf}}
+        \caption*{Anti-symmetric tilt of front- and back- surfaces by $\theta_{x_{\text{front}}}=-\theta_{x_{\text{back}}}=0.5^{\circ}$}
+
+\end{figure}
+\end{document}

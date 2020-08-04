@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subfig}
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\usepackage[legalpaper, landscape, margin=0.5cm]{geometry}
+
+\thispagestyle{empty}
+% \renewcommand{\thesubfigure}{\roman{subfigure}}
+\begin{document}
+
+\begin{figure}[h]
+        \centering
+        \subfloat[misalignments]{\includegraphics[height=3.3cm]{figures/ch04/strehl_misalignment.pdf}}\hspace{0.1cm}
+        \subfloat[fabrication errors]{\includegraphics[height=3.3cm]{figures/ch04/strehl_frabrications.pdf}}\hspace{0.1cm}
+        \subfloat[other sources or errors]{\includegraphics[height=3.3cm]{figures/ch04/strehl_metrology.pdf}}
+\end{figure}
+\end{document}
