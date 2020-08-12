@@ -1,6 +1,6 @@
-% TODO list - chapter #2 - updated 17/06/2020
+% TODO list - chapter #2 - updated 12/08/2020
 
-% 0.) In the subsection "Numerical computation..." show the kernel and speak about the spectrum of plane waves representation - this ties up with the short propagation distance discussion. In the MS chapter explain that the the imposed criteria from the Fresnel integral can be overcome when using the MS, provided tha the beam is collimated inside the optical element.
+% 0.) Add Pagnanin corrections
 % 1.) Finish chapter prologue and define an energy range for what we will consider X-rays (very arbitrary choice).
 % 2.) add Michelson interf. and Young double pinhole references to the coherence chapter.
 % 3.) Maybe expand footnote on Eikonal
@@ -202,7 +202,7 @@ here $\vert\textbf{r}\vert=r$ is the distance from the origin of the wavefront. 
 \begin{equation}\label{eq:parabolic}
     U(\textbf{r}) = \frac{A}{z}\exp(-ikz)\exp{\Bigg[-ik\frac{x^2 + y^2}{2z}\Bigg]},
 \end{equation}
-Eq.~\ref{eq:parabolic} is a paraxial\footnote{Consider a spherical wave with $\textbf{r}=(x,y,z)$ and that $\vert\textbf{r}\vert=r=\sqrt{x^2 + y^2 +z^2}$ and take a sufficiently large coordinate along the $z-$axis (optical axis). The paraxial approximation of the spherical wave can be obtained by choosing points in the $xy-$plane near enough the $z-$axis so that $\sqrt{x^2+y^2}\ll z$ holds. It follows that $r=z\sqrt{1+(x^2+y^2)/z^2}$ can be expanded in a Taylor series: $r\approx z+(x^2+y^2)/2z$ and directly plugged into the exponent in Eq.~\ref{eq:spherical} leading to Eq.~\ref{eq:parabolic} [\cite[\textit{§2.2}]{Saleh2019}]. The paraxial approximation of the spherical wave is also called the Fresnel-approximation.\label{note:fresnel}} approximation of the spherical wave defined by Eq.~\ref{eq:spherical}; and the Gaussian beam\footnote{Take the paraboloidal wave as defined by Eq.~\ref{eq:parabolic}. Evaluating it along the optical axis at a position $z^+=z+\Delta z$ also yields a solution to the paraxial Helmholtz equation (cf. Eq.~\ref{eq:Helmholtz_paraxial}) even if $\Delta z$ is a purely imaginary number [\cite[\textit{Exercise 2.2-2}]{Saleh2019}]. The Gaussian beam can be obtained from the paraboloidal wave by substituting $z$ in Eq.~\ref{eq:parabolic} by $z-iz_0$, for a real $z_0$ [\cite[\textit{§3.1}]{Saleh2019}].}:
+Eq.~\ref{eq:parabolic} is a paraxial\footnote{Consider a spherical wave with $\textbf{r}=(x,y,z)$ and that $\vert\textbf{r}\vert=r=\sqrt{x^2 + y^2 +z^2}$ and take a sufficiently large coordinate along the $z-$axis (optical axis). The paraxial approximation of the spherical wave can be obtained by choosing points in the $xy-$plane near enough the $z-$axis so that $\sqrt{x^2+y^2}\ll z$ holds. It follows that $r=z\sqrt{1+(x^2+y^2)/z^2}$ can be expanded in a Taylor series: $r\approx z+(x^2+y^2)/2z$ and directly plugged into the exponent in Eq.~\ref{eq:spherical} leading to Eq.~\ref{eq:parabolic} [\cite[\textit{§2.2}]{Saleh2019}]. The paraxial approximation of the spherical wave is also called the Fresnel approximation.\label{note:fresnel}} approximation of the spherical wave defined by Eq.~\ref{eq:spherical}; and the Gaussian beam\footnote{Take the paraboloidal wave as defined by Eq.~\ref{eq:parabolic}. Evaluating it along the optical axis at a position $z^+=z+\Delta z$ also yields a solution to the paraxial Helmholtz equation (cf. Eq.~\ref{eq:Helmholtz_paraxial}) even if $\Delta z$ is a purely imaginary number [\cite[\textit{Exercise 2.2-2}]{Saleh2019}]. The Gaussian beam can be obtained from the paraboloidal wave by substituting $z$ in Eq.~\ref{eq:parabolic} by $z-iz_0$, for a real $z_0$ [\cite[\textit{§3.1}]{Saleh2019}].}:
 \begin{equation}\label{eq:gaussian}
     U(\textbf{r})=-i\frac{A}{z_0}\frac{w_0}{W(z)}\exp{\Bigg[-\frac{x^2+y^2}{W^2(z)}\Bigg]}\exp\Bigg[ -ikz - ik\frac{x^2 +y^2}{2R(z)}+i\varphi(z)\Bigg],
 \end{equation}
@@ -221,11 +221,6 @@ Both the paraboloidal wave and Gaussian beam do not, however, formally satisfy t
 \end{equation}
 where $\nabla^2_T\equiv\partial^2/\partial x^2 + \partial^2/\partial y^2$ is the transverse Laplace operator. Eq.~\ref{eq:Helmholtz_paraxial} is the paraxial Helmholtz equation [\cite[\textit{§2.2}]{Saleh2019}]. Determining the evolution in space of the solutions to the Helmholtz equation (Eq.~\ref{eq:Helmholtz}) or the paraxial Helmholtz equation (Eq.~\ref{eq:Helmholtz_paraxial}) is the core of what is called scalar diffraction theory.
 
-%-------------------------------------------------------------------------
-%-------------------------------------------------------------------------
-\subsubsection*{Fresnel diffraction}
-%-------------------------------------------------------------------------
-%-------------------------------------------------------------------------
 
 \begin{figure}[t]
     \centering
@@ -233,6 +228,13 @@ where $\nabla^2_T\equiv\partial^2/\partial x^2 + \partial^2/\partial y^2$ is the
     \caption[Scalar diffraction problem geometry]{Scalar diffraction problem geometry. $\Sigma$ represents the input plane, where the electric field is completely defined, that is, $U(x_0, y_0, z_0)$ is known for all $(x_0, y_0, z_0)$, $\ell$ is a orthonormal vector to $\Sigma$. Scalar diffraction theory concerns the calculation of an electric field $U(x_1, y_1, z_1)$ in the output plane with the knowledge of it in the input plane.}
     \label{fig:diffraction}
 \end{figure}
+
+\newpage
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+\subsubsection*{Fresnel diffraction}
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
 
 Consider a Cartesian coordinate system where the $z-$axis is the optical axis (cf. Fig~\ref{fig:diffraction}), suppose a transverse component of a wave-field complying with Eq.~\ref{eq:Helmholtz} can be completely described at a position $z_0$, that is, $U(x,y,z_0)$ is known for all the $xy-$plane. The wave-field distribution in a parallel plane at a position $z_1$ of the optical axis can be calculated using the first Rayleigh-Sommerfeld diffraction equation [\cite[\textit{Eq.~3-42}]{Goodman2017}]:
 \begin{equation}\label{eq:Huygens-Fresnel}
@@ -293,34 +295,24 @@ where $\mathcal{F}\{\bullet\}$ is the two-dimensional Fourier transform and $\ma
     \end{align}
 \end{subequations}{}
 It is common to represent the Fourier analysis and syntheses as $\mathcal{F}\{g(x,y)\}\equiv G(f_x,f_y)$ and $\mathcal{F}^{-1}\{G(f_x,f_y)\}\equiv g(x,y)$, where $(f_x,f_y)$ are generally referred to as frequencies. For the Fresnel diffraction integral, the kernel of the convolution in Eq.~\ref{eq:conv_theorem}, that is $\mathcal{F}\{h(x,y)\}$, has analytical formulation:
+% \begin{equation}\label{eq:kernel}
+%     \mathcal{F}\{h(x_1,y_1)\} = \frac{k\exp{(ikL)}}{2\pi i L}\mathcal{F}\Bigg\{
+%     \exp\bigg[\frac{ik}{2L}\big(x_1^2+y_1^2 \big)\bigg]\Bigg\} = \exp{(ikL)}\exp{\bigg[-\frac{i\pi^2 2L}{k} \big(f_x^2+f_y^2 \big)\bigg]},
+% \end{equation}
 \begin{equation}\label{eq:kernel}
-    \mathcal{F}\{h(x_1,y_1)\} = \frac{k\exp{(ikL)}}{2\pi i L}\mathcal{F}\Bigg\{
-    \exp\bigg[\frac{ik}{2L}\big(x_1^2+y_1^2 \big)\bigg]\Bigg\} = \exp{(ikL)}\exp{\bigg[-\frac{i\pi^2 2L}{k} \big(f_x^2+f_y^2 \big)\bigg]},
+     \frac{k}{2\pi i L}\mathcal{F}\{h(x,y)\} = \frac{k}{2\pi i L}\mathcal{F}\Bigg\{
+    \exp\bigg[\frac{ik}{2L}\big(x^2+y^2 \big)\bigg]\Bigg\} = \exp{\bigg[-\frac{i2L\pi^2}{k} \big(f_x^2+f_y^2 \big)\bigg]},
 \end{equation}
-which allows to calculate the Fresnel diffraction integral (Eq.~\ref{eq:Fresnel}) by means of the convolution theorem (Eq.~\ref{eq:conv_theorem}) by applying a Fourier transform to the input field, multiplying it by an analytical kernel and applying an inverse Fourier transform to the result.
-
-It is also evident that the Fraunhofer diffraction integral (Eq.~\ref{eq:Fraunhofer}) is a Fourier type integral, differing from Eq.~\ref{eq:Fourier}a by a multiplicative factor outside the integrand. 
+with $f_x=x/(\lambda L)$ and $f_y=y/(\lambda L)$. This formulation allows to calculate the Fresnel diffraction integral (Eq.~\ref{eq:Fresnel}) by means of the convolution theorem (Eq.~\ref{eq:conv_theorem}) by applying a Fourier transform to the input field, multiplying it by an analytical kernel and applying an inverse Fourier transform to the result. It is also evident that the Fraunhofer diffraction integral (Eq.~\ref{eq:Fraunhofer}) is a Fourier type integral, differing from Eq.~\ref{eq:Fourier}a by a multiplicative factor outside the integrand. 
 
 \begin{figure}[t]
     \centering
-    {\includegraphics[width=0.9\linewidth]{figures/ch02/sampling_aliasing.pdf}}
+    {\includegraphics[width=1\linewidth]{figures/ch02/sampling_aliasing.pdf}}
     \caption[Replicas and aliasing]{Replicas and aliasing from numeric calculations of the diffraction integrals. (a) analytical solution of the integrals have no signal replicas. Sampling the input plane signal will introduce replicas in the output plane [\cite{Kelly2014}]. (b) appropriate sampling - cf. Eq.~5 in [\cite{Chubar2019}] - makes the unavoidable replicas further enough that cross-talk between them is negligible within the region of interest (ROI). (c) coarser sampling brings replicas closer up to a point that (d) replicas are so close that aliasing is eminent (red signal).}
     \label{fig:sampling}
 \end{figure}
 
-It should be clear, then, that the paraxial diffraction equations are intertwined with Fourier analysis. Numerically computation of the Fresnel or Fraunhofer diffraction implies \textit{a}-) sampling the input plane $U(x_0,y_0,z_0)$ and \textit{b}-) limiting its extent by either defining an aperture of finite extent or simply by cropping (truncating) the input field. It follows from sampling theory and the discrete Fourier transform (DFT) [\cite[\textit{§10}~\&~\textit{§11}]{Bracewell2000}] that sampling the input field causes replicas of the main signal to appear (cf. Fig.~\ref{fig:sampling}). Generally, the finer the sampling in the input plane, the further apart the replicas are. Consequently, the coarser the mesh gets, the closer they get up to a point that the replicas are close enough to each other that they start cross-talking. The interaction between the main signal and its replicas is called aliasing. Due to the finite extent of the input plane (either by limiting the signal with an aperture or by simply truncating it), it is inevitable that power from neighbouring replicas leak into each other. Sampling should be high enough as to make this inevitable cross-talk negligible [\cite{Kelly2014}]. \todo{add: comment on very large sampling and CPU efficiency ... [\cite{Chubar2019}.]}
-
-%-------------------------------------------------------------------------
-%-------------------------------------------------------------------------
-\subsubsection*{-- On the validity of the Fresnel approximation for short propagation distances\footnote{The author acknowledges the fruitful discussions with David Paganin (Monash University, Australia), Peter Munro (University College London, England) and Oleg Chubar (Brookhaven National Lab., USA).}}
-%-------------------------------------------------------------------------
-%-------------------------------------------------------------------------
-
-\todo{
-Equations \ref{eq:accuracy_Fresnel} is generally very restrictive and there are situations of practical interest where it can be overlook. In fact, //Add discussion from the E-mail 
-A more detailed discussion on the validity of such approximations is given by [\cite{Southwell1981}], [\cite{Rees87}], and [\cite{Forbes1996}
-}
-
+It should be clear, then, that the paraxial diffraction equations are intertwined with Fourier analysis. Numerically computation of the Fresnel or Fraunhofer diffraction implies \textit{a}-) sampling the input plane $U(x_0,y_0,z_0)$ and \textit{b}-) limiting its extent by either defining an aperture of finite extent or simply by cropping (truncating) the input field. It follows from sampling theory and the discrete Fourier transform (DFT) [\cite[\textit{§10}~\&~\textit{§11}]{Bracewell2000}] that sampling the input field causes replicas of the main signal to appear (cf. Fig.~\ref{fig:sampling}). Generally, the finer the sampling in the input plane, the further apart the replicas are. Consequently, the coarser the mesh gets, the closer they get up to a point that the replicas are close enough to each other that they start cross-talking. The interaction between the main signal and its replicas is called aliasing. Due to the finite extent of the input plane (either by limiting the signal with an aperture or by simply truncating it), it is inevitable that power from neighbouring replicas leak into each other. Sampling should be high enough as to make this inevitable cross-talk negligible [\cite{Kelly2014}]. On the other hand, a very large sampling leads to very inefficient calculations largely because of the size of the input and output planes - cf. considerations in [\cite[\textit{§5}]{Goodman2015}]. Efforts towards a memory and CPU efficient computation of the Fresnel free-space propagator in Fourier optics have been reported in [\cite{Chubar2019}].
 
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
@@ -414,6 +406,75 @@ where $\prod$ indicates concatenation of operators to be performed from right to
     \mathcal{D}(\Delta_S)~\bullet=\frac{k\exp{(ik\Delta_S)}}{2\pi i \Delta_S}\iint\limits_{-\infty}^{\hspace{8pt}\infty}{\bullet~\exp{\Bigg\{\frac{ik}{2\Delta_S}\big[(x_1-x)^2+(y_1-y)^2 \big]\Bigg\}}~\mathrm{d}x\mathrm{d}y},
 \end{equation}
 and $\mathrm{T}_j(\Delta_z)$ is the $j-$th complex transmission element operator in projection approximation associated with the $j-$th slice given by Eq.~\ref{eq:transmission_operator}.
+
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+\subsubsection*{-- On the validity of the Fresnel approximation for short propagation distances\footnote{The author acknowledges the fruitful discussions with David Paganin (Monash University, Australia), Peter Munro (University College London, England) and Oleg Chubar (Brookhaven National Lab., USA) when investigating the application of the Fresnel approximation for short propagation distances.}}
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+
+A case of particular importance for X-ray optical design is the is application of the Fresnel propagators in real or reciprocal space to very short propagation distances (from millimetres to hundreds of micrometres) at hard X-ray energies (wavelength of the order of the \r{A}ngstrom) with physical apertures of the order of the millimetre. For situations of practical interest such as the one just described, Eq.~\ref{eq:accuracy_Fresnel} is generally very restrictive. This section presents conditions under which said constraint can be relaxed and even overlooked. 
+
+Consider an X-ray wavefield with wavelength $\lambda=1~\AA$ fully illuminating an aperture $A=500~\mu$m situated at $z=z_0$ along the optical axis as shown in Fig.~\ref{fig:diffraction}. The X-rays passing through such an aperture will illuminate an identical aperture $A$ at a distance $z_1-z_0=L$. Suppose one wants to place the second aperture a distance $L$ such as it is possible to calculate the field distribution in $z_1$ using the Fresnel diffraction integral in Eq.~\ref{eq:Fresnel}. Using Eq.~\ref{eq:accuracy_Fresnel} with the extreme points\footnote{For simplicity, the 1D case is analysed, but the conclusions are easily translated to a 2D system if $U(x,y)=U(x)U(y)$.} given by $(x_0=-A/2, y_0=0)$ and $(x_1=A/2, y_1=0)$, one concludes that $ L\gg86~$mm. However, if one wants to place the second aperture at a distance of $L=1$~mm and still be able to safely apply Eq.~\ref{eq:Fresnel} to calculate the field distribution in $z_0$, the apertures should be reduced to $A\ll18~\mu$m according to Eq.~\ref{eq:accuracy_Fresnel}. The situation just described is at odds with the employment of the Fresnel propagator for very short propagation distances at hard X-ray energies with physical apertures of the order of the millimetre. Yet, with the exception of [\cite{Ali2020}], that explicitly uses the Huygens-Fresnel principle [\cite[\textit{\S3.7}]{Goodman2017}] in its reciprocal form for the wavefield propagation\footnote{cf. Eq.~22 or procedure \textit{PropShort} in Algorithm 1 from [\cite{Ali2020}].}, authors make extensive use of the Fresnel propagator for multi-slicing applications under said conflicting conditions [\cite{Li2017, Munro2019, Celestre2020}]. Possibly one of the few explicit mentions of the propagation distance relation to the transverse plane size applied to multi-slicing techniques is given by Eq.~15 in [\cite{Ishizuka1977}]. It turns out that, indeed, Eq.~\ref{eq:accuracy_Fresnel} when applied to a collimated beam (either a plane-wave or a slowly diverging/converging wave) is too restrictive and can be overlook when applied to MS modelling of weak scatteres.
+
+In an early study where the Fresnel diffraction integral (Eq.~\ref{eq:Fresnel}) is directly compared with the Huygens-Fresnel integral (Eq.~\ref{eq:Huygens-Fresnel}) in terms of amplitude and phase, it was shown that the Fresnel approximation has good accuracy: within 2\% in amplitude and 0.02~rad in phase, when compared to the Huygens-Fresnel integral [\cite{Southwell1981}]. The findings hold even for very high Fresnel numbers\footnote{The Fresnel number is defined as $N_F=a^2/\lambda L$, where $a$ is the half aperture, $\lambda$ is the wavelength and $L$ is the propagation distance. A high Fresnel number indicates the region know as near-field, while the far-field region is know for its low Fresnel numbers. In [\cite{Southwell1981}], it is reported that even for $L<a$ good agreement between the Fresnel approximation and the Huygens-Fresnel integral is found.} along the optical axis within the projected aperture, that is, $\forall~(x,y) \in A$ - [cf. Figs.~1--4 ibid.]. However, for points outside that region ($\forall~(x,y) \notin A$) at very high Fresnel numbers (shadow region), the approximation breaks down: although the amplitude calculation retains good agreement, the phase errors become unacceptably high [cf. Fig.~10 ibid.]. 
+
+\begin{figure}[t]
+    \centering
+    {\includegraphics[width=0.6\linewidth]{figures/ch02/Fresnel.pdf}}
+    \caption[The validity of the Fresnel approximation]{The Fresnel and Fraunhofer approximations region of validity according to the (a) Eqs.~\ref{eq:accuracy_Fresnel} and \ref{eq:accuracy_Fraunhofer}. For a gently divergent, convergent or plane wavefield the constraints can be relaxed, increasing the region o applicability of said approximations. Region \textit{I} represents the shadow zone, where neither approximations are valid. Region \textit{II} is where only the Fresnel approximation is valid. In region \textit{III}, both approximations coexist, the Fraunhofer being advantageous computationally. Region \textit{IV} illustrates an area where only the Fraunhofer approximation is valid - this counter-intuitive result is discussed in [\cite{Rees87}], but is out of the scope here. The boundaries between regions \textit{I} and \textit{II} have been exaggerated for clarity. This figure is adapted from Fig.~4 and Fig.~5 in [\cite{Rees87}].}
+    \label{fig:validity_fresnel}
+\end{figure}
+
+Another study that confirms the validity of the Fresnel approximation for a collimated beam being propagated over a very short distance in presented by [\cite{Rees87}]. This work not only confirms the numerical findings in [\cite{Southwell1981}], but also provides physical explanations, some analytical formulations and derives quantitatively the shape of the region where the Fresnel approximation is valid. By applying directly Eq.~\ref{eq:accuracy_Fresnel} and  Eq.~\ref{eq:accuracy_Fraunhofer}, one obtains the the regions of validity for both Fresnel and Fraunhofer integrals as in Fig.~\ref{fig:validity_fresnel}(a), in which case, $z_{Fresnel}$ is given by Eq.~\ref{eq:accuracy_Fresnel} - cf. Eq.~7 in [\cite{Rees87}]. The relaxing of such constrains is done by invoking the concept of Fresnel zones\footnote{cf. [\cite{Hetch}]} and how much contribution it has to the total amplitude and phase of the propagated beam. Considering that the first zone is unobstructed by the aperture $A$, which is the case for all points not within the shadow region, the distance where the Fresnel diffraction integral starts to be accurate can be as low as $z_{Fresnel}=2\lambda$ - cf. Eq.~9 in [\cite{Rees87}]. This is relaxed regime is represented in Fig.~\ref{fig:validity_fresnel}(b).
+
+Based on the results from [\cite{Southwell1981}] and [\cite{Rees87}], it is possible to affirm that provided the object is illuminated with a plane wave and the output field is calculated in the vicinity of the projected aperture, the application of the Fresnel diffraction integral to very short propagation distances for hard X-ray optics modelling with MS techniques is not limited to the constraints imposed by Eq.~\ref{eq:accuracy_Fresnel}. Cases of interest often have non-plane-wave illumination and require special handling to ensure MS with the Fresnel diffraction integral yields accurate results. Approaches that rely on spherical-to-plane-wave conversion are often employed to avoid such accuracy issues: the angular spectrum of plane waves decomposition [\cite[\textit{\S1.3}]{Paganin2006}]\footnote{Also in [\cite[\textit{\S3.10}~\&~\textit{\S4.2.4}]{Goodman2017}].}, the Fresnel-scaling theorem [\cite[\textit{\S A}]{Paganin2006}], the divergent-beam-to-plane-wave transformation from [\cite{Munro2019}] and the analytical treatment of the quadratic phase term [\cite{Chubar2019}], which is of particular interest within the context of this work, as it is the chosen method for the free-space wavefront propagation simulations presented here. 
+
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+\subsubsection*{\normalsize -- Real and reciprocal space Fresnel propagators at short propagation distances }
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+
+Because of the equivalency of the Fresnel diffraction integral (Eq.~\ref{eq:Fresnel}) and the convolution integral (Eq.~\ref{eq:conv}), one can define the kernel of the Fresnel transform in real-space as:
+\begin{align}\label{eq:kernel_real}
+    h(x,y)=\exp\bigg[\frac{i\pi}{\lambda L}\big(x^2+y^2 \big)\bigg],
+\end{align}{}
+while the kernel of the Fresnel transform in reciprocal-space is given by:
+\begin{align}\label{eq:kernel_reciprocal}
+    H(f_x,f_y)=\exp{\bigg[-i\pi\lambda L\big(f_x^2+f_y^2 \big)\bigg]}.
+\end{align}{}
+The Eqs.~\ref{eq:kernel_real} and \ref{eq:kernel_reciprocal} are related by: $H(f_x,f_y)=i/(\lambda L) \mathcal\cdot{F}\{ h(x,y)\}$ (cf. Eq.~\ref{eq:kernel}). When propagating a wave-field over a very small distance $L$ with the Fresnel diffraction integral, the argument of the exponential function in transformation kernel in real-space becomes very large and the kernel becomes less well-behaved as shown in  Fig.~\ref{fig:real_reciprocal}(a)-(b), consequently small propagation distances are better represented in the reciprocal space - cf. Fig.~\ref{fig:real_reciprocal}(c)-(d). This hints to the fact that when numerically evaluating the Fresnel transform for short propagation distances, methods using the reciprocal-space are more advantageous than in real-space and constrains like the Eq.~\ref{eq:accuracy_Fresnel} can be overlooked provided the non-paraxial components of the Fourier spectrum of the input wavefield is negligible.
+
+\begin{figure}[t]
+    \centering
+    {\includegraphics[width=0.6\linewidth]{figures/ch02/real_reciprocal.png}}
+    \caption[Frensel transformation kernel in real and reciprocal space]{Real-space kernel of the Fresnel transformation for (a) a short propagation distance and for a (b) longer propagation distance. The reciprocal-space propagator kernel is shown in (c) for a small propagation distance and in (d) for a longer distance. Adapted from Fig.~1 in [\cite{Li2015}].}
+    \label{fig:real_reciprocal}
+\end{figure}
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+\subsubsection*{\normalsize -- The analytical treatment of the of the quadratic radiation phase term\footnote{The analytical treatment of the of the quadratic radiation phase terms was introduced in 2007 for the SRW code [\cite{Chubar2008}] (cf. §\ref{sec:wave_propag} in §\ref{sec:optical_simulations}~-~\textit{\nameref{sec:optical_simulations}}). A more detailed description of the memory and CPU efficient computation of the Fresnel free-space propagator in Fourier optics simulations is given by [\cite{Chubar2019}], from which this section is partially based on.}}
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+
+Consider a non-collimated wave-field $U(x_0,y_0,z_0)$ in free-space (eg. Eq.~\ref{eq:spherical} or Eq.~\ref{eq:gaussian}). The phase term of such wave has quadratic terms with radii of curvature in the horizontal and vertical planes $R_x$ and $R_y$ and the transverse coordinates of the centre point $(x_\text{c},y_\text{c})$. It is possible to rewrite $U(x_0,y_0,z_0)$ as:
+\begin{align}\label{eq:Semi_a}
+    U(x_0,y_0,z_0) = F(x_0,y_0,z_0)\exp{\Bigg\{\frac{ik}{2}\Bigg[\frac{(x_0-x_c)^2}{R_y}+\frac{(y_0-y_c)^2}{R_y} \Bigg]\Bigg\}},
+\end{align}{}
+where $F(x_0,y_0,z_0)$ is the residual wavefront after the quadratic phase term is factorised. This residual wave-field satisfies the necessary conditions for the compliance with the Fresnel propagation of collimated beams through very short propagation distances as required by [\cite{Southwell1981}] and [\cite{Rees87}]. Substituting Eq.~\ref{eq:Semi_a} in the Fresnel diffraction integral (Eq.~\ref{eq:Fresnel}):
+\begin{multline}\label{eq:Semi_b}
+    U(x_1,y_1,z_1)=\frac{k\exp{(ikL)}}{2\pi i L}\iint\limits_{-\infty}^{\hspace{8pt}\infty}{F(x_0,y_0,z_0)}\cdot\\ \cdot{\exp{\Bigg\{\frac{ik}{2}\Bigg[\frac{(x_1-x_0)^2+(y_1-y_0)^2}{L}+\frac{(x_0-x_c)^2}{R_y}+\frac{(y_0-y_c)^2}{R_y} \Bigg]\Bigg\}}~\mathrm{d}x_0\mathrm{d}y_0},
+\end{multline}
+which can be conveniently expressed as: 
+\begin{align}\label{eq:Semi_c1}
+    U(x_1,y_1,z_1) = F(x_1,y_1,z_1)\exp{\Bigg\{\frac{ik}{2}\Bigg[\frac{(x_1-x_c)^2}{R_y+L}+\frac{(y_1-y_c)^2}{R_y+L} \Bigg]\Bigg\}},
+\end{align}{}
+with:
+\begin{multline}\label{eq:Semi_c2}
+    F(x_1,y_1,z_1)=\frac{k\exp{(ikL)}}{2\pi i L}\iint\limits_{-\infty}^{\hspace{8pt}\infty}{F(x_0,y_0,z_0)}\cdot\\ \cdot{\exp{\Bigg\{\frac{ik}{2L}\Bigg[\frac{R_x + L}{R_x}\Bigg(\frac{R_xx_1+Lx_c}{R_x+L} - x_0\Bigg)^2+\frac{R_y + L}{R_y}\Bigg(\frac{R_yy_1+Ly_c}{R_y+L} - y_0\Bigg)^2\Bigg]\Bigg\}}~\mathrm{d}x_0\mathrm{d}y_0}.
+\end{multline}
+It is evident that much like Eq.~\ref{eq:Fresnel}, Eq.~\ref{eq:Semi_c2} is a convolution-type integral with analytical Fourier transform of the convolution kernel, hence the discussion presented in \textit{Numerical computation of the Fresnel and Fraunhofer diffraction} in \S\ref{sec:free-space}~-~\textit{\nameref{sec:free-space}} is still applicable and the advantages of the wave propagation at very short distances in reciprocal space are maintained. The analytical treatment of the of the quadratic radiation phase term reduces significantly the required transverse sampling of the wave-field without compromising the compromising the accuracy of calculation, as the oscillations of the residual electric field are less rapid and require less dense sampling. Another advantage of such rewriting of the Fresnel diffraction integral is that the convolution shown in Eq.~\ref{eq:Semi_c2} takes place with respect to the scaled transverse coordinates $x_1\cdot R_x/(R_x+L)$ and $y_1\cdot R_y/(R_y+L)$. When using the convolution-theorem formulation of free-space propagation (cf. Eqs.~\ref{eq:conv} and \ref{eq:conv_theorem}), the scaled coordinates re-scale without any additional re-sampling nor interpolation the output plane by $\Delta x_1 = \Delta x_0 \cdot (R_x+L)/R_x$ and  $\Delta y_1 = \Delta y_0 \cdot (R_y+L)/R_y$, where $\Delta x_0$ and $\Delta y_0$ are the input plane dimensions. The formulation shown in Eqs.~\ref{eq:Semi_c1} and \ref{eq:Semi_c2} has singularities at $R_x+L = 0$ and $R_y+L = 0$, which happens when calculating the propagation of a wavefront after a focusing element at the image plane. The singularities can be dealt with by simply applying a $R_x'\neq0$ and $R_y\neq0'$ such as they are near $R_x$ and $R_y$, but avoid the singularity. Using  $R_x'\neq0$ and $R_y\neq0'$ still reduces the required transverse sampling and re-scales the output plane when propagating the wave-field by using the convolution-theorem formulation.
 
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
