@@ -1,0 +1,19 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subfig}
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\usepackage[legalpaper, landscape, margin=0.5cm]{geometry}
+
+\thispagestyle{empty}
+% \renewcommand{\thesubfigure}{\roman{subfigure}}
+\begin{document}
+
+\begin{figure}[h]
+        \centering
+ \subfloat[]{\includegraphics[height=5cm]{figures/ch04/experimental_a.pdf}}\\
+        \subfloat[]{\includegraphics[height=4cm]{figures/ch04/experimental_b.pdf}}\hspace{0.3cm}
+        \subfloat[]{\includegraphics[height=4cm]{figures/ch04/experimental_c.pdf}}
+\end{figure}
+\end{document}

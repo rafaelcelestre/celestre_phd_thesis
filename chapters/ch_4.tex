@@ -61,7 +61,7 @@ Eq.~\ref{eq:ProjecThick_misaligned} is the ideal parabolic profile of a bi-conca
     -\underbrace{2x\frac{\Delta_{x_j}}{R_{x_j}} - 2y\frac{\Delta_{y_j}}{R_{y_j}}}_\text{(II)}
     +\underbrace{\frac{\Delta_{x_j}^2}{R_{x_j}}+\frac{\Delta_{y_j}^2}{R_{y_j}}+\text{t}_{\text{wall}_j}}_\text{(III)}.
 \end{align}
-The first term in Eq.~\ref{eq:ProjecThick_Nmisaligned}, ($\text{I}$) is a quadratic term and it indicates ideal focusing as in Eq.~\ref{eq:ProjecThick}. The residual terms ($\text{II}$) and ($\text{III}$) are a linear term in $x$ and $y$ and a constant offset term, respectively. The projected thickness and the phase are linearly proportional, so the residual accumulated thickness translates directly into residual accumulated phase and both terms can be used interchangeably - cf. Eq.\ref{eq:aux_funcs_transb}. The first residual term, i.e. ($\text{II}$), adds a linear phase to the wave-front and acts like a prism, not deforming the monochromatic wave-field, but redirecting it. At the focal plane, the image position is transversely shifted but no change to the intensity and phase profiles is added. Symmetrically shifted lenses\footnote{That is $\Delta_{x_m}=-\Delta_{x_n}$ or $\Delta_{y_m}=-\Delta_{y_n}$ for $m,n\in(1,~2,~...,~N)$.} make ($\text{II}$) goes to zero. The residual terms in ($\text{III}$) add a constant phase offset to the transmitted beam.  The effects of the transverse offset to a single X-ray lens are shown in Fig.~\ref{fig:shifted_CRL}.
+The first term in Eq.~\ref{eq:ProjecThick_Nmisaligned}, ($\text{I}$) is a quadratic term and it indicates ideal focusing as in Eq.~\ref{eq:ProjecThick}. The residual terms ($\text{II}$) and ($\text{III}$) are a linear term in $x$ and $y$ and a constant offset term, respectively. The projected thickness and the phase are linearly proportional, so the residual accumulated thickness translates directly into residual accumulated phase and both terms can be used interchangeably - cf. Eq.\ref{eq:aux_funcs_transb}. The first residual term, i.e. ($\text{II}$), adds a linear phase to the wave-front and acts like a prism, not deforming the monochromatic wave-field, but redirecting it. At the focal plane, the image position is transversely shifted but no change to the intensity and phase profiles is added. Symmetrically shifted lenses\footnote{That is $\Delta_{x_m}=-\Delta_{x_n}$ or $\Delta_{y_m}=-\Delta_{y_n}$ for $m,n\in(1,~2,~...,~N)$.} make ($\text{II}$) goes to zero. The residual terms in ($\text{III}$) add a constant phase offset to the transmitted beam. The effects of the transverse offset to a single X-ray lens are shown in Fig.~\ref{fig:shifted_CRL}.
 \begin{figure}[t]
         \centering
          {\includegraphics[height=4.19cm]{figures/ch04/shifted_CRL.pdf}}
@@ -216,7 +216,7 @@ For the aforementioned decomposition of the aberration function in an orthonorma
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-Any (unintentional) deviation of a parabolic shape can be considered as a source of manufacturing error. Each manufacturing process has some type of (signature) error associated to it and with the increasing number of exotic - or non-conventional - designs and tailored manufacturing strategies, it is beyond reasonable to create a model that could parametrise all sources of deviations from the parabolic shape. To circumvent that and to accurately model phase imperfection in compound refractive lenses, metrology data can also be used for optically imperfect X-ray lenses [\cite{Celestre2020, Chubar2020}]. Fig.~\ref{fig:metrology_zernike_profiles} shows three examples of lens figure errors from (a)-(c) a commercial pressed Beryllium lens, (d)-(f) an in-house pressed Aluminium lens and a (g)-(h) in-development laser-ablated Diamond lens from a commercial partner. The figure errors were measured with at-wavelength metrology and can be directly plugged into simulations as they describe the accumulated errors in projection approximation of both front and back focusing surfaces [\cite{Celestre2020, Berujon2020a, Berujon2020}]. The effect on a coherent X-ray of optical imperfections from metrology data is shown in Fig.~\ref{fig:metrology_zernike_simualtions}(c) and (d).
+Any (unintentional) deviation of a parabolic shape can be considered as a source of manufacturing error. Each manufacturing process has some type of (signature) error associated to it and with the increasing number of exotic - or non-conventional - designs and tailored manufacturing strategies, it is beyond reasonable to create a model that could parametrise all sources of deviations from the parabolic shape. To circumvent that and to accurately model phase imperfection in compound refractive lenses, metrology data can also be used for optically imperfect X-ray lenses [\cite{Celestre2020, Chubar2020}]. Fig.~\ref{fig:metrology_zernike_profiles} shows three examples of lens figure errors from (a)-(c) a commercial pressed Beryllium lens, (d)-(f) an in-house pressed Aluminium lens and a (g)-(h) in-development laser-ablated Diamond lens from a commercial partner. The figure errors were measured with at-wavelength metrology\footnote{cf. \S\ref{sec:at_wavelength}~-~\textit{\nameref{sec:at_wavelength}}.} and can be directly plugged into simulations [\cite{Celestre2020}]. The effect on a coherent X-ray of optical imperfections from metrology data is shown in Fig.~\ref{fig:metrology_zernike_simualtions}(c) and (d).
 
 \begin{figure}[t]
         \centering
@@ -235,49 +235,111 @@ license. The 2D rectangular Zernike was originally inspired by the analytical fo
 
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
-\section{Measuring optical imperfections in refractive lenses}
+\section{Measuring optical imperfections in refractive lenses}\label{sec:metrology}
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-The metrology data shown in this section were taken on several beamtimes at the BM05 beamline - ESRF [\cite{Ziegler2004}] (from 2017 to 2018 - before the ESRF long shutdown for the EBS upgrade), at the 1-BM beamline - APS [\cite{Macrander2016}] (in 2019 during the ESRF long shutdown) and the ID06 beamline - ESRF [\cite{Kutsal_2019}] (in 2020 in the commissioning period of the ESRF-EBS upgrade)\footnote{Acknowledgements to Sébastien Bérujon and Ruxandra Cojocaru (BM05-ESRF); Xianbo Shi, Zhi Qiao, Michael Wojcik and Lahsen Assoufid (1-BM-APS-ANL); and to Carsten Detlefs (ID06-ESRF) for the help during the beamtimes.}.
+Surface metrology methods commonly applied to X-ray mirrors [\cite{Alcock2016, Vivo2019}] are not broadly employed for the metrology of X-ray lenses mainly due to their small apertures and steep parabolic surfaces (cf. Fig.~\ref{fig:ideal_CRL}) [\cite{Lyatun2015}]. Non-destructive methods using X-rays are often more appropriate for X-ray lens metrology. This section presents some of the commonly used at-wavelength metrology methods, with emphasis on X-ray speckle vectorial tracking, the experimental technique used throughout this work. The metrology of single- and stacked 2D-Beryllium lens with $R=50~\mu$m is presented and the results are compared. A framework for calculating corrective optics for such stacked lenses is shown, along with the first correction prototypes and tests.
 
-
-%-------------------------------------------------------------------------
-%-------------------------------------------------------------------------
-\subsection{At wavelength-metrology}
-%-------------------------------------------------------------------------
-%-------------------------------------------------------------------------
-
-%-------------------------------------------------------------------------
-%-------------------------------------------------------------------------
-\subsubsection*{X-ray speckle tracking}
-%-------------------------------------------------------------------------
-%-------------------------------------------------------------------------
+The experimental data shown in this section was taken on several beamtimes\footnote{Acknowledgements to Sébastien Bérujon and Ruxandra Cojocaru (BM05-ESRF); Xianbo Shi, Zhi Qiao, Michael Wojcik and Lahsen Assoufid (1-BM-APS); and to Carsten Detlefs (ID06-ESRF) for the help during the experimental sessions.} at the BM05 beamline - ESRF [\cite{Ziegler2004}] (from 2017 to 2018 - before the ESRF long shutdown for the EBS upgrade), at the 1-BM beamline - APS [\cite{Macrander2016}] (in 2019 during the ESRF long shutdown) and the ID06 beamline - ESRF [\cite{Kutsal_2019}] (in 2020 in the commissioning period of the ESRF-EBS upgrade).
 
 
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
-\subsubsection*{Experimental setup}
+\subsection{At wavelength-metrology}\label{sec:at_wavelength}
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
+Surface metrology of X-ray optical elements is often done using visible spectral range [\cite{Alcock2016, Vivo2019}] even if, ultimately, they will be employed in a total different spectral range. At-wavelength metrology is an umbrella term for measurements of optical elements at wavelengths closer to the ones they will be ultimately used - in the case of X-ray lenses, a few dozen kilo-electron-volts. What follows is a non-exhaustive description of commonly used techniques for quality control applied to X-ray lenses and their compliance to a parabolic shape. Other relevant at-wavelength characterisation of X-ray lenses such as X-ray small angle scattering [\cite{Roth2014, Chubar2020}] or the impact of material micro-structures or shape errors on imaging [\cite{Chubar2020,Lyatun2020}] are not covered. 
 
+The simplest techniques involve direct imaging the lens with X-rays by propagation-based phase contrast imaging [\cite{Endrizzi2018}], since absorption contrast imaging has a very reduced contrast for a single lens. With such simple techniques, 2D shapes and distances can be measured (radiographs for controlling the distance and alignment between the parabolic surfaces of X-ray lenses). Still based on imaging techniques, X-ray laminography [\cite{Helfen2011,Roth2014}] and X-ray tomography [\cite{Landis2010,Narikovich2017}] of X-ray lenses provide a 3D reconstruction of the lens volume with high spatial resolution information. These techniques provide data on the refracting surfaces shape and on the internal features (inhomogeneities) and can be used for modelling optical imperfections in refractive lenses. 
+
+
+Another large family of experimental techniques used for lens metrology can be grouped under the wave-front sensing branch\footnote{With the advent of more coherent sources of X-rays as encapsulated by the emmergence of $4^{\text{th}}$-generation synchrotrons and free-electron lasers, the topic of wavefront sensing has seen increased attention [\cite{Seaberg2019}].}. Wavefront-sensing is often employed as a beam-diagnostics tool for highly coherent sources [\cite{Seaberg2019}]. Two approaches are often used: \textit{i}-) the absolute wavefront after an specific optical element is measured and the global state of the wavefront is obtained or \textit{ii}-) a differential measurement is done with and without the optical element under investigation, the differences in the wavefront attributed to the addition of the optical element under test. Current wavefront-sensing techniques used for evaluating the phase errors of CRLs (or individual X-ray lenses) are: the Ronchi test, an interferometric technique that provides qualitative\footnote{It has been demonstrated that the Ronchi test can also retrieve quantitative information [\cite{Lee2010}], but is has not yet been applied to X-ray lenses metrology.} information on third order optical aberrations [\cite{Nilsson2012, Uhlen2014}]; the use of X-ray Shack–Hartmann sensors [\cite{Mayo2004,Mikhaylov2020}]; the ptychographic reconstruction of the wavefront emerging from a strong focusing optics [\cite{Schropp2013,Sala2017,Seiboth2017}]; grating interferometry and all its variations [\cite{David2012,Koch2016,Grizolli2017}]; and the near-field-speckle-tracking-based methods [\cite{Berujon2013,Zdora2018,Berujon2020a}].
+
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+\subsubsection*{X-ray (near field) speckle vector tracking (XSVT)}\addcontentsline{toc}{subsubsection}{-- X-ray (near field) speckle vector tracking (XSVT)}
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+
+The X-ray near-field-speckle-tracking is the chosen technique for systematic at-wavelength metrology of X-ray lenses at the ESRF\footnote{Other synchrotron facilities also offer X-ray lens metrology with the X-ray near field speckle tracking technique: 1-BM at the APS in the U.S.A. [\cite{Qiao2020}] and the B16 beamline at the Diamond Light Source in the U.K. [\cite{Sawhney2013}].} and is available at the BM05 beamline [\cite{Berujon2020a}] and most recently, at the ID06 beamline. The principal reasons for this choice are: \textit{i}-) the lower requirements on transverse- and longitudinal coherence [\cite{Zanette2014,Zdora2015}]; \textit{ii}-) no requirement of specially tailored optics (nor accompanying complicated alignment procedures) [\cite{Morgan2012,Wang2016}]; \textit{iii}-) successful benchmark against more established wave-front sensing techniques [\cite{Kashyap2016,Romell2017}]; and \textit{iv}-) its versatility as a metrology tool being able to measure mirrors, single- and stacked lenses [\cite{Berujon2020a}]. Although the basic principles of the the several X-ray near-field-speckle-based techniques are the same, focus is given to the X-ray (near field) speckle vector tracking (XSVT) as implemented and used for the metrology of single- and stacked X-ray lenses used in this work [\cite{Berujon2020a,Berujon2020}]. An interesting review on different techniques using X-ray near field speckle tracking is given by [\cite{Zdora2018a}] and [\cite{Berujon2020}].
+
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+\subsubsection*{-- Introduction}
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+
+\begin{figure}[t]
+        \centering
+        {\includegraphics[width=0.6\linewidth]{figures/ch04/SpecklePattern.pdf}}
+        \caption[Speckle-pattern and the stationary diffuser]{(a) Speckle-pattern measured at 17~keV at 800~mm downstream the with $\sigma_I=0.19$~a.u., $\overline{I}=0.99$~a.u. and $v\sim0.19$; (b) SEM image of the cellulose acetate membrane filters with mean pore size of 1.2~$\mu$m used as the stationary diffuser. The white bar represents 50~$\mu$m.} \label{fig:SpecklePattern}
+\end{figure}
+
+
+Near-field speckle is a manifestation in intensity of the summation of several complex electric fields when the amplitudes and phases of such fields have random values. The resulting intensities may be locally high due to constructive interference or low, due to destructive interference [\cite[\textit{\S1}]{Goodman2020}]. Globally, to a speckle pattern over a defined region of interest, the speckle contrast (or visibility) can be defined\footnote{Other definitions are commonly found in the literature: $v=\frac{I_\text{max}-I_\text{min}}{I_\text{max}-I_\text{min}}$ and $v=\frac{I_\text{max}-I_\text{min}}{2\overline{I}}$, where $I_\text{max}$ and $I_\text{min}$ are the maximum and minimum intensities found in the region of interest [\cite{Zdora2018a}].} as:
+\begin{equation}\label{eq:visibility}
+    v=\frac{\sigma_I}{\overline{I}},
+\end{equation}
+where $\sigma_I$ is the standard deviation and $\overline{I}$ is the mean value of the intensity value of the speckle pattern. In the X-ray regime, it appears when a sufficiently coherent X-ray beam is transmitted through matter with random spatial variation of $\delta$ and $\beta$, where the local optical path length varies significant when compared to the scale of the wavelength.
+
+For a static random modulation of the wavefield (stationary diffuser\footnote{As opposed to time-varying modulation of the speckle-field as in \cite{Morgan2010,Goikhman2015}.}), it has been demonstrated that the speckle-grains\footnote{Continous regions in space with slowly-varying intensity that can be visually clustered together.} preserve shape and size for free-space propagation distances limited to:
+\begin{equation}\label{eq:speckle_goodness}
+z<\Delta_{\textbf{cl}_\perp}\xi k,
+\end{equation}
+where $\Delta_{\textbf{cl}_\perp}$ is transverse coherence length\footnote{cf. \textit{Spatial coherence} in \S\ref{sec:optical_coherence}~-~\textit{\nameref{sec:optical_coherence}}.} and $\xi$ is the typical transverse length of the modulator, that is, the region where the spatial variation of $\delta$ and $\beta$ is negligible [\cite{Cerbino2008}]. For propagation distances smaller than the imposed limit in Eq.~\ref{eq:speckle_goodness}, speckles can be used as a wavefront marker, since the transverse position of the speckle grains in two parallel planes along the propagation direction can be inferred geometrically. The near-field regime is of particular interest for the X-ray energy range, as very low wavelengths lead to an extended near-field regime. A speckle-pattern and the stationary diffuser used to generate it are shown in Fig.~\ref{fig:SpecklePattern}.
+
+\begin{figure}[t]
+        \centering
+        {\includegraphics[width=1\linewidth]{figures/ch04/speckle_tracking.pdf}}
+        \caption[Tracking of speckle grain]{Tracking of speckle grains. The highlighted grains in yellow and red are inside the sample and have their transverse position changed. The highlighted grain in blue is outside the lens active area and has no apparent shift in transverse position. The sample is a single 2D-Beryllium lens with nominal radius $R=50~\mu\text{m}$, geometric aperture $A_{\diameter}\sim440~\mu\text{m}$. The data was collected $\sim$800mm downstream the speckle-membrane at 17~keV.} \label{fig:speckle_tracking}
+\end{figure}
+
+\begin{figure}[t]
+        \centering
+        {\includegraphics[width=0.6\linewidth]{figures/ch04/speckle_tracking2.png}}
+        \caption[Speckle tracking geometry]{Generic speckle-tracking measurement geometry for the XSVT technique and the origin of the displacement vector $\nu$. From left to right: X-ray beam, speckle-membrane, sample and 2D imaging detector. The distance between sample and detector is given by $d$, the deflection angle is $\alpha$ and the transverse displacement vector in the detector plane is $\nu$.} \label{fig:speckle_tracking2}
+\end{figure}
+
+Based on the uniqueness of each speckle grain, speckle-tracking-based techniques rely on identifying similar patterns in two different images sets: reference image and in the presence of the probe (perturbed) - cf. Fig.~\ref{fig:speckle_tracking}. The computer implementations used for numerically tracking the lateral displacement of the speckle grains in the detector plane vary: cross-correlation peak calculation [\cite{Berujon2012, Morgan2012}] and the least-square-minimisation [\cite{Zanette2014, Zdora2017}] are the two most ubiquitous methods\footnote{Recently, a Euclidean-distance minimisation of the wavelet-transform method has been reported. Compared to correlation-based techniques it is less computationally demanding and more robust to noise [\cite{Qiao2020b}].}$^{,}$\footnote{Regardless of the tracking method, the displacement vector $\nu$ should be equivalent, as it is intimately linked to the sample shape and material.}. The lateral displacement of the speckle grain in the detector plane between the reference and the disturbed image is given by the displacement vector $\nu=(\Delta_x,\Delta_y)$, where $\Delta_x$ and $\Delta_y$ are the respective horizontal and vertical displacements of the speckle grain in the presence of the sample - cf. Fig.~\ref{fig:speckle_tracking2}. With knowledge of the distance between sample and detector $d$, it is possible to reconstruct the deflection angle $\alpha=(\alpha_x,\alpha_y)$ is given by $\alpha\approx\nu/d$. The deflection angle, the wave-field phase $\phi(x,y)$ and wavefront $\mathcal{W}(x,y)$ are related by:
+\begin{equation}\label{eq:wavefront_gradient}
+    k \alpha = \nabla\phi = k \nabla\mathcal{W}.
+\end{equation}
+The beam phase $\phi(x,y)$ or wavefront $\mathcal{W}(x,y)$ can be retrieved by numerical integration of the phase gradients obtained experimentally.
+
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+\subsubsection*{-- Experimental setup}
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+
+\begin{figure}[t]
+        \centering
+        {\includegraphics[width=0.7\linewidth]{figures/ch04/BM05.png}}
+        \caption[Speckle tracking experimental setup at the BM05 beamline, ESRF.]{Generic speckle-tracking experimental setup as originally implemented in the BM05 beamline at the ESRF. \textbf{right to left}: an X-ray source (bending magnet) delivers a beam that has to be monochromatised by Si(111) double crystal monochromator down to a bandwidth of $\Delta \text{E}/\text{E}\approx10^{-4}$. The now monochromatised beam hits the speckle-generator at a distance $R_S$ from the source. The stationary diffuser is composed of several piled up cellulose acetate membrane filters with mean pore size of 1.2~$\mu$m. The membranes are mounted on a (piezoelectric) nano-positioner transverse translation stage, so that the membranes can be scanned on the $xy-$plane. At a distance $l$ downstream the membrane, the sample is placed and aligned as to the optical axis. Further downstream the probe, at a distance $d$, a 10~$\mu$m thick LSO:Tb scintillator converts the X-rays into visible light. The scintillator is imaged into a CMOS PCO Edge 4.2 or a FReLoN camera (2048 x 2048 pixels), which is coupled with a 10x magnification microscope objective in order to reach as theoretical pixel size of about $\sim0.62\times~0.62~\mu$m$^2$. Such experimental setup, without any structural change, was later on used at the 1-BM (APS) and ID06 (ESRF) beamlines. The X-ray source at the ID06 is an undulator and not a bending magnet as depicted here.} \label{fig:BM05}
+\end{figure}
+
+X-ray speckle-tracking can be implemented in several geometries depending on the metrology subject (mirrors, strong focusing mirrors, lenses, stacked lenses) and mode (absolute or differential) - cf. [\cite{Berujon2020a}]. In this section the X-ray (near field) speckle vector tracking (XSVT), a differential metrology mode, as originally implemented at BM05 and shown in Figs.~\ref{fig:speckle_tracking2} and \ref{fig:BM05} is described.
+
+
+
+
+\footnote{At BM05, a bending magnet was the X-ray source until the ESRF-EBS upgrade. The long BM was decomissioned in favour of a much shorter and brighter 2-pole wiggler. All the data collected at BM05 was taken before this upgrade. At the 1-BM, the photon source is also a BM while at the ID06 the source is an undulator.}
+
+ A highly coherent X-ray source will have a higher contrast when compared to a lower-coherence source for the same random modulation. The reduction in coherence leads to a smearing of the speckle pattern.
+ 
+ This is done to ensure that the speckle-grain size covers a few pixels (<10 pixels). A minimum contrast of 0.1 (Eq.~\ref{eq:visibility}) is required, which is set by the transverse coherence length $\Delta_{\textbf{cl}_\perp}$ at the speckle generator position. At the cost of flux, the coherence length can be increase by slitting down the beam 
+ at a good compromise between the visible light yield, resulting in lower integration times and lateral resolution.
 [\cite{Berujon2020a, Berujon2020}]
 
 
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
-\subsubsection*{Data processing and analysis}
+\subsubsection*{-- Data acquisition, processing and analysis}
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-%-------------------------------------------------------------------------
-%-------------------------------------------------------------------------
-\subsubsection*{Recommended literature}
-%-------------------------------------------------------------------------
-%-------------------------------------------------------------------------
-
-At-wavelength-metrology, a niche-application of wavefront sensing, is a vast subject and it is out of scope to discuss in details all the most relevant literature available mainly due to its granularity. Current at-wavelength techniques used for evaluating the phase errors of CRLs (or individual X-ray lenses) are the Ronchigram [\cite{}], a technique based on ...; ptychography [\cite{}] ...; grating interferometry and all its variations [\cite{,,,,}] and speckle-tracking-based methods [\cite{,,,,}].
 
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
@@ -297,10 +359,6 @@ At-wavelength-metrology, a niche-application of wavefront sensing, is a vast sub
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-% %-------------------------------------------------------------------------
-% %-------------------------------------------------------------------------
-% \section{BARC4REFRACTIVE\_OPTICS}
-% %-------------------------------------------------------------------------
 % %-------------------------------------------------------------------------
 
 $\blacksquare$
