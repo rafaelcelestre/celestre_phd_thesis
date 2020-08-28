@@ -779,7 +779,7 @@
 @article{Grizolli2017,
     author = {Grizolli, Walan C. and Shi, Xianbo and Assoufid, Lahsen and Kolodziej, Tomasz and Shvyd'ko, Yuri},
     doi = {10.1117/12.2274023},
-    editor = {Assoufid, Lahsen and Ohashi, Haruhiko and Asundi, Anand K.},
+    %editor = {Assoufid, Lahsen and Ohashi, Haruhiko and Asundi, Anand K.},
     file = {:C$\backslash$:/Users/celestre/Work Folders/Documents/Mendeley/Grizolli et al.{\_}2017{\_}Single-grating Talbot imaging for wavefront sensing and x-ray metrology.pdf:pdf},
     isbn = {9781510612273},
     journal = { Proc. SPIE 10385, Advances in Metrology for X-Ray and EUV Optics VII, 1038502},
@@ -789,7 +789,6 @@
     pages = {1},
     publisher = {SPIE},
     title = {{Single-grating Talbot imaging for wavefront sensing and x-ray metrology}},
-    url = {https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10385/2274023/Single-grating-Talbot-imaging-for-wavefront-sensing-and-x-ray/10.1117/12.2274023.full},
     volume = {\textbf{10385}},
     year = {2017}
 }
@@ -1183,4 +1182,84 @@
     url = {https://doi.org/10.1107/S1600577519015200},
     volume = {\textbf{27}},
     year = {2020}
+}
+
+
+@article{Berujon2016,
+    abstract = {We demonstrate computerized tomography (CT) reconstructions from absorption, phase, and dark-field signals obtained from scans acquired when the x-ray probe light is modulated with speckle. Two different interlaced schemes are proposed to reduce the number of sample exposures. First, the already demonstrated x-ray speckle-vector tracking (XSVT) concept for projection imaging allows the three signal CT reconstructions from multiple images per projection. Second, a modified XSVT approach is shown to provide absorption and phase reconstructions, this time from a single image per angular projection. Reconstructions from data obtained at a synchrotron facility emphasize the potential of the approaches for the imaging of complex samples.},
+    archivePrefix = {arXiv},
+    arxivId = {1507.05807},
+    author = {Berujon, Sebastien and Ziegler, Eric},
+    doi = {10.1103/PhysRevApplied.5.044014},
+    eprint = {1507.05807},
+    issn = {23317019},
+    journal = {Physical Review Applied},
+    mendeley-groups = {Metrology},
+    number = {4},
+    pages = {044014},
+    publisher = {American Physical Society},
+    title = {{X-ray Multimodal Tomography Using Speckle-Vector Tracking}},
+    url = {https://journals.aps.org/prapplied/abstract/10.1103/PhysRevApplied.5.044014},
+    volume = {\textbf{5}},
+    year = {2016}
+}
+
+@article{Harker2015,
+    abstract = {As Photometric Stereo is a means of measuring the gradient field of a surface, an essential step in the measurement of a surface structure is the reconstruction of a surface from its measured gradient field. Given that the surface normals are subject to noise, straightforward integration does not provide an adequate reconstruction of the surface. In fact, if the noise in the gradient can be considered to be Gaussian, the optimal reconstruction based on maximum likelihood principles is obtained by the method of least-squares. However, since the reconstruction of a surface from its gradient is an inverse problem, it is usually necessary to introduce some form of regularization of the solution. This paper describes and demonstrates the functionality of a library of MATLAB functions for the regularized reconstruction of a surface from its measured gradient field. The library of functions, entitled “Surface Reconstruction from Gradient Fields: grad2Surf Version 1.0” is available at the MATLAB file-exchange http://www.mathworks.com/matlabcentral/fileexchange/authors/321598 The toolbox is the culmination of a number of papers on the least-squares reconstruction of a surface from its measured gradient field, regularized solutions to the problem, and real-time implementations of the algorithms.1-4},
+    author = {Harker, Matthew and O'Leary, Paul},
+    doi = {10.1117/12.2182827},
+    %editor = {Meriaudeau, Fabrice and Aubreton, Olivier},
+    file = {:C$\backslash$:/Users/celestre/Work Folders/Documents/Mendeley/Harker, O'Leary{\_}2015{\_}MATLAB toolbox for the regularized surface reconstruction from gradients.pdf:pdf},
+    journal = {Proc. SPIE 9534, Twelfth International Conference on Quality Control by Artificial Vision 2015},
+    keywords = {MATLAB,Spectral Regularization,Surface Reconstruction from Gradients,Sylvester Equation,Tikhonov Regularization},
+    mendeley-groups = {Mathematics},
+    pages = {95341E},
+    publisher = {SPIE},
+    title = {{MATLAB toolbox for the regularized surface reconstruction from gradients}},
+    url = {http://proceedings.spiedigitallibrary.org/proceeding.aspx?doi=10.1117/12.2182827},
+    volume = {\textbf{9534}},
+    year = {2015}
+}
+@article{Huang2015,
+    abstract = {As a requisite and key step in some gradient-based measurement techniques, the reconstruction of the shape, more generally the scalar potential, from the measured gradient data has been studied for many years. In this work, three types of two-dimensional integration methods are compared under various conditions. The merits and drawbacks of each integration method are consequently revealed to provide suggestions in selection of a proper integration method for a particular application. {\textcopyright} 2014 Elsevier Ltd.},
+    author = {Huang, Lei and Idir, Mourad and Zuo, Chao and Kaznatcheev, Konstantine and Zhou, Lin and Asundi, Anand},
+    doi = {10.1016/j.optlaseng.2014.07.002},
+    issn = {01438166},
+    journal = {Optics and Lasers in Engineering},
+    keywords = {Integration,Least squares estimation,Shape from gradient,Shape reconstruction,Wavefront reconstruction},
+    mendeley-groups = {Mathematics},
+    pages = {1--11},
+    publisher = {Elsevier Ltd},
+    title = {{Comparison of two-dimensional integration methods for shape reconstruction from gradient data}},
+    volume = {\textbf{64}},
+    year = {2015}
+}
+@inproceedings{Agrawal2006,
+    abstract = {We propose a generalized equation to represent a continuum of surface reconstruction solutions of a given non-integrable gradient field. We show that common approaches such as Poisson solver and Frankot-Chellappa algorithm are special cases of this generalized equation. For a N × N pixel grid, the subspace of all integrable gradient fields is of dimension N{\textless}sup{\textgreater}2{\textless}/sup{\textgreater} -1. Our framework can be applied to derive a range of meaningful surface reconstructions from this high dimensional space. The key observation is that the range of solutions is related to the degree of anisotropy in applying weights to the gradients in the integration process. While common approaches use isotropic weights, we show that by using a progression of spatially varying anisotropic weights, we can achieve significant improvement in reconstructions. We propose (a) $\alpha$-surfaces using binary weights, where the parameter a allows trade off between smoothness and robustness, (b) M-estimators and edge preserving regularization using continuous weights and (c) Diffusion using affine transformation of gradients. We provide results on photometric stereo, compare with previous approaches and show that anisotropic treatment discounts noise while recovering salient features in reconstructions. {\textcopyright} Springer-Verlag Berlin Heidelberg 2006.},
+    author = {Agrawal, Amit and Raskar, Ramesh and Chellappa, Rama},
+    booktitle = {Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)},
+    doi = {10.1007/11744023_45},
+    file = {:C$\backslash$:/Users/celestre/Work Folders/Documents/Mendeley/Agrawal, Raskar, Chellappa{\_}2006{\_}What is the range of surface reconstructions from a gradient field.pdf:pdf},
+    isbn = {3540338322},
+    issn = {16113349},
+    mendeley-groups = {Mathematics},
+    pages = {578--591},
+    publisher = {Springer Verlag},
+    title = {{What is the range of surface reconstructions from a gradient field?}},
+    url = {https://link.springer.com/chapter/10.1007/11744023{\_}45},
+    volume = {\textbf{3951 LNCS}},
+    year = {2006}
+}
+@article{Frankot1988,
+    author = {Frankot, Robert T. and Chellappa, Rama},
+    doi = {10.1109/34.3909},
+    issn = {01628828},
+    journal = {IEEE Transactions on Pattern Analysis and Machine Intelligence},
+    keywords = {2 1/2-D models,Computer vision,depth maps,integrability,photoclinometry,radarclinometry,shape from shading,surface reconstruction},
+    mendeley-groups = {Mathematics},
+    number = {4},
+    pages = {439--451},
+    title = {{A Method for Enforcing Integrability in Shape from Shading Algorithms}},
+    volume = {\textbf{10}},
+    year = {1988}
 }

@@ -196,29 +196,31 @@ where $A$ is a complex constant (complex envelope), $\textbf{k}=(k_x, k_y, k_z)$
 \begin{equation}\label{eq:spherical}
     U(\textbf{r}) = \frac{A}{r}\exp(-ikr),
 \end{equation}
-here $\vert\textbf{r}\vert=r$ is the distance from the origin of the wavefront. Two other common waves are often found in modelling of optical systems. Defining henceforth the $z-$axis as the optical axis, the paraboloidal wave is given by:
+here $\vert\textbf{r}\vert=r$ is the distance from the origin of the wavefront. %Two other common waves are often found in modelling of optical systems. Defining henceforth the $z-$axis as the optical axis, the paraboloidal wave is given by:
+Defining henceforth the $z-$axis as the optical axis, the paraboloidal wave is given by:
 \begin{equation}\label{eq:parabolic}
     U(\textbf{r}) = \frac{A}{z}\exp(-ikz)\exp{\Bigg[-ik\frac{x^2 + y^2}{2z}\Bigg]},
 \end{equation}
-Eq.~\ref{eq:parabolic} is a paraxial\footnote{Consider a spherical wave with $\textbf{r}=(x,y,z)$ and that $\vert\textbf{r}\vert=r=\sqrt{x^2 + y^2 +z^2}$ and take a sufficiently large coordinate along the $z-$axis (optical axis). The paraxial approximation of the spherical wave can be obtained by choosing points in the $xy-$plane near enough the $z-$axis so that $\sqrt{x^2+y^2}\ll z$ holds. It follows that $r=z\sqrt{1+(x^2+y^2)/z^2}$ can be expanded in a Taylor series: $r\approx z+(x^2+y^2)/2z$ and directly plugged into the exponent in Eq.~\ref{eq:spherical} leading to Eq.~\ref{eq:parabolic} [\cite[\textit{§2.2}]{Saleh2019}]. The paraxial approximation of the spherical wave is also called the Fresnel approximation.\label{note:fresnel}} approximation of the spherical wave defined by Eq.~\ref{eq:spherical}; and the Gaussian beam\footnote{Take the paraboloidal wave as defined by Eq.~\ref{eq:parabolic}. Evaluating it along the optical axis at a position $z^+=z+\Delta z$ also yields a solution to the paraxial Helmholtz equation (cf. Eq.~\ref{eq:Helmholtz_paraxial}) even if $\Delta z$ is a purely imaginary number [\cite[\textit{Exercise 2.2-2}]{Saleh2019}]. The Gaussian beam can be obtained from the paraboloidal wave by substituting $z$ in Eq.~\ref{eq:parabolic} by $z-iz_0$, for a real $z_0$ [\cite[\textit{§3.1}]{Saleh2019}].}:
-\begin{equation}\label{eq:gaussian}
-    U(\textbf{r})=-i\frac{A}{z_0}\frac{w_0}{W(z)}\exp{\Bigg[-\frac{x^2+y^2}{W^2(z)}\Bigg]}\exp\Bigg[ -ikz - ik\frac{x^2 +y^2}{2R(z)}+i\varphi(z)\Bigg],
-\end{equation}
-where $z_0$ is the so-called Rayleigh range and:
-\begin{subequations}\label{eq:gaussian_parameters}
-    \begin{align}
-        W(z) &= w_0\sqrt{1+\Bigg(\frac{z}{z_0}\Bigg)^2}&&(\small{\text{beam~width}}),\\
-        R(z) &= z \Bigg[1+ \Bigg(\frac{z}{z_0}\Bigg)^2\Bigg] &&(\small{\text{wavefront-radius-of-curvature}}),\\
-        \varphi(z) &= \tan^{-1}\Bigg(\frac{z}{z_0}\Bigg) &&(\small{\text{Gouy~phase}}),\\
-        w_0 &= \sqrt{\frac{\lambda z_0}{\pi}} &&(\small{\text{beam~width~at~the~waist}}).
-    \end{align}
-\end{subequations}{}
-Both the paraboloidal wave and Gaussian beam do not, however, formally satisfy the Helmholtz equation as defined by Eq.~\ref{eq:Helmholtz}. They do obey a paraxial form of the Helmholtz wave-equation. This assumes a plane wave as defined in Eq.~\ref{eq:planewave} can be modulated by a complex envelope $A(\textbf{r})$ that slowly varies along a distance $\lambda=2\pi/k$ along the optical axis $z$. It can be shown\footnote{The complete derivation of the paraxial wave-equation can be found in [\cite[\textit{§2.2.C}]{Saleh2019}].} that plugging this modulated plane-wave in the Helmholtz equation (Eq.~\ref{eq:Helmholtz}) leads to:
+Eq.~\ref{eq:parabolic} is a paraxial\footnote{Consider a spherical wave with $\textbf{r}=(x,y,z)$ and that $\vert\textbf{r}\vert=r=\sqrt{x^2 + y^2 +z^2}$ and take a sufficiently large coordinate along the $z-$axis (optical axis). The paraxial approximation of the spherical wave can be obtained by choosing points in the $xy-$plane near enough the $z-$axis so that $\sqrt{x^2+y^2}\ll z$ holds. It follows that $r=z\sqrt{1+(x^2+y^2)/z^2}$ can be expanded in a Taylor series: $r\approx z+(x^2+y^2)/2z$ and directly plugged into the exponent in Eq.~\ref{eq:spherical} leading to Eq.~\ref{eq:parabolic} [\cite[\textit{§2.2}]{Saleh2019}]. The paraxial approximation of the spherical wave is also called the Fresnel approximation.\label{note:fresnel}} approximation of the spherical wave defined by Eq.~\ref{eq:spherical}.
+
+The paraboloidal wave does not, however, formally satisfy the Helmholtz equation as defined by Eq.~\ref{eq:Helmholtz}. It does obey a paraxial form of the Helmholtz wave-equation\footnote{The Gaussian beam is another very common solution of the paraxial Helmholtz equation. Consider the paraboloidal wave as defined by Eq.~\ref{eq:parabolic}. Evaluating it along the optical axis at a position $z^+=z+\Delta z$ also yields a solution to the paraxial Helmholtz equation (cf. Eq.~\ref{eq:Helmholtz_paraxial}) even if $\Delta z$ is a purely imaginary number [\cite[\textit{Exercise 2.2-2}]{Saleh2019}]. The Gaussian beam can be obtained from the paraboloidal wave by substituting $z$ in Eq.~\ref{eq:parabolic} by $z-iz_0$, for a real $z_0$ [\cite[\textit{§3.1}]{Saleh2019}].
+% \begin{equation}\label{eq:gaussian}
+%     U(\textbf{r})=-i\frac{A}{z_0}\frac{w_0}{W(z)}\exp{\Bigg[-\frac{x^2+y^2}{W^2(z)}\Bigg]}\exp\Bigg[ -ikz - ik\frac{x^2 +y^2}{2R(z)}+i\varphi(z)\Bigg],
+% \end{equation}
+% where $z_0$ is the so-called Rayleigh range and:
+% \begin{subequations}\label{eq:gaussian_parameters}
+%     \begin{align}
+%         W(z) &= w_0\sqrt{1+\Bigg(\frac{z}{z_0}\Bigg)^2}&&(\small{\text{beam~width}}),\\
+%         R(z) &= z \Bigg[1+ \Bigg(\frac{z}{z_0}\Bigg)^2\Bigg] &&(\small{\text{wavefront-radius-of-curvature}}),\\
+%         \varphi(z) &= \tan^{-1}\Bigg(\frac{z}{z_0}\Bigg) &&(\small{\text{Gouy~phase}}),\\
+%         w_0 &= \sqrt{\frac{\lambda z_0}{\pi}} &&(\small{\text{beam~width~at~the~waist}}).
+%     \end{align}
+% \end{subequations}{}
+}. This assumes a plane wave as defined in Eq.~\ref{eq:planewave} can be modulated by a complex envelope $A(\textbf{r})$ that slowly varies along a distance $\lambda=2\pi/k$ along the optical axis $z$. It can be shown\footnote{The complete derivation of the paraxial wave-equation can be found in [\cite[\textit{§2.2.C}]{Saleh2019}].} that plugging this modulated plane-wave in the Helmholtz equation (Eq.~\ref{eq:Helmholtz}) leads to:
 \begin{equation}\label{eq:Helmholtz_paraxial}
     \Bigg(i2k\frac{\partial}{\partial z}-\nabla^2_T\Bigg)A=0.
 \end{equation}
 where $\nabla^2_T\equiv\partial^2/\partial x^2 + \partial^2/\partial y^2$ is the transverse Laplace operator. Eq.~\ref{eq:Helmholtz_paraxial} is the paraxial Helmholtz equation [\cite[\textit{§2.2}]{Saleh2019}]. Determining the evolution in space of the solutions to the Helmholtz equation (Eq.~\ref{eq:Helmholtz}) or the paraxial Helmholtz equation (Eq.~\ref{eq:Helmholtz_paraxial}) is the core of what is called scalar diffraction theory.
-
 
 \begin{figure}[t]
     \centering
@@ -227,7 +229,6 @@ where $\nabla^2_T\equiv\partial^2/\partial x^2 + \partial^2/\partial y^2$ is the
     \label{fig:diffraction}
 \end{figure}
 
-\newpage
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 \subsubsection*{Fresnel diffraction}
@@ -443,11 +444,11 @@ while the kernel of the Fresnel transform in reciprocal-space is given by:
 \begin{align}\label{eq:kernel_reciprocal}
     H(f_x,f_y)=\exp{\bigg[-i\pi\lambda L\big(f_x^2+f_y^2 \big)\bigg]}.
 \end{align}{}
-The Eqs.~\ref{eq:kernel_real} and \ref{eq:kernel_reciprocal} are related by: $H(f_x,f_y)=i/(\lambda L) \mathcal\cdot{F}\{ h(x,y)\}$ (cf. Eq.~\ref{eq:kernel}). When propagating a wave-field over a very small distance $L$ with the Fresnel diffraction integral, the argument of the exponential function in transformation kernel in real-space becomes very large and the kernel becomes less well-behaved as shown in  Fig.~\ref{fig:real_reciprocal}(a)-(b), consequently small propagation distances are better represented in the reciprocal space - cf. Fig.~\ref{fig:real_reciprocal}(c)-(d). This hints to the fact that when numerically evaluating the Fresnel transform for short propagation distances, methods using the reciprocal-space are more advantageous than in real-space and constrains like the Eq.~\ref{eq:accuracy_Fresnel} can be overlooked provided the non-paraxial components of the Fourier spectrum of the input wavefield is negligible.
+The Eqs.~\ref{eq:kernel_real} and \ref{eq:kernel_reciprocal} are related by: $H(f_x,f_y)=i/(\lambda L)\cdot \mathcal{F}\{ h(x,y)\}$ (cf. Eq.~\ref{eq:kernel}). When propagating a wave-field over a very small distance $L$ with the Fresnel diffraction integral, the argument of the exponential function in transformation kernel in real-space becomes very large and the kernel becomes less well-behaved as shown in  Fig.~\ref{fig:real_reciprocal}(a)-(b), consequently small propagation distances are better represented in the reciprocal space - cf. Fig.~\ref{fig:real_reciprocal}(c)-(d). This hints to the fact that when numerically evaluating the Fresnel transform for short propagation distances, methods using the reciprocal-space are more advantageous than in real-space and constrains like the Eq.~\ref{eq:accuracy_Fresnel} can be overlooked provided the non-paraxial components of the Fourier spectrum of the input wavefield is negligible.
 
 \begin{figure}[t]
     \centering
-    {\includegraphics[width=0.6\linewidth]{figures/ch02/real_reciprocal.png}}
+    {\includegraphics[width=0.5\linewidth]{figures/ch02/real_reciprocal.png}}
     \caption[Frensel transformation kernel in real and reciprocal space]{Real-space kernel of the Fresnel transformation for (a) a short propagation distance and for a (b) longer propagation distance. The reciprocal-space propagator kernel is shown in (c) for a small propagation distance and in (d) for a longer distance. Adapted from Fig.~1 in [\cite{Li2015}].}
     \label{fig:real_reciprocal}
 \end{figure}
@@ -457,7 +458,7 @@ The Eqs.~\ref{eq:kernel_real} and \ref{eq:kernel_reciprocal} are related by: $H(
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-Consider a non-collimated wave-field $U(x_0,y_0,z_0)$ in free-space (eg. Eq.~\ref{eq:spherical} or Eq.~\ref{eq:gaussian}). The phase term of such wave has quadratic terms with radii of curvature in the horizontal and vertical planes $R_x$ and $R_y$ and the transverse coordinates of the centre point $(x_\text{c},y_\text{c})$. It is possible to rewrite $U(x_0,y_0,z_0)$ as:
+Consider a non-collimated wave-field $U(x_0,y_0,z_0)$ in free-space (eg. Eq.~\ref{eq:spherical}). The phase term of such wave has quadratic terms with radii of curvature in the horizontal and vertical planes $R_x$ and $R_y$ and the transverse coordinates of the centre point $(x_\text{c},y_\text{c})$. It is possible to rewrite $U(x_0,y_0,z_0)$ as:
 \begin{align}\label{eq:Semi_a}
     U(x_0,y_0,z_0) = F(x_0,y_0,z_0)\exp{\Bigg\{\frac{ik}{2}\Bigg[\frac{(x_0-x_c)^2}{R_y}+\frac{(y_0-y_c)^2}{R_y} \Bigg]\Bigg\}},
 \end{align}{}
@@ -579,7 +580,7 @@ In general\footnote{For typical electron-bunch lengths larger than $\sim30~\text
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-The other extreme is the fully coherent case, that is $|j(\textbf{r}_1,\textbf{r}_2)|\approx1$ for any two pair of points $\textbf{r}_1$ and $\textbf{r}_2$ inside the beam footprint. This regime is often prone to diffraction effects and the framework for dealing with those is best given by wave-propagation, which follows physical optics principles - cf. §\ref{sec:physical_optics}~-~\textit{\nameref{sec:physical_optics}}. The X-ray source can be simply approximated by any solution of the Helmholtz equation (Eq.~\ref{eq:Helmholtz}) or its paraxial form given by Eq.~\ref{eq:Helmholtz_paraxial}. The most commonly used solutions are: the plane wave (Eq.~\ref{eq:planewave}), the spherical wave (Eq.~\ref{eq:spherical}), the parabolic wave (Eq.~\ref{eq:parabolic}) and the Gaussian beam (Eq.~\ref{eq:gaussian}-\ref{eq:gaussian_parameters}). Alternatively, the wavefront emerging from any accelerator-based X-ray source described by an arbitrary magnetic field can be calculated [\cite{Chubar1995, Chubar2001}]. This wave-field can then be propagated in the free-space between the optical elements using the diffraction integrals (cf. Eqs.~\ref{eq:Huygens-Fresnel},  \ref{eq:Fresnel} or \ref{eq:Fraunhofer}). The interaction between the wave and optical elements in the beamline is done by the calculation of the appropriate transmission element\footnote{In addition to the theory describing the propagation of X-rays in the matter (§\ref{sec:thin_element}~-~\textit{\nameref{sec:thin_element}}) a variety of optical elements can be simulated within the wave optics by being able to describe them adequately as transmission elements, similar to a transfer function in signals and systems theory - cf. [\cite{Canestrari2014, Li2017}].}. After the said wave is propagated to the observation plane, the intensity and phase can be calculated. 
+The other extreme is the fully coherent case, that is $|j(\textbf{r}_1,\textbf{r}_2)|\approx1$ for any two pair of points $\textbf{r}_1$ and $\textbf{r}_2$ inside the beam footprint. This regime is often prone to diffraction effects and the framework for dealing with those is best given by wave-propagation, which follows physical optics principles - cf. §\ref{sec:physical_optics}~-~\textit{\nameref{sec:physical_optics}}. The X-ray source can be simply approximated by any solution of the Helmholtz equation (Eq.~\ref{eq:Helmholtz}) or its paraxial form given by Eq.~\ref{eq:Helmholtz_paraxial}. The most commonly used solutions are: the plane wave (Eq.~\ref{eq:planewave}), the spherical wave (Eq.~\ref{eq:spherical}), the parabolic wave (Eq.~\ref{eq:parabolic}) and the Gaussian beam (not covered here). Alternatively, the wavefront emerging from any accelerator-based X-ray source described by an arbitrary magnetic field can be calculated [\cite{Chubar1995, Chubar2001}]. This wave-field can then be propagated in the free-space between the optical elements using the diffraction integrals (cf. Eqs.~\ref{eq:Huygens-Fresnel},  \ref{eq:Fresnel} or \ref{eq:Fraunhofer}). The interaction between the wave and optical elements in the beamline is done by the calculation of the appropriate transmission element\footnote{In addition to the theory describing the propagation of X-rays in the matter (§\ref{sec:thin_element}~-~\textit{\nameref{sec:thin_element}}) a variety of optical elements can be simulated within the wave optics by being able to describe them adequately as transmission elements, similar to a transfer function in signals and systems theory - cf. [\cite{Canestrari2014, Li2017}].}. After the said wave is propagated to the observation plane, the intensity and phase can be calculated. 
 
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------

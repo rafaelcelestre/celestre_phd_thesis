@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subfig}
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+% \usepackage[legalpaper, landscape, margin=0.5cm]{geometry}
+\usepackage[legalpaper, portrait, margin=0.5cm]{geometry}
+
+\thispagestyle{empty}
+% \renewcommand{\thesubfigure}{\roman{subfigure}}
+\begin{document}
+
+\begin{figure}[h]
+        \centering
+        \subfloat[$\eta=0.5$ (sub-pixel size)]{\includegraphics[height=3.6cm]{figures/ch04b/Al_eta_p5.pdf}}\hspace{0.1cm}
+        \subfloat[$\eta=1.0$ (nominal pixel size)]{\includegraphics[height=3.6cm]{figures/ch04b/Al_eta_1p0.pdf}}\hspace{0.1cm}
+        \subfloat[$\eta=2.0$ (poor lateral resolution)]{\includegraphics[height=3.6cm]{figures/ch04b/Al_eta_2p0.pdf}}\\
+        \caption*{Aluminium}
+        \setcounter{subfigure}{0}
+        \subfloat[$\eta=0.5$ (sub-pixel size)]{\includegraphics[height=3.6cm]{figures/ch04b/Be_eta_p5.pdf}}\hspace{0.1cm}
+        \subfloat[$\eta=1.0$ (nominal pixel size)]{\includegraphics[height=3.6cm]{figures/ch04b/Be_eta_1p0.pdf}}\hspace{0.1cm}
+        \subfloat[$\eta=2.0$ (poor lateral resolution)]{\includegraphics[height=3.6cm]{figures/ch04b/Be_eta_2p0.pdf}}\\
+        \caption*{Beryllium}
+        \setcounter{subfigure}{0}
+        \subfloat[$\eta=0.5$ (sub-pixel size)]{\includegraphics[height=3.6cm]{figures/ch04b/C_eta_p5.pdf}}\hspace{0.1cm}
+        \subfloat[$\eta=1.0$ (nominal pixel size)]{\includegraphics[height=3.6cm]{figures/ch04b/C_eta_1p0.pdf}}\hspace{0.1cm}
+        \subfloat[$\eta=2.0$ (poor lateral resolution)]{\includegraphics[height=3.6cm]{figures/ch04b/C_eta_2p0.pdf}}\\
+        \caption*{Diamond}
+        \setcounter{subfigure}{0}
+        \subfloat[$\eta=0.5$ (sub-pixel size)]{\includegraphics[height=3.6cm]{figures/ch04b/SU8_eta_p5.pdf}}\hspace{0.1cm}
+        \subfloat[$\eta=1.0$ (nominal pixel size)]{\includegraphics[height=3.6cm]{figures/ch04b/SU8_eta_1p0.pdf}}\hspace{0.1cm}
+        \subfloat[$\eta=2.0$ (poor lateral resolution)]{\includegraphics[height=3.6cm]{figures/ch04b/SU8_eta_2p0.pdf}}\\
+        \caption*{SU-8}
+        \setcounter{subfigure}{0}
+ \end{figure}
+\end{document}
