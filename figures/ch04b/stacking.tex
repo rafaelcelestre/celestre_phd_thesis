@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subfig}
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+% \usepackage[legalpaper, landscape, margin=0.5cm]{geometry}
+\usepackage[legalpaper, portrait, margin=0.5cm]{geometry}
+
+\thispagestyle{empty}
+% \renewcommand{\thesubfigure}{\roman{subfigure}}
+\begin{document}
+
+\begin{figure}[h]
+        \centering
+        \subfloat[full profile]{\includegraphics[height=3.29cm]{figures/ch04b/FF_error_addition.pdf}}\hspace{0.1cm}
+        \subfloat[polynomial fit]{\includegraphics[height=3.29cm]{figures/ch04b/LF_error_addition.pdf}}\hspace{0.1cm}
+        \subfloat[residues]{\includegraphics[height=3.29cm]{figures/ch04b/HF_error_addition.pdf}}
+\end{figure}
+\end{document}
