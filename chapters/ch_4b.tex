@@ -97,7 +97,7 @@ X-ray speckle imaging (SBI) can be implemented in several geometries depending o
 
 \subsubsection*{Illumination}
 
-Unlike other wavefront sensing techniques, speckle-based metrology has low requirements on transverse and longitudinal coherence\footnote{Phase-contrast with low-coherence sources has, in fact, been demonstrated [\cite{Cloetens1996, Wilkins1996, Pfeiffer2006, Munro2012}].} as demonstrated by [\cite{Zanette2014,Zdora2015,Wang2016}]. The degree of lateral coherence of the illumination is intimately connected with two important factors: the speckle contrast (cf. Eq.~\ref{eq:visibility}) and the propagation distance where shape and size of the speckle grains are preserved (cf. Eq.~\ref{eq:speckle_goodness}). X-rays with lower transverse coherence will produce speckle with low visibility (smeared out or blurred image \todo{- cf. Fig.~\ref{fig:coherence_vs_visibility}}) and the numerical process of tracking signals will lose some of its accuracy. For metrology applications, a minimum contrast of 0.1 (Eq.~\ref{eq:visibility}) is expected [\cite{Berujon2020a}] for the algorithms to show an acceptable accuracy. A reduced propagation distance $d$ between the sample and the detector (cf. Fig.~\ref{fig:speckle_tracking2} and \ref{fig:BM05}) arising from a reduced coherence length $\Delta_{\textbf{cl}_\perp}$ (Eq.~\ref{eq:speckle_goodness}) diminishes the angular sensitivity and will impact on the residual height error measurement sensitivity. When selecting an X-ray source, a higher degree of transverse coherence is preferred. Nonetheless, bending magnets\footnote{At BM05, a bending magnet was the X-ray source used in this project until the ESRF-EBS upgrade long shutdown (December 2018). The BM05 bending magnet in place since the opening of the ESRF in 1994 was decommissioned in favour of a much shorter and brighter 2-pole wiggler, installed early 2020. All the data collected at BM05 and presented hereafter were collected before this upgrade.} are readily well suited for  speckle-imaging-based metrology since their beam usually offer a the necessary minimum transverse coherence  \footnote{As of the writing of this thesis, the beamlines the routinely offer X-ray lenses metrology with speckle-based-imaging are the BM05 (ESRF) [\cite{Berujon2020a}], 1-BM (APS) [\cite{Qiao2020}] and B16 (DLS) [\cite{Sawhney2013}].}. 
+Unlike other wavefront sensing techniques, speckle-based metrology has low requirements on transverse and longitudinal coherence\footnote{Phase-contrast with low-coherence sources has, in fact, been demonstrated [\cite{Cloetens1996, Wilkins1996, Pfeiffer2006, Munro2012}].} as demonstrated by [\cite{Zanette2014,Zdora2015,Wang2016}]. The degree of lateral coherence of the illumination is intimately connected with two important factors: the speckle contrast (cf. Eq.~\ref{eq:visibility}) and the propagation distance where shape and size of the speckle grains are preserved (cf. Eq.~\ref{eq:speckle_goodness}). X-rays with lower transverse coherence will produce speckle with low visibility (smeared out or blurred image) and the numerical process of tracking signals will lose some of its accuracy. For metrology applications, a minimum contrast of 0.1 (Eq.~\ref{eq:visibility}) is expected [\cite{Berujon2020a}] for the algorithms to show an acceptable accuracy. A reduced propagation distance $d$ between the sample and the detector (cf. Fig.~\ref{fig:speckle_tracking2} and \ref{fig:BM05}) arising from a reduced coherence length $\Delta_{\textbf{cl}_\perp}$ (Eq.~\ref{eq:speckle_goodness}) diminishes the angular sensitivity and will impact on the residual height error measurement sensitivity. When selecting an X-ray source, a higher degree of transverse coherence is preferred. Nonetheless, bending magnets\footnote{At BM05, a bending magnet was the X-ray source used in this project until the ESRF-EBS upgrade long shutdown (December 2018). The BM05 bending magnet in place since the opening of the ESRF in 1994 was decommissioned in favour of a much shorter and brighter 2-pole wiggler, installed early 2020. All the data collected at BM05 and presented hereafter were collected before this upgrade.} are readily well suited for  speckle-imaging-based metrology since their beam usually offer a the necessary minimum transverse coherence  \footnote{As of the writing of this thesis, the beamlines the routinely offer X-ray lenses metrology with speckle-based-imaging are the BM05 (ESRF) [\cite{Berujon2020a}], 1-BM (APS) [\cite{Qiao2020}] and B16 (DLS) [\cite{Sawhney2013}].}. 
 
 Choosing the experiment energy\footnote{The energy chosen for most metrology experiments was $\text{E}=17~$keV with $\Delta \text{E}/\text{E}\approx10^{-4}$ by using a Si(111) DCM. This energy was originally set at the BM05 due to the source higher flux at this energy (the critical storage ring energy was around 19 keV) and the good compromise between absorption and sensitivity such working wavelength offer. Later, this same energy was also adopted for experiments at other beamlines in order to facilitate direct comparison during the data-analysis.} for X-ray lens metrology is about reaching a compromise between several competing constraints. For a fixed distance $d$, the energy should be high enough so that the speckle grains being transmitted through the lens geometric aperture are not excessively deformed by focusing at the detection plane - the higher the energy, the longer the focal length of a X-ray lens is (cf. Eq.~\ref{eq:CRL_classic}) - on the other hand, a lower energy gives larger refraction angles, which increases the sensitivity of the experimental technique. Excessive deformation of the transmitted speckle field, however, causes the tracking to fail in delivering credible results. Higher energy is also beneficial when considering the limit to the distance $d$ imposed by Eq.~\ref{eq:speckle_goodness}. On the other hand, increasing the energy decreases the coherent fraction of the emitted beam, which in turn reduces the speckle visibility\footnote{Slitting down the beam and increasing the propagation distance from the source to the speckle-membrane ($R_s$ in Fig.~\ref{fig:BM05}) both help to increase the coherence length at the expense of photon flux - cf. van-Cittert-Zernike theorem in [\cite[\textit{§4.4.4}]{Mandel1995}] or the applicability to SR in [\cite[\textit{§4}]{Geloni2008}].}. Lastly, the source spectrum (Fig.~\ref{fig:emission}) has also to be considered, as a higher photon flux allows for shorter acquisition time, meaning that experiments require less time and possible instabilities (vibrations, long time drifts and other external perturbations) have a lower impact on the acquired data. Requirements on the illumination monochromaticity are not stringent for SBI, but the metrology of X-ray lenses requires narrow bandwidths as these optics suffer from intrinsic strong aberrations. In order to secure a good lateral resolution, a Si(111) double crystal monochromator (DCM)\footnote{Yet, an experimental comparison between the metrology data obtained with a Si(111) DCM with $\Delta \text{E}/\text{E}\approx10^{-4}$ and a multi-layer monochromator with $\Delta \text{E}/\text{E}\approx10^{-2}$ showed very good agreement between both data-sets [\cite[\textit{\S3.3.3}]{Berujon2020a}].} is usually used to bring down the bandwidth to $\Delta \text{E}/\text{E}\approx10^{-4}$.
 
@@ -238,13 +238,14 @@ Being able to measure stacked lenses is also of high interest as it allows not o
 \clearpage
 
 \begin{table}[t]
-\caption[Lens stack 1 main parameters from XSVT metrology.]{Compilation of radii, figure errors and clear aperture for lenses L01 to L10 (stack 1) obtained with XSVT metrology.}
+\caption[Lens stack 1 main parameters from XSVT metrology]{Compilation of radii, figure errors and clear aperture for lenses L01 to L10 (stack 1) obtained with XSVT metrology.}
 \centering
-\label{tab:CDn}
+\label{tab:CDn}\small
 % \resizebox{\columnwidth}{!}{
 \begin{tabular}{cccccc}
+\hline \hline
 \textbf{lens}      & \textbf{radius}  & \multicolumn{3}{c}{figure errors$^\dagger$ (r.m.s) $\mu$m}  & \textbf{useful aperture}\\ \cline{3-5}
-\textbf{number}    & $\mu$m           & full profile & pol. fit   & residues & $\mu$m\\ \hline \hline
+\textbf{number}    & $\mu$m           & full profile & pol. fit   & residues & $\mu$m\\ \hline
 L01                &48.77   &0.57   &0.45   &0.35      &439\\
 L02                &48.24   &0.80   &0.69   &0.43      &442\\
 L03                &48.76   &0.77   &0.55   &0.54      &432\\
@@ -269,27 +270,27 @@ Stack 01:           &5.46   &5.75   &5.20   &2.47    &399\\
 \begin{figure}[!htb]
     \centering
     {\includegraphics[width=1.\linewidth]{figures/ch04b/CDn_individual.pdf}}
-    \caption[Artificially stacked lenses - stack 1 - figure errors]{Individually measured and artificially stacked lenses forming the stack 1. The individual lenses parameters are shown in Table~\ref{tab:CDn}. Profiles calculated for a geometric aperture of $A_{\diameter}=400~\mu\text{m}$.}
+    \caption[Figure errors from the artificially stacked lenses - L01-L10]{Individually measured and artificially stacked lenses forming the stack 1. The individual lenses parameters are shown in Table~\ref{tab:CDn}. Profiles calculated for a geometric aperture of $A_{\diameter}=400~\mu\text{m}$.}
     \label{fig:accumulated_profile_1}
 \end{figure}
 
 \begin{figure}[!htb]
     \centering
     {\includegraphics[width=1.\linewidth]{figures/ch04b/CDn_Stack.pdf}}
-    \caption[Stacked lenses - stack 1 - figure errors]{Measurement of a CRL composed of the lenses L01-L10 described in Table~\ref{tab:CDn} (stack 1). Profiles calculated for a geometric aperture of $A_{\diameter}=400~\mu\text{m}$.}
+    \caption[Figure errors from stack 1]{Measurement of a CRL composed of the lenses L01-L10 described in Table~\ref{tab:CDn} (stack 1). Profiles calculated for a geometric aperture of $A_{\diameter}=400~\mu\text{m}$.}
     \label{fig:CDn}
 \end{figure}
 
 \clearpage
 
 \begin{table}[t]
-\caption[Lens stack 2 main parameters from XSVT metrology.]{Compilation of radii, figure errors and useful aperture for lenses L11 to L20 (stack 2) obtained with XSVT metrology.}
+\caption[Lens stack 2 main parameters from XSVT metrology]{Compilation of radii, figure errors and useful aperture for lenses L11 to L20 (stack 2) obtained with XSVT metrology.}
 \centering
-\label{tab:CDo}
+\label{tab:CDo}\small
 % \resizebox{\columnwidth}{!}{
-\begin{tabular}{cccccc}
+\begin{tabular}{cccccc} \hline \hline
 \textbf{lens}      & \textbf{radius}  & \multicolumn{3}{c}{figure errors$^\dagger$ (r.m.s) $\mu$m}   & \textbf{useful aperture}\\ \cline{3-5}  
-\textbf{number}    & $\mu$m           & full profile & pol. fit   & residues                                         & $\mu$m\\ \hline \hline
+\textbf{number}    & $\mu$m           & full profile & pol. fit   & residues                                         & $\mu$m\\ \hline
 L11                &49.05   &0.71   &0.57   &0.43      &440\\
 L12                &49.27   &0.80   &0.68   &0.44      &460\\
 L13                &48.98   &0.94   &0.75   &0.56      &435\\
@@ -314,14 +315,14 @@ Stack 02:           &5.67    &6.47   &5.97   &2.49  &407\\
 \begin{figure}[!htb]
     \centering
     {\includegraphics[width=1.\linewidth]{figures/ch04b/CDo_individual.pdf}}
-    \caption[Artificially stacked lenses - stack 2 - figure errors]{Individually measured and artificially stacked lenses forming the stack 1. The individual lenses parameters are shown in Table~\ref{tab:CDo}. Profiles calculated for a geometric aperture of $A_{\diameter}=400~\mu\text{m}$.}
+    \caption[Figure errors from the artificially stacked lenses - L11-L20]{Individually measured and artificially stacked lenses forming the stack 2. The individual lenses parameters are shown in Table~\ref{tab:CDo}. Profiles calculated for a geometric aperture of $A_{\diameter}=400~\mu\text{m}$.}
     \label{fig:accumulated_profile_2}
 \end{figure}
 
 \begin{figure}[!htb]
     \centering
     {\includegraphics[width=1.\linewidth]{figures/ch04b/CDo_Stack.pdf}}
-    \caption[Stacked lenses - stack 2 - figure errors]{Measurement of a CRL composed of the lenses L11-L20 described in Table~\ref{tab:CDn} (stack 2). Profiles calculated for a geometric aperture of $A_{\diameter}=400~\mu\text{m}$.}
+    \caption[Figure errors from stack 2]{Measurement of a CRL composed of the lenses L11-L20 described in Table~\ref{tab:CDn} (stack 2). Profiles calculated for a geometric aperture of $A_{\diameter}=400~\mu\text{m}$.}
     \label{fig:CDo}
 \end{figure}
 
