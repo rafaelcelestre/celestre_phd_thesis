@@ -191,31 +191,28 @@ Figure~\ref{fig:sensitivity_2} shows the XSVT longitudinal sensitivity ($\Delta{
 
 Equation~\ref{eq:XSVT_resolution} is a geometric approximation of the problem and does not take into account propagation of uncertainties associated with the different components in the experiment, template-matching accuracy of the tracking routines nor numerical errors associated with the wavefront reconstruction as described by [\cite{Fried1977, Southwell1980}]. Those can be globally estimated by applying the XSVT data analysis routine to two different data-sets taken under the exact same experimental conditions. The two 2D deflection angle maps allow to obtain the angular sensitivity lower threshold and to estimate $\eta$ under the conditions imposed by the experimental setup. Those maps can be integrated to obtain the phase noise level (see Eq.~\ref{eq:wavefront_gradient}) and an associated thickness can by estimated by using Eq.~\ref{eq:recovered_thickness}. Applying the same reasoning to a single set of references used as both the reference- and sample-data sets instead, allows to calculate a fundamental data-processing limit.
 
-\clearpage
-
-\begin{figure}[t]
-        \centering
-        {\includegraphics[width=1.0\linewidth]{figures/ch04b/sensitivity_2.pdf}}
-        \caption[XSVT sensitivity calculation]{X-ray speckle vectorial tracking longitudinal sensitivity ($\Delta{z_{\text{min}}}$) for four common used materials for refractive optics manufacturing. The solid red line indicates the performance of the method at 10~keV, while the solid green line for 30~keV. The dashed purple line indicates the experimental performance at 17~keV (used energy for such experiments in this work.). Black point-dashed line indicates the nominal pixel size of the imaging detector $\Delta_\text{pixel}=0.65~\mu$m. Curves calculated using Eq.~\ref{eq:XSVT_resolution}.}\label{fig:sensitivity_2}
-\end{figure}
-
-\clearpage
 
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
-\section{Single lens measurements}\label{sec:single_lens}
+\section{X-ray lenses metrology}\label{sec:metrology}
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-Since early 2017, metrology of individual X-ray lenses has been systematically done at the ESRF. Measurements have been applied to quality control of commercially acquired X-ray lenses either for assessing the optical quality of already purchased lenses and for verifying if newly-purchased lenses meet specifications. The metrology profiles extracted from such measurements have been used in X-ray beamline simulations\footnote{Simulations using optical metrology of X-ray lenses have been reported in [\cite{Chubar2020}].} [\cite{Celestre2020}]. More recently, metrology of single lenses started to be used in order to aid manufacturing of X-ray lenses produced in-house\footnote{See [\cite{Celestre2020c}].} or as a co-development with commercial partners as it allows to understand the relation between production parameters and their effects on the lens profile.
+Since early 2017, metrology of individual X-ray lenses has been systematically done at the ESRF. Measurements have been applied to quality control of commercially acquired X-ray lenses either for assessing the optical quality of already purchased lenses and for verifying if newly-purchased lenses meet specifications. The metrology profiles extracted from such measurements have been used in X-ray beamline simulations\footnote{Simulations using optical metrology of X-ray lenses have been reported in [\cite{Chubar2020}].} [\cite{Celestre2020}]. More recently, metrology started to be used in order to aid manufacturing of X-ray lenses produced in-house\footnote{See [\cite{Celestre2020c}].} or as a co-development with commercial partners as it allows to understand the relation between production parameters and their effects on the lens profile.
+
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
+\subsection{Single lens measurements}\label{sec:single_lens}
+%-------------------------------------------------------------------------
+%-------------------------------------------------------------------------
 
 Tables~\ref{tab:CDn} and \ref{tab:CDo} show a compilation of radii, figure errors and useful geometric aperture for two sets of ten 2D-Beryllium lenses with nominal radius $R=50~\mu\text{m}$ and geometric aperture $A_{\diameter}=440~\mu\text{m}$ measured individually and as stacks. These are the lenslets used for in the optical simulations shown in \S\ref{sec:effect_optical_imperfections}~-~\textit{\nameref{sec:effect_optical_imperfections}} and \S\ref{sec:corrections}~-~\textit{\nameref{sec:corrections}}. The figure errors are divided in full profile, polynomial fit (low frequency - LF) and residues from the fit (high-frequency - HF). For the particular case of the 2D-Beryllium lenses, Zernike circle polynomials until the 37$^\text{th}$ order (3$^\text{rd}$ order spherical aberration) were used. In the context of this work, the low-frequencies (LF) span from $\sim500~\mu$m or $2\times10^{3}~\text{m}^{-1}$ (geometrical aperture of a lenslet) to $\sim50~\mu$m or $2\times10^{4}~\text{m}^{-1}$, while the mid- and high-frequencies span from $\sim50~\mu$m or $2\times10^{4}~\text{m}^{-1}$ to $\sim0.5~\mu$m or $2\times10^{6}~\text{m}^{-1}$, which is obtained from the Nyquist frequency\footnote{Nyquist frequency is defined as one over twice the effective pixel size $\Delta_\text{pixel}=0.65~\mu$m.} of the measured data.
 
-Individually measured lenses can be artificially stacked to study the effects of pilling up lenses and to be later compared to the measurement of stacked lenses. This artificial stacking can be done by propagating a plane wave through the CRL and extracting any developed quadratic phase term at the exit pupil - see Fig.~\ref{fig:accumulated_extraction}. The phase can be readily converted into a thickness profile in projection approximation with the aid of Eq.~\ref{eq:aux_funcs_transb}. The progressive increase of figure errors for the full-, fit- and residual- profiles is shown in Fig.~\ref{fig:stacking_errors}. The accumulated profiles for the stacks 1 and 2 are shown in Figs.~\ref{fig:accumulated_profile_1} and~\ref{fig:accumulated_profile_2} and compiled in Tables~\ref{tab:CDn} and \ref{tab:CDo}.  
+Individually measured lenses can be artificially stacked to study the effects of pilling up lenses and to be later compared to the measurement of stacked lenses. This artificial stacking can be done by propagating a plane wave through the CRL and extracting any developed quadratic phase term at the exit pupil - see Fig.~\ref{fig:accumulated_extraction}. The phase can be readily converted into a thickness profile in projection approximation with the aid of Eq.~\ref{eq:aux_funcs_transb}. The accumulated\footnote{The progressive increase of figure errors for the full-, fit- and residual- profiles is shown in Fig.~\ref{fig:stacking_errors} from \S\ref{sec:stacking}~-~\textit{\nameref{sec:stacking}}} profiles for the stacks 1 and 2 are shown in Figs.~\ref{fig:accumulated_profile_1} and~\ref{fig:accumulated_profile_2} and compiled in Tables~\ref{tab:CDn} and \ref{tab:CDo}.  
 
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
-\section{Stacked lenses measurements}\label{sec:lens_stack}
+\subsection{Stacked lenses measurements}\label{sec:lens_stack}
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
@@ -228,14 +225,14 @@ Being able to measure stacked lenses is also of high interest as it allows not o
     \label{fig:accumulated_extraction}
 \end{figure}
 
-\begin{figure}[t]
-    \centering
-    {\includegraphics[width=1.\linewidth]{figures/ch04b/stacking_errors.pdf}}
-    \caption[Accumulative figure errors]{Progressive increase of figure errors for the (a) full-, (b) fit- and (c) residual- profiles. The green-diamond shaped marker indicates the artificially stacked lenses from the stack 1, while the magenta triangles, the stack 2. The black markers indicate the corresponding measured stack. Figure errors calculated for a geometric aperture of $A_{\diameter}=400~\mu\text{m}$.}
-    \label{fig:stacking_errors}
-\end{figure}
+% \begin{figure}[t]
+%     \centering
+%     {\includegraphics[width=1.\linewidth]{figures/ch04b/stacking_errors.pdf}}
+%     \caption[Accumulative figure errors]{Progressive increase of figure errors for the (a) full-, (b) fit- and (c) residual- profiles. The green-diamond shaped marker indicates the artificially stacked lenses from the stack 1, while the magenta triangles, the stack 2. The black markers indicate the corresponding measured stack. Figure errors calculated for a geometric aperture of $A_{\diameter}=400~\mu\text{m}$.}
+%     \label{fig:stacking_errors}
+% \end{figure}
 
-\clearpage
+% \clearpage
 
 \begin{table}[t]
 \caption[Lens stack 1 main parameters from XSVT metrology]{Compilation of radii, figure errors and clear aperture for lenses L01 to L10 (stack 1) obtained with XSVT metrology.}
@@ -281,7 +278,7 @@ Stack 01:           &5.46   &5.75   &5.20   &2.47    &399\\
     \label{fig:CDn}
 \end{figure}
 
-\clearpage
+% \clearpage
 
 \begin{table}[t]
 \caption[Lens stack 2 main parameters from XSVT metrology]{Compilation of radii, figure errors and useful aperture for lenses L11 to L20 (stack 2) obtained with XSVT metrology.}
@@ -312,20 +309,28 @@ Stack 02:           &5.67    &6.47   &5.97   &2.49  &407\\
 % }
 \end{table}
 
-\begin{figure}[!htb]
+\begin{figure}[ht]
     \centering
     {\includegraphics[width=1.\linewidth]{figures/ch04b/CDo_individual.pdf}}
     \caption[Figure errors from the artificially stacked lenses - L11-L20]{Individually measured and artificially stacked lenses forming the stack 2. The individual lenses parameters are shown in Table~\ref{tab:CDo}. Profiles calculated for a geometric aperture of $A_{\diameter}=400~\mu\text{m}$.}
     \label{fig:accumulated_profile_2}
 \end{figure}
 
-\begin{figure}[!htb]
+\begin{figure}[ht]
     \centering
     {\includegraphics[width=1.\linewidth]{figures/ch04b/CDo_Stack.pdf}}
     \caption[Figure errors from stack 2]{Measurement of a CRL composed of the lenses L11-L20 described in Table~\ref{tab:CDn} (stack 2). Profiles calculated for a geometric aperture of $A_{\diameter}=400~\mu\text{m}$.}
     \label{fig:CDo}
 \end{figure}
 
+
+% \clearpage
+
+\begin{figure}[ht]
+        \centering
+        {\includegraphics[width=1.0\linewidth]{figures/ch04b/sensitivity_2.pdf}}
+        \caption[XSVT sensitivity calculation]{X-ray speckle vectorial tracking longitudinal sensitivity ($\Delta{z_{\text{min}}}$) for four common used materials for refractive optics manufacturing. The solid red line indicates the performance of the method at 10~keV, while the solid green line for 30~keV. The dashed purple line indicates the experimental performance at 17~keV (used energy for such experiments in this work.). Black point-dashed line indicates the nominal pixel size of the imaging detector $\Delta_\text{pixel}=0.65~\mu$m. Curves calculated using Eq.~\ref{eq:XSVT_resolution}.}\label{fig:sensitivity_2}
+\end{figure}
 
 \clearpage
 

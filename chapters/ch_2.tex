@@ -18,7 +18,7 @@ Hard X-rays are electromagnetic radiation with wavelength below\footnote{The cho
 \section{From the Hittorf's tube to the EBS}\label{sec:sources_intro}
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
-Since the discovery\footnote{Professor W. C. R\"{o}ntgen has published his first notes on the discovery of X-rays in January 1896 in [\cite{Roentgen1896}]. In March the same year, R\"{o}ntgen went on to publish some additional notes on his discovery [\cite{Roentgen1896a}]. Further observations of the X-ray properties were later published in [\cite{Roentgen1897}].} of X-rays in late November 1895 by W. C. R\"{o}ntgen [\cite{Roentgen1896}] up to the concept and implementation of the fourthgeneration high-energy synchrotron light sources in the second half of the 2010's [\cite{Eriksson2016}], there has been an Herculean amount of work directed to increasing a key energy-dependent quality parameter of x-ray sources, called brilliance\footnote{Although a common jargon in X-ray science and technology, the term brilliance is not unanimously agreed upon. For an insightful discussion on the terminology, please refer to the discussion in [\cite{Mills2005}] and to the Chapter~3.9 and Table~3.1 in [\cite{Talman2006}]. Eq.~\ref{eq:brilliance} is an approximation result. For an accurate calculation of the brilliance, please, refer to [\cite{Walker2019}].}:
+Since the discovery\footnote{Professor W. C. R\"{o}ntgen has published his first notes on the discovery of X-rays in January 1896 in [\cite{Roentgen1896}]. In March the same year, R\"{o}ntgen went on to publish some additional notes on his discovery [\cite{Roentgen1896a}]. Further observations of the X-ray properties were later published in [\cite{Roentgen1897}].} of X-rays in late November 1895 by W. C. R\"{o}ntgen [\cite{Roentgen1896}] up to the concept and implementation of the fourth generation high-energy synchrotron light sources in the second half of the 2010's [\cite{Eriksson2016}], there has been an Herculean amount of work directed to increasing a key energy-dependent quality parameter of x-ray sources, called brilliance\footnote{Although a common jargon in X-ray science and technology, the term brilliance is not unanimously agreed upon. For an insightful discussion on the terminology, please refer to the discussion in [\cite{Mills2005}] and to the Chapter~3.9 and Table~3.1 in [\cite{Talman2006}]. Eq.~\ref{eq:brilliance} is an approximation result. For an accurate calculation of the brilliance, please, refer to [\cite{Walker2019}].}:
 \begin{equation}\label{eq:brilliance}
    \mathcal{B}_0 = \frac{\varphi}{4\pi^2\epsilon_\mathrm{h}\epsilon_\mathrm{v}},
 \end{equation}{}
@@ -196,10 +196,10 @@ where $A$ is a complex constant (complex envelope), $\textbf{k}=(k_x, k_y, k_z)$
 \begin{equation}\label{eq:spherical}
     U(\textbf{r}) = \frac{A}{r}\exp(-ikr),
 \end{equation}
-here $\vert\textbf{r}\vert=r$ is the distance from the origin of the wavefront. %Two other common waves are often found in modelling of optical systems. Defining henceforth the $z-$axis as the optical axis, the paraboloidal wave is given by:
+here  $\vert\textbf{r}\vert=r=\sqrt{x^2 + y^2 +z^2}$ is the distance from the origin of the wavefront. %Two other common waves are often found in modelling of optical systems. Defining henceforth the $z-$axis as the optical axis, the paraboloidal wave is given by:
 Defining henceforth the $z-$axis as the optical axis, the paraboloidal wave is given by:
 \begin{equation}\label{eq:parabolic}
-    U(\textbf{r}) = \frac{A}{z}\exp(-ikz)\exp{\Bigg[-ik\frac{x^2 + y^2}{2z}\Bigg]},
+    U(\textbf{r}) = \frac{A}{z}\exp(-ikz)\exp{\Bigg(-ik\frac{x^2 + y^2}{2z}\Bigg)},
 \end{equation}
 Eq.~\ref{eq:parabolic} is a paraxial\footnote{Consider a spherical wave with $\textbf{r}=(x,y,z)$ and that $\vert\textbf{r}\vert=r=\sqrt{x^2 + y^2 +z^2}$ and take a sufficiently large coordinate along the $z-$axis (optical axis). The paraxial approximation of the spherical wave can be obtained by choosing points in the $xy-$plane near enough the $z-$axis so that $\sqrt{x^2+y^2}\ll z$ holds. It follows that $r=z\sqrt{1+(x^2+y^2)/z^2}$ can be expanded in a Taylor series: $r\approx z+(x^2+y^2)/2z$ and directly plugged into the exponent in Eq.~\ref{eq:spherical} leading to Eq.~\ref{eq:parabolic} [\cite[\textit{§2.2}]{Saleh2019}]. The paraxial approximation of the spherical wave is also called the Fresnel approximation.\label{note:fresnel}} approximation of the spherical wave defined by Eq.~\ref{eq:spherical}.
 
@@ -385,7 +385,7 @@ and:
 \end{subequations}
 $\Delta_z$ is the projected thickness along the $z-$axis and it depends on the transverse coordinates $(x,y)$, which can be dropped out for a more concise representation. Because of the multiplicative nature of the transmission element, Eq.~\ref{eq:transmission} can be put in operator\footnote{Using the operator formulation was inspired by discussions with David Paganin (Monash University, Australia) and Vincent Favre-Nicolin (ESRF, France).} form:
 \begin{equation}\label{eq:transmission_operator}
-    \mathrm{T}(\Delta_z)~\bullet =\sqrt{\mathrm{T}_\text{BL}(\Delta_z)}\exp{(-i\phi\Delta_z)}~\bullet.
+    \mathrm{T}(\Delta_z)~\bullet =\sqrt{\mathrm{T}_\text{BL}(\Delta_z)}\exp{[i\phi(\Delta_z)]}~\bullet.
 \end{equation}
 Eq.~\ref{eq:aux_funcs_transa} shows the absorption experienced by the wave-field when passing through matter (Beer-Lambert law) and Eq.~\ref{eq:aux_funcs_transb} shows the phase-shift experienced by the wave-field. The coefficient multiplying $\Delta_z$ in $\mathrm{T}_{\text{BL}}$ is know as linear attenuation coefficient $\mu$ [\cite[\textit{§1.6}]{Als-Nielsen2011}]. 
 

@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subfig}
+\usepackage{amsmath}
+\usepackage[export]{adjustbox}
+\usepackage{graphicx}
+\usepackage[legalpaper, landscape, margin=0.5cm]{geometry}
+
+\thispagestyle{empty}
+% \renewcommand{\thesubfigure}{\roman{subfigure}}
+\begin{document}
+
+\begin{figure}[h]
+        \centering
+        \subfloat[longitudinal scan]{\includegraphics[height=4cm]{figures/ch06/longitudinal.pdf}}\\
+        \subfloat[transverse scan]{\includegraphics[height=4cm]{figures/ch06/transverse.pdf}}\\%\hspace{0.1cm}
+        \subfloat[angular scan]{\includegraphics[height=4cm]{figures/ch06/angular.pdf}}
+
+\end{figure}
+\end{document}
