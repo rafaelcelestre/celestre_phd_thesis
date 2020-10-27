@@ -1,0 +1,28 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subfig}
+\usepackage{amsmath}
+\usepackage[export]{adjustbox}
+\usepackage{graphicx}
+\usepackage[legalpaper, portrait, margin=0.5cm]{geometry}
+
+\thispagestyle{empty}
+% \renewcommand{\thesubfigure}{\roman{subfigure}}
+\begin{document}
+
+\begin{figure}[h]
+        \centering
+        \subfloat[full beam caustics]{\includegraphics[height=4.5cm]{figures/ch06/plate_test/CDn_cst_cut_x_a2scan_Mo_again_full.pdf}}\\
+        \subfloat[zoomed beam caustics]{\includegraphics[height=3.4cm]{figures/ch06/plate_test/CDn_cst_cut_x_a2scan_Mo_again_reduced.pdf}}\hspace{0.1cm}
+        \subfloat[beam profile (upstream)]{\includegraphics[height=5cm]{figures/ch06/plate_test/a2scan_Mo_again_0070}}\hspace{0.1cm}
+        \subfloat[beam profile (downstream)]{\includegraphics[height=5cm]{figures/ch06/plate_test/a2scan_Mo_again_0050}}\hspace{0.1cm}
+        \caption*{aberrated system}
+        
+        
+        \subfloat[full beam caustics]{\includegraphics[height=4.5cm]{figures/ch06/plate_test/CDn_cst_cut_y_N10R50p5_outOfFocus_a2scan_Mo_full.pdf}}\\
+        \subfloat[zoomed beam caustics]{\includegraphics[height=3.4cm]{figures/ch06/plate_test/CDn_cst_cut_y_N10R50p5_outOfFocus_a2scan_Mo_reduced.pdf}}\hspace{0.1cm}
+        \subfloat[beam profile (upstream)]{\includegraphics[height=5cm]{figures/ch06/plate_test/N10R50p5_outOfFocus_a2scan_Mo0290}}\hspace{0.1cm}
+        \subfloat[beam profile (downstream)]{\includegraphics[height=5cm]{figures/ch06/plate_test/N10R50p5_outOfFocus_a2scan_Mo0274}}\hspace{0.1cm}
+        \caption*{corrected system}
+\end{figure}
+\end{document}

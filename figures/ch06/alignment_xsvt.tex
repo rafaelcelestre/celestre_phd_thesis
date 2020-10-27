@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subfig}
+\usepackage{amsmath}
+\usepackage[export]{adjustbox}
+\usepackage{graphicx}
+\usepackage[legalpaper, portrait, margin=0.5cm]{geometry}
+
+\thispagestyle{empty}
+% \renewcommand{\thesubfigure}{\roman{subfigure}}
+\begin{document}
+
+\begin{figure}[h]
+        \centering
+        \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDnbis_figure_errors_FF}}\hspace{0.05cm}
+        \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDnbis_figure_errors_LF}}\hspace{0.05cm}
+        \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDnbis_figure_errors_HF}}\hspace{0.05cm}
+        \subfloat[]{\includegraphics[height=2.6cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDnbis_Zern_fit}}
+        \caption*{lens stack 01}\setcounter{subfigure}{0}
+        \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v1_figure_errors_FF}}\hspace{0.05cm}
+        \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v1_figure_errors_LF}}\hspace{0.05cm}
+        \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v1_figure_errors_HF}}\hspace{0.05cm}
+        \subfloat[]{\includegraphics[height=2.6cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v1_Zern_fit}}
+        \caption*{lens stack 01 + PP01.v1}\setcounter{subfigure}{0}
+        \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v2_figure_errors_FF}}\hspace{0.05cm}
+        \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v2_figure_errors_LF}}\hspace{0.05cm}
+        \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v2_figure_errors_HF}}\hspace{0.05cm}
+        \subfloat[]{\includegraphics[height=2.6cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v2_Zern_fit}}
+        \caption*{lens stack 01 + PP01.v2}\setcounter{subfigure}{0}
+        \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v3_figure_errors_FF}}\hspace{0.05cm}
+        \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v3_figure_errors_LF}}\hspace{0.05cm}
+        \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v3_figure_errors_HF}}\hspace{0.05cm}
+        \subfloat[]{\includegraphics[height=2.6cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v3_Zern_fit}}
+        \caption*{lens stack 01 + PP01.v3}\setcounter{subfigure}{0}
+        % \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v1_figure_errors_FF}}\hspace{0.05cm}
+        % \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v1_figure_errors_LF}}\hspace{0.05cm}
+        % \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v1_figure_errors_HF}}\hspace{0.05cm}
+        % \subfloat[]{\includegraphics[height=2.6cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v1_Zern_fit}}
+        % \caption*{lens stack 01 + PP02.v1}\setcounter{subfigure}{0}
+        % \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v2_figure_errors_FF}}\hspace{0.05cm}
+        % \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v2_figure_errors_LF}}\hspace{0.05cm}
+        % \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v2_figure_errors_HF}}\hspace{0.05cm}
+        % \subfloat[]{\includegraphics[height=2.6cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v2_Zern_fit}}
+        % \caption*{lens stack 01 + PP02.v2}\setcounter{subfigure}{0}
+        % \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v3_figure_errors_FF}}\hspace{0.05cm}
+        % \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v3_figure_errors_LF}}\hspace{0.05cm}
+        % \subfloat[]{\includegraphics[height=2.3cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v3_figure_errors_HF}}\hspace{0.05cm}
+        % \subfloat[]{\includegraphics[height=2.6cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v3_Zern_fit}}
+        % \caption*{lens stack 01 + PP02.v3}\setcounter{subfigure}{0}
+
+\end{figure}
+\end{document}
+
+
+
+% \begin{figure}[h]
+%         \centering
+%         \subfloat[]{\includegraphics[height=3.2cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDnbis_figure_errors_FF}}\hspace{0.1cm}
+%         \subfloat[]{\includegraphics[height=3.5cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDnbis_Zern_fit}}
+%         \caption*{lens stack 01}
+%         \subfloat[]{\includegraphics[height=3.2cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v1_figure_errors_FF}}\hspace{0.1cm}
+%         \subfloat[]{\includegraphics[height=3.5cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v1_Zern_fit}}
+%         \caption*{lens stack 01 + PP01.v1}
+%         \subfloat[]{\includegraphics[height=3.2cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v2_figure_errors_FF}}\hspace{0.1cm}
+%         \subfloat[]{\includegraphics[height=3.5cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v2_Zern_fit}}
+%         \caption*{lens stack 01 + PP01.v2}
+%         \subfloat[]{\includegraphics[height=3.2cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v3_figure_errors_FF}}\hspace{0.1cm}
+%         \subfloat[]{\includegraphics[height=3.5cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP1_v3_Zern_fit}}
+%         \caption*{lens stack 01 + PP01.v3}
+        
+%         \subfloat[]{\includegraphics[height=3.2cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v1_figure_errors_FF}}\hspace{0.1cm}
+%         \subfloat[]{\includegraphics[height=3.5cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v1_Zern_fit}}
+%         \caption*{lens stack 01 + PP02.v1}
+%         \subfloat[]{\includegraphics[height=3.2cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v2_figure_errors_FF}}\hspace{0.1cm}
+%         \subfloat[]{\includegraphics[height=3.5cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v2_Zern_fit}}
+%         \caption*{lens stack 01 + PP02.v2}
+%         \subfloat[]{\includegraphics[height=3.2cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v3_figure_errors_FF}}\hspace{0.1cm}
+%         \subfloat[]{\includegraphics[height=3.5cm]{figures/ch06/plate_test/SRW_M_thk_res_workflow_a_FC_CDn_LSP2_v3_Zern_fit}}
+%         \caption*{lens stack 01 + PP02.v3}
+
+% \end{figure}

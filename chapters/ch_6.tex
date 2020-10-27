@@ -1,7 +1,7 @@
 \begin{refsection}
 \chapter{Correcting optical imperfections in refractive lenses}\label{sec:corrections}
 
-The necessity and possibility of arbitrarily manipulating the X-ray wavefront has been teased since, at least, the early 2000's [\cite{Chubar1999, Chubar2001b}]. It was not until the advent of extremely accurate additive and subtractive manufacturing techniques [\cite{Stohr2015, Polikarpov2016, Petrov2017, Roth2018, Sanli2018, Seiboth2019, Abrashitova2020, Antipov2020, Lin2020, Medvedskaya2020}] that the demonstration of free-form X-ray refractive optics was done [\cite{Sawhney2016,Seiboth2017,Laundy2019, Seiboth2020}]. The possibility of producing very accurate free-form optics for the correction of optical aberrations has brought renewed interest in wavefront sensing [\cite{Berujon2015, Seaberg2019}] and optical design simulations [\cite{Laundy2020}]. This chapter presents the early results on correcting optical imperfections in refractive lenses obtained at the ESRF. The design and expected performance is based on the lenses presented in \S\ref{sec:single_lens}~-~\textit{\nameref{sec:single_lens}} and the simulations shown in Chapter~\ref{sec:effect_optical_imperfections}~-~\textit{\nameref{sec:effect_optical_imperfections}}.
+The necessity and possibility of arbitrarily manipulating the X-ray wavefront has been teased since, at least, the early 2000's [\cite{Chubar1999, Chubar2001b}]. It was not until the advent of extremely accurate additive and subtractive manufacturing techniques [\cite{Stohr2015, Polikarpov2016, Petrov2017, Roth2018, Sanli2018, Seiboth2019, Abrashitova2020, Antipov2020, Lin2020, Medvedskaya2020}] that the demonstration of free-form X-ray refractive optics was done [\cite{Sawhney2016,Seiboth2017,Laundy2019, Seiboth2020, Dhamgaye2020}]. The possibility of producing very accurate free-form optics for the correction of optical aberrations has brought renewed interest in wavefront sensing [\cite{Berujon2015, Seaberg2019}] and optical design simulations [\cite{Laundy2020}]. This chapter presents the early results on correcting optical imperfections in refractive lenses obtained at the ESRF. The design and expected performance is based on the lenses presented in \S\ref{sec:single_lens}~-~\textit{\nameref{sec:single_lens}} and the simulations shown in Chapter~\ref{sec:effect_optical_imperfections}~-~\textit{\nameref{sec:effect_optical_imperfections}}.
 
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
@@ -9,7 +9,7 @@ The necessity and possibility of arbitrarily manipulating the X-ray wavefront ha
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-Correcting optical imperfections can be done by actively reshaping an optical element (adaptive optics) [\cite{Sutter2012, Alcock2013}] or by inserting a static (passive) optical element specially fitted to compensate the deviations from a perfect profile [\cite{Morawe2019}] or the wavefront error in relation to an idealised intensity [\cite{Donato2020}] or phase profile. Phase manipulation for wavefront manipulation can be done with diffractive elements [\cite{Probst2020}] or with refractive elements [\cite{Sawhney2016,Seiboth2017,Laundy2019,Seiboth2020}]. As indicated by the vast literature, refractive optics is the most popular method for correcting phase errors in partially-coherent X-ray beams. This section presents the design of refractive optical correctors for refractive lens stacks.
+Correcting optical imperfections can be done by actively reshaping an optical element (adaptive optics) [\cite{Sutter2012, Alcock2013}] or by inserting a static (passive) optical element specially fitted to compensate the deviations from a perfect profile [\cite{Morawe2019}] or the wavefront error in relation to an idealised intensity [\cite{Donato2020}] or phase profile. Phase manipulation for wavefront manipulation can be done with diffractive elements [\cite{Probst2020}] or with refractive elements [\cite{Sawhney2016,Seiboth2017,Laundy2019,Seiboth2020, Dhamgaye2020}]. As indicated by the vast literature, refractive optics is the most popular method for correcting phase errors in partially-coherent X-ray beams. This section presents the design of refractive optical correctors for refractive lens stacks.
 
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
@@ -101,7 +101,7 @@ Using the optical setup shown in Fig.~\ref{fig:recovered_phase_corrected}, it is
     \centering
     \begin{tabular}{lrcccccc}\hline \hline
     &    &$\sigma_z$ ($\mu$m)     &$S_{\text{a}}$ (Eq.~\ref{eq:Strehl})  &$S_{\text{b}}$  (Eq.~\ref{eq:Marechal}) &$S_{\text{c}}$  (Eq.~\ref{eq:Mahajan}) &Coherent &Partially-coherent \\ \hline
-    Fig.~\ref{fig:Strehl_correction} &L01-L10  &4.84  &0.067      &0.285 &0.393  &0.394          &0.409 \\
+    Fig.~\ref{fig:Strehl_correction} &L01-L10  &4.84  &0.067      &0.285 &0.393  &0.394         &0.409 \\
     &L01-L10 + PP                              &3.27  &0.503      &0.545 &0.608  &0.595         &0.671\\
     \hline \hline
     \end{tabular}
@@ -125,13 +125,10 @@ shows the beam profile at selected positions up- and downstream the focal plane 
 \end{figure}
 
 
-
-
-
 \begin{figure}[h]
         \centering
         {\includegraphics[width=0.99\linewidth]{figures/ch06/CDn_corrected.pdf}}
-        \caption[Expected performance of the diamond phase corrector]{Expected performance of the Diamond phase corrector. (a) partially-coherent simulations show the beam profile up- and downstream the focal position averaging 10$^{4}$ wavefronts to simulate the radiation emitted by an undulator; (b) the coherent simulations show the beam profile of a plane wavefront being focused; (c) beam propagation near the focal position (beam caustics) for a fully coherent beam (horizontal cut around $y=0$); (d) phase and (e) intensity of the PSF calculated focusing a plane-wavefront; (f) demagnified image of the undulator photon-source (extended source). The phase-plate was designed in diamond and a cut is shown in Fig.~\ref{fig:recovered_phase_corrected}. The residual error profile after the correction is shown in Fig.~\ref{fig:plate_profile}.}\label{fig:CDn_corrected}
+        \caption[Expected performance of the diamond phase corrector]{Expected performance of the diamond phase corrector. (a) partially-coherent simulations show the beam profile up- and downstream the focal position averaging 10$^{4}$ wavefronts to simulate the radiation emitted by an undulator; (b) the coherent simulations show the beam profile of a plane wavefront being focused; (c) beam propagation near the focal position (beam caustics) for a fully coherent beam (horizontal cut around $y=0$); (d) phase and (e) intensity of the PSF calculated focusing a plane-wavefront; (f) demagnified image of the undulator photon-source (extended source). The phase-plate was designed in diamond and a cut is shown in Fig.~\ref{fig:recovered_phase_corrected}. The residual error profile after the correction is shown in Fig.~\ref{fig:plate_profile}.}\label{fig:CDn_corrected}
 \end{figure}
 
 \begin{figure}[h]
@@ -150,8 +147,8 @@ The expected performance of the correction plate shown in Figs.~\ref{fig:CDn_cor
 
 \begin{figure}[h]
         \centering
-        {\includegraphics[width=0.6\linewidth]{figures/ch06/sensitivity_test.pdf}}
-        \caption[Alignment sensitivity scan for the corrected system]{Study of the precision requeriments on (a) longitudinal, (b) transverse and (c) angular alignment of the phase plate.}\label{fig:tolerancing}
+        {\includegraphics[width=0.7\linewidth]{figures/ch06/sensitivity_test.pdf}}
+        \caption[Alignment sensitivity scan for the corrected system]{Study of the precision requirements on longitudinal, transverse and angular alignment of the phase plate based on the optimisation of the Strehl ratio for a fully-coherent beam.}\label{fig:tolerancing}
 \end{figure}
 
 \clearpage
@@ -161,26 +158,109 @@ The expected performance of the correction plate shown in Figs.~\ref{fig:CDn_cor
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-This section presents the early results 
+A series of phase plates designed to correct the accumulated figure error of 10 Be lenses (L01-L10) was commissioned based on the profile shown in Fig.~\ref{fig:plate_profile}, which was calculated to be placed 10~mm downstream the last lens of the stack and to correct the errors at 8~keV. The plates were ablated from diamond (HPHT IIb) by a femtosecond laser (515~nm, 3~W, 60~kHz, 200~fs) by a third-party company. The refractive phase plates produced by such technique have a surface roughness of $\sim$700~nm, but the company offers polishing, which lowers the surface roughness down to $\sim$100~nm, at the expense of removing some high-spatial frequency features of the correctors, but it is possible to account for the uneven material removal during polishing on the design of the phase plate\footnote{At the time of this writing this has not yet been tested.} [\cite{Antipov2020}]. Regardless of the surface finishing, it is expected from the prototypes a high shape fidelity to the profile in Fig.~\ref{fig:plate_profile}. Lastly, to facilitate the use of the phase correctors, it was requested that the phase plates come in frames compatible with the ones used for X-ray lenses - see Fig.~\ref{fig:potpourri}. The phase-plate should be precisely centred in the $\diameter=12$~mm aluminium-bronze disk, so it can be easily installed in the lenses housing minimising the performance degradation from misalignments shown in Fig.~\ref{fig:tolerancing}.
 
-
+\begin{figure}[t]
+        \centering
+        {\includegraphics[width=1\linewidth]{figures/ch06/ppr.pdf}}
+        \caption[Lens casing, frame and correction plates]{Typical lens casing, lens frame and both generation of correction plates. }\label{fig:potpourri}
+\end{figure}
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 \subsection{Early tests on an X-ray beam}\label{sec:prototype_testing}
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
+So far, only two generation of correction plates were produced - see Fig.~\ref{fig:potpourri}. The first generation of phase-plates was received and measured in Dec. 2019 with the XSVT technique described in \S\ref{sec:measuring}~-~\textit{\nameref{sec:measuring}}. This first iteration did not aim to produce useful plates, but it allowed to gain useful insights for the production of the second generation correctors, which was delivered in June 2020 - this time with the aim of being used for correction optical imperfections. The phase-plates from the second generation design were chosen to demonstrate some of the preliminary results correcting optical imperfections in refractive lenses obtained at the ESRF.
+
+The second generation of phase plates produced a set of three correction plates (PP01.v1 to PP01.v3) based on the design shown in Fig.~\ref{fig:plate_profile}. The difference among the three plates is the script used for laser ablation and the presence or not of a surface post-processing. The v1 refers to an undisclosed laser polishing, while v2 and v3 have no post-processing. The PP01.v3 plate uses a different script for surface removal [\cite{Antipov2020}]. Figure~\ref{fig:pps} shows the retrieved profile using the XSVT technique and experimental setup described in \S\ref{sec:measuring}~-~\textit{\nameref{sec:measuring}}. The profiles are very similar among each other and no strong effect in the surface shape of the polished phase-plate can be observed with XSVT. For the phase-plate PP01.v2, the manufacturer provided visible light metrology (scanning confocal laser microscopy), which is shown in Fig.~\ref{fig:pp2_visible}. The surface roughness of the non-polished plate is evident in Fig.~\ref{fig:pp2_visible}(c). Figure~\ref{fig:metrology_comp} shows a profile cut of the retrieved thicknesses measured with XSVT and visible-light metrology against the designed profile, showing a initial good agreement for the central part of the phase plate and lesser agreement towards the edge of the geometric aperture.  
+
+Once measured individually, the phase plates were added directly to the lens casing relying on the assumption that the phase-plates were perfectly centred within their frames and thus, would ideally be perfectly aligned to the lens stack - see Fig.~\ref{fig:potpourri}. The lens stack with the correction plate was then re-measured with the XSVT. For comparison, the lens stack without any correction was also measured under the very same conditions. The metrology is shown in Fig.~\ref{fig:alignment_xsvt} and summarised in Table~\ref{tab:corrected_xsvt}. It is evident that the correction plates are not centred within the lateral tolerance defined by Fig.~\ref{fig:tolerancing}(c)-(d).
+
+\begin{table}[t]
+    \caption[Residual figure error profile r.m.s. value for L01-L10 and for the corrected system]{Residual figure error profile r.m.s. value for L01-L10 (Fig.~\ref{fig:accumulated_profile_1}) and for the corrected system (Fig.~\ref{fig:residual_profile}).}
+    \centering
+    \label{tab:corrected_xsvt}\small
+    \begin{tabular}{rccc}
+    \hline \hline
+    &\multicolumn{3}{c}{figure errors$^\dagger$ (r.m.s) $\mu$m}\\ \cline{2-4}
+    &full profile & pol. fit   & residues \\ \hline
+    stack 01:           &4.89  &4.73  &1.41\\
+    stack 01 + PP01.v1: &3.03  &2.91  &1.66\\
+    stack 01 + PP01.v2: &4.26  &3.95  &1.51\\
+    stack 01 + PP01.v3: &3.44  &3.10  &1.44\\
+    % stack 01 + PP02.v1: &4.86  &4.81  &1.78\\
+    % stack 01 + PP02.v2: &4.09  &3.84  &1.33\\
+    % stack 01 + PP02.v3: &3.59  &3.34  &1.21\\
+    \hline \hline
+    \multicolumn{4}{r}{\footnotesize{$^\dagger$ values given for $A_{\diameter}=320~\mu\text{m}$}}     
+    \end{tabular}
+\end{table}
+
+In order to be able to test the correction effectiveness and performance, it was decided to mount a phase-plate outside the lens case so at least the longitudinal alignment could be done. The phase-plate chosen for the early tests was the PP01.v2 due to its good agreement with he designed profile in Fig.~\ref{fig:plate_profile}. The simplest alignment of the phase plate is based on maximising the peak intensity at the image plane. This approach, however, could not be employed due to the saturation of the detector at the image plane even after a set of attenuators was used. Instead, the alignment of the phase-corrector was done trying to visually optimise, in terms of homogeneity, the far field beam-profile several tens of millimetres downstream the focal plane. Once the best transverse position was found, a series of 2D images up- and downstream the optical axis was taken with the same 2D imaging detector used for the XSVT (pixel size of $\sim$0.63~$\mu$m). The beam caustics can be obtained from this series of images and it is shown in Fig.~\ref{fig:experimental_CDn_pp} for the aberrated and corrected system. Due to the saturation at the vicinity of the focal plane, a quantitative assessment of the improvement cannot be done, however, a clear qualitative improvement on the beam profile up- and downstream the focal plane is seen.
+
+
+\clearpage
+
+\begin{figure}[t]
+        \centering
+        {\includegraphics[width=1\linewidth]{figures/ch06/pps.pdf}}
+        \caption[XSVT metrology of phase-plate PP01.v1-PP01.v3]{Phase-plate metrology using the XSVT as described in \S\ref{sec:measuring}~-~\textit{\nameref{sec:measuring}}.}\label{fig:pps}
+\end{figure}
+
+\begin{figure}[t]
+        \centering
+        {\includegraphics[width=1\linewidth]{figures/ch06/pp2_visible.pdf}}
+        \caption[Scanning confocal laser microscopy of PP01.v2 phase-plate]{Scanning confocal laser microscopy of the PP01.v2 phase-plate provided by the manufacturer.}\label{fig:pp2_visible}
+\end{figure}
+
+\begin{figure}[t]
+        \centering
+        {\includegraphics[width=0.7\linewidth]{figures/ch06/metrology_comp.pdf}}
+        \caption[Profile cuts of the correction plates]{Profile cuts of the correction plates P01.v1-v3 measured with the XSVT metrology and from the P01.v2 plate measured with the visible-light metrology. }\label{fig:metrology_comp}
+\end{figure}
+
+\begin{figure}[t]
+        \centering
+        {\includegraphics[width=1.0\linewidth]{figures/ch06/alignment_xsvt.pdf}}
+        \caption[Residual thickness after installation of the correction plates PP01.v1-v3]{\textbf{top row}: thickness error of lens stack 01. \textbf{centre-top} to \textbf{bottom row}: residual thickness after installation of the correction plates PP01.v1, PP01.v2 and PP01.v3 respectively.}\label{fig:alignment_xsvt}
+\end{figure}
+
+\clearpage
+
+\begin{figure}[t]
+        \centering
+        {\includegraphics[width=1.0\linewidth]{figures/ch06/experimental_CDn_pp.pdf}}
+        \caption[Experimental beam caustics for the aberrated and corrected systems]{Experimental beam caustics taken at 10.6~keV for the aberrated and corrected system.}\label{fig:experimental_CDn_pp}
+\end{figure}
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 \section{Discussion}\label{sec:corrective_optics_discussion}
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-The early results presented in are by no means discouraging. They there is a long way to reach results published by other groups, but they also indicate that the
+\subsection{Design and expected performance}
 
-$\blacksquare$
+The concept and design of optical correction for aberrated system is quite simple and can be represented by the Eq.~\ref{eq:phase_plate}. Although current micro- and nano-manufacturing techniques are able to reproduce such intricate profiles, its alignment on a beamline can be cumbersome and render the correction plate impractical. A successful compromise for 2D focusing CRLs is the adoption of a radially symmetric correction plate described by Eq.~\ref{eq:phase_plate_r} - these have been demonstrated to work by other groups [\cite{Seiboth2017,Seiboth2018,Seiboth2020,Dhamgaye2020}]. 
 
-\clearpage
+Using the approach guided by Eq.~\ref{eq:phase_plate_r}, a design to compensate for the accumulated errors from lenses L01-L10 (see  Fig.~\ref{fig:accumulated_profile_1}) was calculated and it is shown in Fig.~\ref{fig:plate_profile}. Placing this ideal diamond phase-plate on the simulations and extracting the residual profile allows to gain some insight in the expected performance of the corrected system. Although most, if not all spherical aberration was removed, there is still a high content on non-symmetric aberrations as shown in Figure~\ref{fig:residual_profile}(d), which will still degrade the beam focusing quality, but to a lesser extent. Figure~\ref{fig:residual_profile}(e) shows a (much reduced) residual profile, which indicates that the correction plate should be calculation over a few iterations, until the azimuthally averaged profile goes below what is currently possible to be manufactured. Table~\ref{tab:corrected} shows that the overall figure error r.m.s. value over the exit pupil is reduced to $\sim$68\% of the L01-L10 figure error. The low-frequencies are more affected being reduced to 65\% its original value. The high frequencies are reduced to 75\% of the value prior to the correction. This reduction in the figure errors is accompanied by an increase in the Strehl ratio as evidenced by Table~\ref{tab:Strehl_corrected} and Fig.~\ref{fig:Strehl_correction}. The improvement of the Strehl ratio for the coherent case differs from the one for the partially-coherent case. Figure~\ref{fig:Strehl} already showed a very small difference between both cases, but it was deemed to be insignificant. This difference shows the necessity of further studying the impact of the optical correction for moderate- and low-coherence systems.
+
+The expected improvements brought by the optical correction also apply to the beam up- and down-stream the image plane as the several cuts along the beam caustics in Fig.~\ref{fig:CDn_corrected} show. The elongated tail before the image plane and the doughnut shape from Fig.~\ref{fig:CDnS} are no longer present, however, at the image plane vicinity, satellite structures are seen around the main lobe. The image plane is greatly improved for both the fully- and partially-coherent simulations with great suppression of the side lobes, showing some similarities with the beam performance predicted in Fig.~\ref{fig:simulations_HF}. In fact, the better the correction plate is, the closer the system will behave as in Fig.~\ref{fig:simulations_HF}, a result of the high-frequency profile shown in Fig.~\ref{fig:CDnHF}. The performance of very well corrected systems will be the high-frequency content, which does not significantly changes the main-lobe, but significantly increases the background around it, as shown in Fig.~\ref{fig:hf_strehl_scan}.
+
+It is important to point out that the expected performance and all previously improvements are only obtained for the perfectly aligned phase-plate. Tolerance simulations were done to narrow down the most critical degrees of freedom when aligning the phase-plate in respect to the CRL to be corrected. The longitudinal scan is an useful tool when operating the phase plate outside the design energy. Figure~\ref{fig:tolerancing}(a)-(b) shows that a longitudinal scan of a phase-plate operating at its designed energy. Bringing the plate upstream the nominal position $\Delta_{z_\text{pp}}$ decreases its performance, but going downstream moderately improves it. This is probably due to the higher absorption towards the edge of the plate and a smaller footprint of the beam. The transverse alignment is by far the most sensitive degree of freedom and a moderate misalignment may compromise the correction, bringing the Strehl ratio to the same value the aberrated system originally had. Figure~\ref{fig:tolerancing}(c)-(d) reinforces what has been observed by other groups [\cite[Fig.~5.12]{Seiboth2016b}]. Finally, in terms of the Strehl ratio, the phase-plate is not too much influenced by the angular alignment, provided it is kept reasonably small. A tilt is introduced to the system, which laterally shifts the focused beam, but its intensity remains largely unchanged.
+
+\subsection{Early phase plate tests on an X-ray beam}
+
+The early tests with the second generation of phase-plate are encouraging and help delineate strategies for further development of phase correctors to be used with the CRLs. Three phase plates were produced trying to replicate the shape in Fig.~\ref{fig:plate_profile} with differences in the scripts used for engraving the diamond slab and with post polishing or not. Figures~\ref{fig:pps} and \ref{fig:pp2_visible} show a very similar profile for all three plates where the low-frequencies are well represented, but the residues from the polynomial fit show a clear limitation of XSVT in showing the difference between a polished and non-polished plate. Although the effects of polishing are noticeable in the far-field (presence of small angle scattering and speckle), XSVT cannot show the surface roughness as the visible-light metrology does - Fig.~\ref{fig:pp2_visible}. This makes the case for using complementary metrology methods for a complete characterisation of the phase-plates. When overlapping the profile cuts, as in Fig.~\ref{fig:metrology_comp}, the difference in the profiles becomes more evident. Visible light metrology and designed plate have a more similar profile, while the data collected with XSVT show lower height values towards the edges of the phase-plate. The differences may come from the processing of the phase-gradients from the XSVT, small inaccuracies when measuring the distances in the experimental setup or a difference between the tabled index of refraction/density and the real index of refraction from the plate - something similar has been speculated in [\cite[\textit{§3.2}]{Seiboth2020}] for justifying differences between design and measured phase-plates done using IP-S resist, a much less studied material than diamond. 
+
+One of the key aspects of the commissioned of the phase-plates is that they come perfectly centred in a frame compatible to the ones used for encasing X-ray lenses - Fig.~\ref{fig:potpourri}(b) and (c), which is done to circumvent the degradation in performance from the lateral misalignment in Fig.~\ref{fig:tolerancing}(c)-(d). Unfortunately, the phase plates of the current generation do not yet meet such requirements as the metrology of the CRL with the correction plates suggests - see Fig.~\ref{fig:alignment_xsvt}; improvements in the centring of the phase plates are expected from the partner company, but are also separately under way within the X-ray optics group at the ESRF. 
+
+Aligning the phase-plate in respect to the CRL also surfaced a very important aspect: the lack of internal protocol for alignment. Ideally, one would scan the phase-plate transversely at at each position of the scan, the residual wavefront would be calculated and the minimisation of figure errors would be sought. This approach is unpractical for the XSVT due to the data acquisition and processing time, not to mention the very large data-set it would generate. This highlights the necessity to re-implement speckle-tracking based on only two images (XST)\footnote{Refer to \S\ref{sec:foundation}~-~\textit{\nameref{sec:foundation}} in \S\ref{sec:measuring}~-~\textit{\nameref{sec:measuring}}.} for a fast evaluation of the figure errors at the expense of a lower spatial resolution. This technique felt in disfavour within the X-ray Optics Group due to the many advantages of XSVT [\cite{Berujon2020}], but there is clearly a necessity for a fast characterisation technique.
+
+Trying to align the phase-plate by maximising the peak intensity was the next obvious step. However, these particular experiments took place at the ID06 beamline after the ESRF-EBS upgrade, an undulator beamline that naturally has has a very high photon flux at the harmonics when compared to the typical emission of bending magnets\footnote{Refer to \S\ref{sec:sources}~-~\textit{\nameref{sec:sources}}.}. This increase in photon flux is welcome for the metrology, but causes the imaging detector to saturate at the image plane even after attenuators were placed in the beam. As an alternative to the optimisation of the peak intensity, the qualitative improvement of the beam profile downstream the focal plane was done. The phase plate was scanned transversely while the far field was registered. The final position of the phase plate was where the beam was more homogeneous and the doughnut shape less evident. The drawing of general guidelines for the alignment of the phase-plates and metrics to evaluate it are the topic of future works\footnote{With the resume of the ESRF user's mode, more access to beamtimes are expected. The ESRF reopened to the public on the 25$^\text{th}$ of August 2020, despite of the pandemic outbreak of the COVID-19 [\cite{Cho2020}].}.
+
+The beam caustics and profiles shown in Fig.~\ref{fig:experimental_CDn_pp} for the aberrated beam confirm the results from the modelling presented in the chapter~\ref{sec:effect_optical_imperfections}~-~\textit{\nameref{sec:effect_optical_imperfections}} and published in [\cite{Celestre2020}]. The presence of the tail upstream the focal plane and the doughnut shape downstream are clearly present. A direct comparison with the simulations is not possible due to the limited caustic step and detector pixel size, but the main elements and trends are present. Once the phase-plate is inserted and aligned, an improvement in the beam profile homogeneity is seen, although a quantification is not possible, due to the saturation of the detector. The central tail is reduced, although still present upstream the image plane. More remarkable is the suppression of the doughnut shape. The performance of the correction plate is better near the image plane, but that could be from the low spatial resolution of the detector. The correction performance is, at the moment, far from the expected simulated performance or the reported performance from other groups [\cite{Seiboth2017,Seiboth2018,Seiboth2020,Dhamgaye2020}]. These are the performance of second-generation phase plates and with beamtime availability and addressing the aforementioned issues with alignment, wavefront-sensing and protocols for evaluating the performance of the phase-plates, improvements in the design and fabrication of phase plates are expected.  $\blacksquare$
+
 \addcontentsline{toc}{section}{References}
 \printbibliography[heading=subbibliography]
 \end{refsection}
