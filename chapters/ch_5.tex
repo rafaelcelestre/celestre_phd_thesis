@@ -129,7 +129,7 @@ For this section, a hypothetical beamline operating on the new Extremely Brillia
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 In a conservative approach, the partially coherent simulations presented here were done using 10$^{4}$ wavefronts to ensure convergence.
-The convergence of the partially-coherent simulations is connected to the sampling of the electron distribution $f(s,s',\gamma_e)$, where each electron in a bunch has a different initial condition in terms of position $s=(x_e,y_e,z_e=0)$, direction $s'=(x'_e,y'_e)$ and energy $\gamma_e$ - see \textit{Physical-optics-based methods} in \S\ref{sec:partially_coherent}~-~\textit{\nameref{sec:partially_coherent}}. \todo{Fig.~\ref{fig:ME_convergence} shows the sampling of the function $f(s,s',\gamma_e)$ for the ESRF-EBS, the old ESRF-low $\beta$ and the old ESRF-high $\beta$ straight sections.}
+The convergence of the partially-coherent simulations is connected to the sampling of the electron distribution $f(s,s',\gamma_e)$, where each electron in a bunch has a different initial condition in terms of position $s=(x_e,y_e,z_e=0)$, direction $s'=(x'_e,y'_e)$ and energy $\gamma_e$ - see \textit{Physical-optics-based methods} in \S\ref{sec:partially_coherent}~-~\textit{\nameref{sec:partially_coherent}}. %\todo{Fig.~\ref{fig:ME_convergence} shows the sampling of the function $f(s,s',\gamma_e)$ for the ESRF-EBS, the old ESRF-low $\beta$ and the old ESRF-high $\beta$ straight sections.}
 
 \begin{table}[t]
 \caption[Electron-beam parameters for the ESRF-ESB, the old ESRF-low $\beta$ and the old ESRF-high $\beta$ straight sections]{\todo{Electron-beam parameters for the ESRF-ESB, the old ESRF-low $\beta$ and the old ESRF-high $\beta$ straight sections.}}\label{tab:E_beam_param}
@@ -189,12 +189,13 @@ Calculating the full beam caustic with partially-coherent simulations is impract
 
 \clearpage
 
-%-------------------------------------------------------------------------
-%-------------------------------------------------------------------------
-\section{Imaging}\label{sec:imaging_sim}
-%-------------------------------------------------------------------------
-%-------------------------------------------------------------------------
-\todo{If there's time: grid \& Siemens star [\cite{Simons2017}]} 
+% %-------------------------------------------------------------------------
+% %-------------------------------------------------------------------------
+% \section{Imaging}\label{sec:imaging_sim}
+% %-------------------------------------------------------------------------
+% %-------------------------------------------------------------------------
+% \todo{If there's time: grid \& Siemens star [\cite{Simons2017}]} 
+
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 \section{Discussion}\label{sec:discussion}
@@ -218,8 +219,9 @@ The metrology of single lenses and that of lens stacks was already discussed in 
     \label{fig:CD_Strehl}
 \end{figure}
 
-The effect on the resulting aberrations of stacking X-ray lenses has been modelled and discussed in depth by [\cite{Osterhoff2017}]. The progressive increase in the resulting figure errors from lenses artificially stacked is shown in Fig.~\ref{fig:stacking_errors}, which shows the evolution of the (a) full figure errors, (b) the polynomial fit of the full profile and (c) the residues when stacking lenses \todo{carefully read Osterhof's paper and make comparison with his theory}. The simulations in Fig.~\ref{fig:CDn01-05-10} show the progressive deterioration of an X-ray beam by adding the figure errors to the simulations by showing three scenarios: a single lens, five lenses and ten lenses, representing a low-, a moderate- and a high-aberrated system. This sensitivity study in only possible because the metrology of individual lenses is available. Using the metrology of a full stack and scaling it would not adequately represent the system due to the existence of correlated- and uncorrelated figure errors as pointed out by [\cite{Osterhoff2017}] and shown in Fig.~\ref{fig:stacking_errors}.
+The effect on the resulting aberrations of stacking X-ray lenses has been modelled and discussed in depth by [\cite{Osterhoff2017}]. The progressive increase in the resulting figure errors from lenses artificially stacked is shown in Fig.~\ref{fig:stacking_errors}, which shows the evolution of the (a) full figure errors, (b) the polynomial fit of the full profile and (c) the residues when stacking lenses. The simulations in Fig.~\ref{fig:CDn01-05-10} show the progressive deterioration of an X-ray beam by adding the figure errors to the simulations by showing three scenarios: a single lens, five lenses and ten lenses, representing a low-, a moderate- and a high-aberrated system. This sensitivity study in only possible because the metrology of individual lenses is available. Using the metrology of a full stack and scaling it would not adequately represent the system due to the existence of correlated- and uncorrelated figure errors as pointed out by [\cite{Osterhoff2017}] and shown in Fig.~\ref{fig:stacking_errors}.
 
+%  \todo{carefully read Osterhof's paper and make comparison with his theory}.
 
 \begin{figure}[t]
     \centering
