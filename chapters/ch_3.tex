@@ -33,9 +33,7 @@ Parallel to the early observation of the phenomena that showed that X-rays are a
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-The early optical elements based on diffraction for focusing of X-rays were curved crystals operating on the Bragg diffraction condition [\cite{Gouy1916,Seemann1916}]. The use of curved crystals\footnote{Several early works on curved crystals often refer to "systems operating on Bragg reflection", which is actually an euphemism for diffraction.} for focusing X-rays came in context of optimising the performance of spectrographs (spectrometers) with major contributions from [\cite{Johansson1933,V.Hamos1933, Hamos1937}]. Other historical milestones are multi-layer mirrors\footnote{} , monochromators [\cite{Smith1941}] and gratings monochromators [\cite{}] and zone-plates\footnote{Often referred to X-ray lenses up until the ealy 1990's, when refractive X-ray lenses were demonstrated for the first time [\cite{Snigirev1996}].} [\cite{Baez1960,Schmahl1969,Kirz1974}]. More recent developments include (multi-layer) Laue lenses [\cite{}], kinoform lenses\footnote{Kinoform lenses are a hybrid between diffractive- and refractive optics [\cite{Jordan1970}].} [\cite{}] and diffractive corrective optics for focusing elements [\cite{Probst2020}].
-
-
+The early optical elements based on diffraction for focusing of X-rays were curved crystals operating on the Bragg diffraction condition [\cite{Gouy1916,Seemann1916}]. The use of curved crystals\footnote{Several early works on curved crystals often refer to "systems operating on Bragg reflection", which is actually an euphemism for diffraction.} for focusing X-rays came in context of optimising the performance of spectrographs (spectrometers) with major contributions from [\cite{Johansson1933,V.Hamos1933, Hamos1937}]. Other historical milestones are multi-layer mirrors\footnote{In the multi-layer mirrors it is not the total external reflection effect that reflects the X-rays, but Bragg diffraction from the periodic arrangement of the layered structture on the mirror surface.}, monochromators [\cite{Smith1941}] and gratings monochromators [\cite{refMonoGrating}] and zone-plates\footnote{Often referred to X-ray lenses up until the ealy 1990's, when refractive X-ray lenses were demonstrated for the first time [\cite{Snigirev1996}].} [\cite{Baez1960,Schmahl1969,Kirz1974}]. More recent developments include (multi-layer) Laue lenses [\cite{refMLL}], kinoform lenses\footnote{Kinoform lenses are a hybrid between diffractive- and refractive optics [\cite{Jordan1970}].} [\cite{refKino}] and diffractive corrective optics for focusing elements [\cite{Probst2020}].
 
 
 %-------------------------------------------------------------------------
@@ -44,7 +42,7 @@ The early optical elements based on diffraction for focusing of X-rays were curv
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-Using total external reflection for focusing X-rays started around the late 1940's with [\cite{Ehrenberg1947, Kirkpatrick1948, Ehrenberg1949, Kirkpatrick1950}] in the context of direct imaging and X-ray microscopy\footnote{Early works on "X-ray microscopy" are based on imaging of the reciprocal space with the necessity of Fourier transformations to recover the image in the direct space [\cite{Bragg1939,Bragg1942}].}, moving away from the spectroscopy application of the previous decades. Soon after several X-ray mirror designs emerged [\cite{Wolter1952,Montel1957}] and continue to do so today [\cite{}]. X-ray mirrors have a very wide use in X-ray optics and a general review can be found in [\cite{Howells1993,Susini1993}].
+Using total external reflection for focusing X-rays started around the late 1940's with [\cite{Ehrenberg1947, Kirkpatrick1948, Ehrenberg1949, Kirkpatrick1950}] in the context of direct imaging and X-ray microscopy\footnote{Early works on "X-ray microscopy" are based on imaging of the reciprocal space with the necessity of Fourier transformations to recover the image in the direct space [\cite{Bragg1939,Bragg1942}].}, moving away from the spectroscopy application of the previous decades. Soon after several X-ray mirror designs emerged [\cite{Wolter1952,Montel1957}] and continue to do so today [\cite{refNewMirrors}]. X-ray mirrors have a very wide use in X-ray optics and a general review can be found in [\cite{Howells1993,Susini1993}].
 
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
@@ -80,13 +78,6 @@ An interesting account of the early days of X-ray optics is presented by [\cite{
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 
-\begin{figure}[t]
-    \centering
-    {\includegraphics[width=.8\linewidth]{figures/ch03/1D2D.pdf}}
-    \caption[1D and 2D focusing X-ray lenses]{1D (left) and 2D focusing (right) X-ray lenses. The top row shows a 3D rendering of such lenses with emphasis on the parabolic profile - shaded in purple is the vertical profile and in green, the horizontal profile. Bottom row shows scanning electron microscope (SEM) images of two Be lenses. Due to the limited field of view, image (c) is stitched, which explains the colour discontinuation on the left side of the image.} 
-    \label{fig:1D2D_lenses}
-\end{figure}
-
 X-ray lenses may have different surface shape: in initial experiments a cylindrical surface was used [\cite{Snigirev1996, Protopopov1998}], which was soon replaced by a parabolic shape that almost completely removes geometrical aberrations [\cite{Elleaume1998, Lengeler1999}]. Parabolic lenses are the most used X-ray lenses in CRL as they can focus 1D (cylinder with parabolic section) or in 2D (paraboloid of revolution) - cf. Fig.~\ref{fig:1D2D_lenses}. It is worth noting, that although less usual, X-ray lenses can assume other shapes: an elliptical profile when focusing collimated beams [\cite{Evans-Lutterodt2003}], or a Cartesian oval for point-to-point focusing [\cite{SanchezdelRio2012}]. However, parabolic shapes always present a very good approximation to geometric focusing and reduce the geometrical aberrations to levels that are smaller than contributions from the fabrication errors and diffraction effects.
 
 %-------------------------------------------------------------------------
@@ -107,12 +98,19 @@ to an X-ray in vacuum ($n_1$) penetrating the lens material ($n_1$) with inciden
 
 \begin{figure}[t]
     \centering
+    {\includegraphics[width=.8\linewidth]{figures/ch03/1D2D.pdf}}
+    \caption[1D and 2D focusing X-ray lenses]{1D (left) and 2D focusing (right) X-ray lenses. The top row shows a 3D rendering of such lenses with emphasis on the parabolic profile - shaded in purple is the vertical profile and in green, the horizontal profile. Bottom row shows scanning electron microscope (SEM) images of two Be lenses. Due to the limited field of view, image (c) is stitched, which explains the colour discontinuation on the left side of the image.} 
+    \label{fig:1D2D_lenses}
+\end{figure}
+
+\begin{figure}[t]
+    \centering
     {\includegraphics[width=0.7\linewidth]{figures/ch03/reflection_refraction.pdf}}
     \caption[Refraction and total external reflection in the X-ray regime]{Refraction and total external reflection in the X-ray regime.}
     \label{fig:reflection_refraction}
 \end{figure}
 
-From a simplistic point of view, the choice of material for an X-ray lens is guided by maximising the $\delta/\beta$ ratio for a given energy. This means choosing a material that will maximise refraction and minimise absorption within the lens [\cite{Serebrennikov2016, Roth2017}]. On a further step, knowledge about the material inner structure is also very relevant and minimising small angle scattering from the lenses, speckle formation and unwanted diffraction becomes relevant [\citeauthor{Roth2014,Chubar2020,Lyatun2020}]. Ultimately, the choice of material is also connected to the the manufacturing process of the lenses. Commonly\footnote{A more broad overview on fabrication processes used for refractive X-ray lenses and materials is presented in Table~I from the supplementary materials in [\cite{Roth2017}].} used materials are Aluminium and Beryllium, which are usually associated with pressed lenses [\cite{}]; Nickel and SU-8 polymer for deep X-ray lithography and LIGA [\cite{}]; SU-8 and other polymeric materials are also associated with 3D printed lenses [\cite{}]; Silicon and glassy carbon for lithography and dry etching [\cite{}]; and more recently, diamond and glassy carbon for laser ablated lenses [\cite{}]. Figure~\ref{fig:refractive_index} shows $\delta$, $\beta$ and the ratio $\delta/\beta$ for energies ranging from 5~keV to 100~keV for Aluminium, Beryllium, diamond and SU-8. 
+From a simplistic point of view, the choice of material for an X-ray lens is guided by maximising the $\delta/\beta$ ratio for a given energy. This means choosing a material that will maximise refraction and minimise absorption within the lens [\cite{Serebrennikov2016, Roth2017}]. On a further step, knowledge about the material inner structure is also very relevant and minimising small angle scattering from the lenses, speckle formation and unwanted diffraction becomes relevant [\citeauthor{Roth2014,Chubar2020,Lyatun2020}]. Ultimately, the choice of material is also connected to the the manufacturing process of the lenses. Commonly\footnote{A more broad overview on fabrication processes used for refractive X-ray lenses and materials is presented in Table~I from the supplementary materials in [\cite{Roth2017}].} used materials are Aluminium and Beryllium, which are usually associated with pressed lenses [\cite{refBe,refAl}]; Nickel and SU-8 polymer for deep X-ray lithography and LIGA [\cite{refLIGA}]; SU-8 and other polymeric materials are also associated with 3D printed lenses [\cite{ref3Dprinted}]; Silicon and glassy carbon for lithography and dry etching [\cite{refLithoLens}]; and more recently, diamond and glassy carbon for laser ablated lenses [\cite{refLaserLens}]. Figure~\ref{fig:refractive_index} shows $\delta$, $\beta$ and the ratio $\delta/\beta$ for energies ranging from 5~keV to 100~keV for Aluminium, Beryllium, diamond and SU-8. 
 
 \begin{figure}[t]
     \centering
@@ -168,6 +166,15 @@ It is clear from Eqs.~\ref{eq:A} and \ref{eq:L} that for a parabolic surface, $A
 
 % Note to myself: the critical angle limitation on the parabolic profile is not a real concern... aperture get's so large, that it makes no physically sense. Absorption is more pronounced. 
 
+\begin{figure}[t]
+    \centering
+    {\includegraphics[width=0.8\linewidth]{figures/ch03/models.pdf}}
+    \caption[Hierarchical CRL representation]{Hierarchical depiction of the CRL. (a) illustrates a single thin element equivalent of several lenslets. This representation accounts for net refraction and absorption in one transmission element but ignores intra-lens spacing. (b) multi-slice representation of a CRL. Here each lens of the stack is represented individually by one transmission element. Those are separated by a drift space corresponding to the typical distance between elements ($\Delta\text{s}$). (c) Not only can the CRL be represented as a series of thin elements separated by drift spaces, but also figure errors can be added. They are placed directly after the thin element representing a single X-ray lens.}
+    \label{fig:models}
+\end{figure}
+
+
+\clearpage
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
 \subsection{CRL modelling}\label{sec:CRL_modelling}
@@ -179,13 +186,6 @@ It is clear from Eqs.~\ref{eq:A} and \ref{eq:L} that for a parabolic surface, $A
 \subsubsection*{Ideal thin lens and single lens equivalent}\addcontentsline{toc}{subsubsection}{-- Ideal thin lens and single lens equivalent}
 %-------------------------------------------------------------------------
 %-------------------------------------------------------------------------
-
-\begin{figure}[t]
-    \centering
-    {\includegraphics[width=0.7\linewidth]{figures/ch03/models.pdf}}
-    \caption[Hierarchical CRL representation]{Hierarchical depiction of the CRL. (a) illustrates a single thin element equivalent of several lenslets. This representation accounts for net refraction and absorption in one transmission element but ignores intra-lens spacing. (b) multi-slice representation of a CRL. Here each lens of the stack is represented individually by one transmission element. Those are separated by a drift space corresponding to the typical distance between elements ($\Delta\text{s}$). (c) Not only can the CRL be represented as a series of thin elements separated by drift spaces, but also figure errors can be added. They are placed directly after the thin element representing a single X-ray lens.}
-    \label{fig:models}
-\end{figure}
 
 At any point inside the geometric aperture of a single paraboloidal X-ray lens, the projected thickness $\Delta_z$ can be calculated as:
 \begin{equation}\label{eq:ProjecThick}
@@ -248,8 +248,8 @@ Even an ideal and aberration-free finite optical element is not able to image a 
 \begin{align}\label{eq:PSF}
     d = 1.22\lambda (1-M)\frac{f_{\text{CRL}}}{A},
 \end{align}{}
-where the $M$ is the magnification of the system, which goes to zero for a plane wave or a very distant source. Systems with nonuniform illumination at the pupil exit, in the case of the CRLs, an apodised systems approaching a Gaussian illumination, may present a different PSF shape depending on the truncation imposed by the aperture  (see Fig.~\ref{fig:PSF}). A very weakly truncated focusing system will have a Gaussian-shaped focal spot as little to no cropping occurs and therefore diffraction effects can be neglected. Increasing the truncation of the beam enhances diffraction effects from the geometric aperture. A strongly truncated focusing system will have a PSF that resembles the diffraction pattern in the far-field associated with the aperture of the system\footnote{The far-field diffraction pattern of a circular aperture is a squared first-order Bessel function profile while a square aperture will produce a 2D sinc-squared pattern [\cite{Guasti1993}].} [\cite{Mahajan1986}]. 
-
+where the $M$ is the magnification of the system, which goes to zero for a plane wave or a very distant source. Systems with nonuniform illumination at the pupil exit, in the case of the CRLs, an apodised systems approaching a Gaussian illumination, may present a different PSF shape depending on the truncation imposed by the aperture. A very weakly truncated focusing system will have a Gaussian-shaped focal spot as little to no cropping occurs and therefore diffraction effects can be neglected. Increasing the truncation of the beam enhances diffraction effects from the geometric aperture. A strongly truncated focusing system will have a PSF that resembles the diffraction pattern in the far-field associated with the aperture of the system\footnote{The far-field diffraction pattern of a circular aperture is a squared first-order Bessel function profile while a square aperture will produce a 2D sinc-squared pattern [\cite{Guasti1993}].} [\cite{Mahajan1986}]. 
+% where the $M$ is the magnification of the system, which goes to zero for a plane wave or a very distant source. Systems with nonuniform illumination at the pupil exit, in the case of the CRLs, an apodised systems approaching a Gaussian illumination, may present a different PSF shape depending on the truncation imposed by the aperture  (see Fig.~\ref{fig:PSF}). A very weakly truncated focusing system will have a Gaussian-shaped focal spot as little to no cropping occurs and therefore diffraction effects can be neglected. Increasing the truncation of the beam enhances diffraction effects from the geometric aperture. A strongly truncated focusing system will have a PSF that resembles the diffraction pattern in the far-field associated with the aperture of the system\footnote{The far-field diffraction pattern of a circular aperture is a squared first-order Bessel function profile while a square aperture will produce a 2D sinc-squared pattern [\cite{Guasti1993}].} [\cite{Mahajan1986}]. 
 %\todo{Figure with 2 graphs side by side: transmission (like Fig \ref{fig:EffectiveAperure}) and the horizontal cut of the PSF. 4 curves: 100\% transmisson on the edge of A, 75\%, 1$/e^2$ and 0}
 
 
