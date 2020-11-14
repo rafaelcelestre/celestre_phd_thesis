@@ -1,4 +1,4 @@
-
+% 12/11/2020 - First round of corrections: added Ray's corrections
 \documentclass[a4paper, twoside]{report}
 \usepackage[utf8]{inputenc}
 \usepackage{helvet}
@@ -25,11 +25,10 @@ bottom=30mm
 
 \newcommand{\PhDname}{Rafael Celestre} 
 
-\newcommand{\thesisTitle}{Investigations of the effect of optical imperfections on partially coherent X-ray beam degradation by combining optical simulations with wavefront sensing experiments}
-\newcommand{\thesisTitleFR}{\'Etude de l'effet des imperfections optiques sur la d\'egradation du faisceau de rayons X partiellement coh\'erent en combinant les simulations optiques avec les mesures du front d'onde}
+\newcommand{\thesisTitle}{Investigations of the effect of optical imperfections on partially coherent X-ray beam by combining optical simulations with wavefront sensing experiments}
+\newcommand{\thesisTitleFR}{\'Etude de l'effet des imperfections optiques aux faisceaux de rayons X partiellement coh\'erents en combinant les simulations optiques avec les mesures du front d'onde}
 
 \begin{document}
-
 
 \label{form_first}
 %% Numéro National de Thèse (donnée par la bibliothèque à la suite du 1er dépôt)
@@ -41,14 +40,13 @@ bottom=30mm
 %% Spécialité de doctorat
 \newcommand{\PhDspeciality}{Physique de la Matière Condensée et du Rayonnement} 	
 %% Établissement de préparation
-\newcommand{\PhDworkingplace}{Installation Européenne de Rayonnement Synchrotron (ESRF - The European Synchrotron)}
+\newcommand{\PhDworkingplace}{Installation Européenne de Rayonnement Synchrotron (ESRF - the European Synchrotron)}
 %% Ville de soutenance
 \newcommand{\defenseplace}{Grenoble} 
 %% Date de soutenance
 \newcommand{\defensedate}{XXX janvier, 2021} 													
 
 %%% Établissement / Institution
-
 
 \newcommand{\vpostt}{0.1} 																	%% NE PAS MODIFIER / DO NOT MODIFY
 \newcommand{\hpostt}{6}																		%% NE PAS MODIFIER / DO NOT MODIFY
@@ -59,46 +57,46 @@ bottom=30mm
 
 %%% JURY
 
-% Lors du premier dépôt de la thèse le nom du président nest pas connu, le choix du président se fait par les membres du Jury juste avant la soutenance. La précision est apportée sur la couverture lors du second dépôt 
-
 %%% Membre n°1 (Président) / Member n°1 (President)
-\newcommand{\jurynameA}{Prénom Nom}
-\newcommand{\juryadressA}{Statut, Établissement (Unité de recherche)}
+\newcommand{\jurynameA}{\textbf{Dr. Vincent \textsc{Favre-Nicolin}}, maître de conférences HDR}
+\newcommand{\juryadressA}{ESRF - the European Synchrotron,\\
+en congé de l'Université Grenoble Alpes}
 \newcommand{\juryroleA}{Président}
 
 %%% Membre n°2 (Rapporteur) / Member n°2 (Reviewer)
-\newcommand{\jurynameB}{Prof. Chris Jacobsen}
-\newcommand{\juryadressB}{Statut, Établissement (Unité de recherche)}
+\newcommand{\jurynameB}{\textbf{Dr. Chris \textsc{Jacobsen}}, professeur}
+\newcommand{\juryadressB}{Dept. of Physics \& Astronomy, Northwestern University,\\Advanced Photon Source, Argonne National Lab., États-Unis}
 \newcommand{\juryroleB}{Rapporteur}
 
 %%% Membre n°3 (Rapporteur) / Member n°3 (Reviewer)
-\newcommand{\jurynameC}{Prof. David Paganin}
-\newcommand{\juryadressC}{Statut, Établissement (Unité de recherche)}
+\newcommand{\jurynameC}{\textbf{Dr. David \textsc{Paganin}}, professeur adjoint}
+\newcommand{\juryadressC}{School of Physics and Astronomy, Monash University, Australie}
 \newcommand{\juryroleC}{Rapporteur}
 
 %%% Membre n°4 (Examinateur) / Member n°4 (Examiner)
-\newcommand{\jurynameD}{Prénom Nom}
-\newcommand{\juryadressD}{Statut, Établissement (Unité de recherche)}
+\newcommand{\jurynameD}{\textbf{Dr. Christian \textsc{Schroer}}, professeur}
+\newcommand{\juryadressD}{Inst. für Nanostruktur- und Festkörperphysik, Universität Hamburg,\\
+Deutsches Elektronen-Synchrotron DESY, Allemagne}
 \newcommand{\juryroleD}{Examinateur}
 
 %%% Membre n°5 (Directeur de thèse) / Member n°5 (Thesis supervisor)
-\newcommand{\jurynameE}{\textbf{Dr. Manuel Sanchéz del Río}}
-\newcommand{\juryadressE}{Phisicien, ESRF - The European Synchrotron}
+\newcommand{\jurynameE}{\textbf{Dr. Manuel \textsc{Sanchéz del Río}}, physicien HDR}
+\newcommand{\juryadressE}{ ESRF - the European Synchrotron}
 \newcommand{\juryroleE}{Directeur de thèse}
 
 %%% Membre n°6 (Co-directeur de thèse) / Member n°6 (Thesis co-supervisor)
-\newcommand{\jurynameF}{\textbf{Dr. Thomas Roth}}
-\newcommand{\juryadressF}{Phisicien, ESRF - the European Synchrotron}
-\newcommand{\juryroleF}{Co-directeur de thèse}
+\newcommand{\jurynameF}{\textbf{Dr. Thomas \textsc{Roth}}, physicien}
+\newcommand{\juryadressF}{ESRF - the European Synchrotron}
+\newcommand{\juryroleF}{Co-encadrant de thèse}
 
 %%% Membre n°7 (Invité) / Member n°7 (Guest)
-\newcommand{\jurynameG}{Prénom Nom}
-\newcommand{\juryadressG}{Statut, Établissement (Unité de recherche)}
-\newcommand{\juryroleG}{Invité}
+\newcommand{\jurynameG}{\textbf{Dr. Lucia \textsc{Alianelli}}, chercheuse principal }
+\newcommand{\juryadressG}{Diamond Light Source Ltd, Royaume-Uni}
+\newcommand{\juryroleG}{Examinatrice}
 
 %%% Membre n°8 (Invité) / Member n°8 (Guest)
-\newcommand{\jurynameH}{Prénom Nom}
-\newcommand{\juryadressH}{Statut, Établissement (Unité de recherche)}
+\newcommand{\jurynameH}{\textbf{Dr. Raymond \textsc{Barrett}}, chef du groupe d'optique des rayons X}
+\newcommand{\juryadressH}{ESRF - the European Synchrotron}
 \newcommand{\juryroleH}{Invité}
 
 %% Il est possible d'ajouter des membres supplémentaires selon le même modèle / More jury members can be added according to the same model
@@ -140,10 +138,9 @@ bottom=30mm
 	\color{black}
 
 	\begin{flushleft}
-	    \Large \textbf{\textsc{Thèse}}\\
-	    \large Pour obtenir le grade de:\\ \bigskip \vfill  
+	    \large \textbf{\textsc{Thèse}} our obtenir le grade de:\\ \bigskip \vfill  
 	    \Large \textbf{\textsc{Docteur de l’Université Grenoble Alpes}} \\
-        \large Spécialité: Physique de la Matière Condensée et du Rayonnement\\
+        \large Spécialité: \textbf{Physique de la Matière Condensée et du Rayonnement}\\
         \small Arrêté ministériel: 25 mai 2016\\ \bigskip \vfill  
         \large Présentée par\\ \bigskip \vfill 
         \Large \textbf{\textsc{Rafael Celestre}}\\ \bigskip \vfill 
@@ -157,13 +154,13 @@ bottom=30mm
 		\vfill
 	\end{center}
 	\begin{flushleft}
-		\normalsize Thèse de doctorat dirigée par: \\ \bigskip
+		\small Thèse de doctorat dirigée par: \\ \bigskip
 		\small
 		\begin{tabular}{@{} L{9.5cm} R{4.5cm}}
     		\jurynameE  \\ \juryadressE & \juryroleE \\
     		\jurynameF  \\ \juryadressF & \juryroleF  \\ \bigskip
 	\end{tabular} 
-		\normalsize préparée à \PhDworkingplace~dans \ecodoctitle~(n$^{\circ}$~\ecodocnum).\\ \bigskip
+		\small préparée à \PhDworkingplace~dans \ecodoctitle~(n$^{\circ}$~\ecodocnum).\\ \bigskip
 		\vfill
 		Thèse présentée et soutenue publiquement à \defenseplace, le \defensedate~devant le jury composé de :
 	\end{flushleft}
