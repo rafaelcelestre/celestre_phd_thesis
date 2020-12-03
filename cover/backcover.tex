@@ -1,0 +1,110 @@
+% 12/11/2020 - First round of corrections: added Ray's corrections
+\documentclass[a4paper, twoside]{report}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{geometry}
+\geometry{
+left=16mm,
+top=30mm,
+right=16mm,
+bottom=30mm
+}
+\usepackage{xcolor}
+\definecolor{uga_gray}{rgb}{0.8705,0.8705,0.8705}
+\definecolor{uga_dark_gray}{rgb}{0.6,0.6,0.6}
+
+\usepackage[absolute,overlay]{textpos}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{setspace}
+
+\usepackage[subpreambles=true]{standalone}
+
+\begin{document}
+
+\label{form_first}
+\newcommand{\vpostt}{0.1}
+\newcommand{\hpostt}{6}
+\newcommand{\vpos}{0.2}
+\newcommand{\hpos}{11.5}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}lm{#1}}
+
+\newcommand{\PhDTitleFR}{\'Etude de l'effet des imperfections optiques aux faisceaux de rayons X partiellement coh\'erents en combinant les simulations optiques avec les mesures du front d'onde}
+\newcommand{\keywordsFR}{Simulations optiques, lentilles à rayons X, métrologie à la longueur d'onde, optique physique}
+\newcommand{\abstractFR}{En optique physique, les éléments faiblement focalisés sont généralement simulés comme un seul élément mince. Alors qu'une seule lentille à rayons X dans des conditions de fonctionnement typiques peut souvent être représentée de cette manière, la simulation d'une pile de lentilles complète avec une approche similaire manque de polyvalence. Ce travail propose de décomposer un pile de lentilles en ses petites lentilles séparées par une propagation en espace libre, comme le font les techniques de découpage en plusieurs tranches déjà utilisées pour les simulations optiques. Une attention particulière est accordée à la modélisation de l'élément lentille unique en ajoutant des degrés de liberté supplémentaires permettant la modélisation des désalignements typiques et des erreurs de fabrication. Des polynômes orthonormaux pour les aberrations optiques ainsi que des données de métrologie obtenues avec le suivi vectoriel du speckle des rayons X (XSVT) sont également utilisés pour obtenir des résultats de simulation réalistes, qui sont présentés dans plusieurs simulations cohérentes et partiellement cohérentes tout au long de ce travail. La mise en œuvre d'un modèle de lentilles à rayons X utilisant des données de métrologie permet d'extraire les erreurs de chiffres accumulées et de calculer les corrections de phase. Enfin, cette thèse présente une méthodologie pour le calcul du profil des correcteurs de réfraction, qui est appliquée pour produire des plaques de phase ablationnées au diamant. Les premiers résultats expérimentaux montrent une amélioration du profil du faisceau. Ce projet a abordé des aspects importants du programme ESRF-EBS d'optique des rayons X R$\&$D tel que défini dans le plan de mise à niveau stratégique (\textit{Orange book}).}
+
+\newcommand{\PhDTitleEN}{Investigations of the effect of optical imperfections on partially coherent X-ray beam by combining optical simulations with wavefront sensing experiments}
+\newcommand{\keywordsEN}{Optical simulations, X-ray lenses, at-wavelengh metrology, physical optics}
+\newcommand{\abstractEN}{In physical optics, weakly focusing elements are usually simulated as a single thin element. While a single X-ray lens at typical operation conditions can often be represented in this way, simulating a full lens stack with a similar approach lacks versatility. This work proposes decomposing a lens stack into its lenslets separated by a free-space propagation, similar to the multi-slicing techniques already used for optical simulations. Attention is given to modelling the single lens element by adding additional degrees of freedom allowing the modelling of typical misalignments and fabrication errors. Orthonormal polynomials for optical aberrations as well as metrology data obtained with X-ray speckle vector tracking (XSVT) are also used to obtain realistic simulation results, which are presented in several coherent- and partially-coherent simulations throughout this work. Implementing a model of X-ray lenses using metrology data allows extraction of the accumulated figure errors and enables the calculation of phase corrections. Finally, this thesis presents a methodology for calculating the profile of refractive correctors, which is applied to produce phase plates ablated from diamond. Early experimental results show an improvement on the beam profile. This project addressed important aspects of the ESRF-EBS X-ray optics R$\&$D programme as laid out in the strategic upgrade plan (Orange book).}
+
+\label{layout_first}
+
+\thispagestyle{empty}
+.
+
+\begin{textblock*}{120mm}(69mm,9mm)
+\textblockcolour{white}
+\color{black}
+\begin{singlespace}
+
+\begin{flushleft}
+\fcolorbox{uga_dark_gray}{white}{\parbox{1\textwidth}{
+        \noindent {\bf Titre:} \PhDTitleFR
+        \medskip
+        
+        \noindent {\bf Mots clés:} \keywordsFR 
+        \vspace{-2mm}
+        
+        \begin{multicols}{2}
+            \noindent {\bf Résumé:} 
+            \abstractFR 
+        \end{multicols}
+}}
+\end{flushleft}
+
+\vspace*{0mm}
+
+\begin{flushleft}
+\fcolorbox{uga_dark_gray}{white}{\parbox{1\textwidth}{
+        \noindent {\bf Title:} \PhDTitleEN
+        \medskip
+        
+        \noindent {\bf Keywords:} \keywordsEN
+        \vspace{-2mm}
+        
+        \begin{multicols}{2}
+            \noindent {\bf Abstract:} 
+            \abstractEN
+        \end{multicols}
+}}
+\end{flushleft}
+
+\end{singlespace}
+    
+\end{textblock*}
+
+
+\begin{textblock}{5}(0,0)
+	\textblockcolour{uga_gray}
+	\begin{center}
+	    	\includegraphics[scale=0.30]{cover/uga_logo.pdf}
+	\end{center}{}
+	\vspace{300mm}
+\end{textblock}
+
+\begin{textblock*}{50mm}(5mm,280mm)
+\textblockcolour{uga_gray}
+\color{uga_dark_gray}
+{\bf\noindent Université Grenoble Alpes	         }
+
+\noindent 621 avenue Centrale
+
+\noindent 38400 Saint-Martin-d'Hères, France 
+\end{textblock*}
+
+
+\end{document}
