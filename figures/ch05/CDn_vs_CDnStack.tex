@@ -7,29 +7,42 @@
 \usepackage[a3paper, landscape, margin=0.5cm]{geometry}
 
 \thispagestyle{empty}
-% \renewcommand{\thesubfigure}{\roman{subfigure}}
+\renewcommand{\thesubfigure}{\roman{subfigure}}
 \begin{document}
 
 \begin{figure}[t]
         \centering
-        \subfloat[vertical caustics]{\includegraphics[height=3.4cm]{figures/ch05/CDn_vs_CDnStack/Be_ideal_8p0keV_d0p0mm_n10_intensity_cstc_Y_cstc_2D.pdf}}\hspace{0.1cm}
-        \subfloat[PSF phase (rad)]{\includegraphics[height=3.5cm]{figures/ch05/CDn_vs_CDnStack/Be_ideal_8p0keV_d0p0mm_n10_phase_phase_2D.pdf}}\hspace{0.1cm}
-        \subfloat[PSF intensity]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_ideal_8p0keV_d0p0mm_n10_intensity_intensity_2D.pdf}}\hspace{0.1cm}
-        \subfloat[source image]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_ideal_8keV_d0p0mm_10k_ME_intensity_intensity_2D.pdf}}
-        \caption*{ideal stacked lenses}\vspace{0.3cm}\setcounter{subfigure}{0}
+    %     \subfloat[vertical caustics]{\includegraphics[height=3.4cm]{figures/ch05/CDn_vs_CDnStack/Be_ideal_8p0keV_d0p0mm_n10_intensity_cstc_Y_cstc_2D.pdf}}\hspace{0.1cm}
+    %     \subfloat[PSF phase (rad)]{\includegraphics[height=3.5cm]{figures/ch05/CDn_vs_CDnStack/Be_ideal_8p0keV_d0p0mm_n10_phase_phase_2D.pdf}}\hspace{0.1cm}
+    %     \subfloat[PSF intensity]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_ideal_8p0keV_d0p0mm_n10_intensity_intensity_2D.pdf}}\hspace{0.1cm}
+    %     \subfloat[source image]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_ideal_8keV_d0p0mm_10k_ME_intensity_intensity_2D.pdf}}
+    %     \caption*{ideal stacked lenses}\vspace{0.3cm}\setcounter{subfigure}{0}
+    %     \subfloat[vertical caustics]{\includegraphics[height=3.4cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_8p0keV_d0p0mm_n10_intensity_cstc_Y_cstc_2D.pdf}}\hspace{0.1cm}
+    %     \subfloat[PSF phase (rad)]{\includegraphics[height=3.5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_8p0keV_d0p0mm_n10_phase_phase_2D.pdf}}\hspace{0.1cm}
+    %     \subfloat[PSF intensity]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_8p0keV_d0p0mm_n10_intensity_intensity_2D.pdf}}\hspace{0.1cm}
+    %     \subfloat[source image]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_8keV_d0p0mm_10k_ME_intensity_intensity_2D.pdf}}
+    %     \caption*{artificially stacked lenses L01-L10}\vspace{0.3cm}\setcounter{subfigure}{0}
+    %     \subfloat[vertical caustics]{\includegraphics[height=3.4cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_stack_8p0keV_d0p0mm_n10_intensity_cstc_Y_cstc_2D.pdf}}\hspace{0.1cm}
+    %     \subfloat[PSF phase (rad)]{\includegraphics[height=3.5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_stack_8p0keV_d0p0mm_n10_phase_phase_2D.pdf}}\hspace{0.1cm}
+    %     \subfloat[PSF intensity]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_stack_8p0keV_d0p0mm_n10_intensity_intensity_2D.pdf}}\hspace{0.1cm}
+    %     \subfloat[source image]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_Stack_8keV_d0p0mm_10k_ME_intensity_intensity_2D.pdf}}
+    %     \caption*{stack 1}\vspace{0.3cm}
+    %     \subfloat[fully-coherent]{\includegraphics[height=3.3cm]{figures/ch05/CDn_vs_CDnStack/Strehl_SE_CDn_vs_CDnStack.pdf}}\hspace{0.1cm}
+    %     \subfloat[partially-coherent]{\includegraphics[height=3.3cm]{figures/ch05/CDn_vs_CDnStack/Strehl_ME_CDn_vs_CDnStack.pdf}}
+    %   \caption*{normalised intensity profile cuts}
+
+        % \subfloat[vertical caustics]{\includegraphics[height=3.4cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_stack_8p0keV_d0p0mm_n10_intensity_cstc_Y_cstc_2D.pdf}}\hspace{0.1cm}
+        % \subfloat[PSF intensity]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_stack_8p0keV_d0p0mm_n10_intensity_intensity_2D.pdf}}\hspace{0.1cm}
+        % \subfloat[source image]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_Stack_8keV_d0p0mm_10k_ME_intensity_intensity_2D.pdf}}
+        % \caption*{stack 1}\vspace{0.3cm}
+
         \subfloat[vertical caustics]{\includegraphics[height=3.4cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_8p0keV_d0p0mm_n10_intensity_cstc_Y_cstc_2D.pdf}}\hspace{0.1cm}
-        \subfloat[PSF phase (rad)]{\includegraphics[height=3.5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_8p0keV_d0p0mm_n10_phase_phase_2D.pdf}}\hspace{0.1cm}
         \subfloat[PSF intensity]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_8p0keV_d0p0mm_n10_intensity_intensity_2D.pdf}}\hspace{0.1cm}
         \subfloat[source image]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_8keV_d0p0mm_10k_ME_intensity_intensity_2D.pdf}}
-        \caption*{artificially stacked lenses L01-L10}\vspace{0.3cm}\setcounter{subfigure}{0}
-        \subfloat[vertical caustics]{\includegraphics[height=3.4cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_stack_8p0keV_d0p0mm_n10_intensity_cstc_Y_cstc_2D.pdf}}\hspace{0.1cm}
-        \subfloat[PSF phase (rad)]{\includegraphics[height=3.5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_stack_8p0keV_d0p0mm_n10_phase_phase_2D.pdf}}\hspace{0.1cm}
-        \subfloat[PSF intensity]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_stack_8p0keV_d0p0mm_n10_intensity_intensity_2D.pdf}}\hspace{0.1cm}
-        \subfloat[source image]{\includegraphics[height=5cm]{figures/ch05/CDn_vs_CDnStack/Be_CDn_Stack_8keV_d0p0mm_10k_ME_intensity_intensity_2D.pdf}}
-        \caption*{stack 1}\vspace{0.3cm}
-        \subfloat[fully-coherent]{\includegraphics[height=3.3cm]{figures/ch05/CDn_vs_CDnStack/Strehl_SE_CDn_vs_CDnStack.pdf}}\hspace{0.1cm}
-        \subfloat[partially-coherent]{\includegraphics[height=3.3cm]{figures/ch05/CDn_vs_CDnStack/Strehl_ME_CDn_vs_CDnStack.pdf}}
-       \caption*{normalised intensity profile cuts}
+        % \caption*{artificially stacked lenses L01-L10}\vspace{0.3cm}\setcounter{subfigure}{0}
 
+    %     \subfloat[fully-coherent]{\includegraphics[height=3.3cm]{figures/ch05/CDn_vs_CDnStack/Strehl_SE_CDn_vs_CDnStack.pdf}}\hspace{0.1cm}
+    %     \subfloat[partially-coherent]{\includegraphics[height=3.3cm]{figures/ch05/CDn_vs_CDnStack/Strehl_ME_CDn_vs_CDnStack.pdf}}
+    %   \caption*{normalised intensity profile cuts}
 \end{figure}
 \end{document}

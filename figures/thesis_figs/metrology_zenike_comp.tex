@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{subfig}
+\usepackage{amsmath}
+
+\usepackage{graphicx}
+\usepackage[legalpaper, landscape, margin=0.5cm]{geometry}
+
+\thispagestyle{empty}
+% \renewcommand{\thesubfigure}{\roman{subfigure}}
+\begin{document}
+
+\begin{figure}[h]
+        \centering
+        \subfloat[profile]{\includegraphics[height=3.4cm]{figures/thesis_figs/figure_errors_FF_workflow_a_FC_Be.pdf}}\hspace{0.1cm}        
+        \subfloat[PSF]{\includegraphics[height=5cm]{figures/thesis_figs/cst_CRL_Be_metrology_intensity_intensity_2D.pdf}}\hspace{0.1cm}
+        \subfloat[vertical caustics]{\includegraphics[height=3.5cm]{figures/thesis_figs/cst_CRL_Be_metrology_intensity_intensity_cstc_X_cstc_2D.pdf}}\\\caption*{Simulations using the metrology data}
+        
+        \subfloat[profile]{\includegraphics[height=3.4cm]{figures/thesis_figs/figure_errors_LF_workflow_a_FC_Be.pdf}}\hspace{0.1cm}        
+        \subfloat[PSF]{\includegraphics[height=5cm]{figures/thesis_figs/cst_CRL_Be_Zernike_intensity_intensity_2D.pdf}}\hspace{0.1cm}
+        \subfloat[vertical caustics]{\includegraphics[height=3.5cm]{figures/thesis_figs/cst_CRL_Be_Zernike_intensity_cstc_X_cstc_2D.pdf}}\\\caption*{Simulations using the Zernike circle polynomials}
+        
+        % \subfloat[profile]{\includegraphics[height=3.4cm]{figures/thesis_figs/CDn_individual_12p39842keV_n_10.0_lsp2p0mm_cpp2p0mm_phase_figure_errors_FF.pdf}}\hspace{0.1cm}        
+        % \subfloat[PSF]{\includegraphics[height=5cm]{figures/thesis_figs/Be_CDn_8p0keV_d0p0mm_n10_intensity_intensity_2D.pdf}}\hspace{0.1cm}
+        % \subfloat[vertical caustics]{\includegraphics[height=3.5cm]{figures/thesis_figs/Be_CDn_8p0keV_d0p0mm_n10_intensity_cstc_X_cstc_2D.pdf}}\\\caption*{Simulations using the metrology data}
+        
+        % \subfloat[profile]{\includegraphics[height=3.4cm]{figures/thesis_figs/CDn_individual_12p39842keV_n_10.0_lsp2p0mm_cpp2p0mm_phase_figure_errors_LF.pdf}}\hspace{0.1cm}        
+        % \subfloat[PSF]{\includegraphics[height=5cm]{figures/thesis_figs/Be_CDn_LF_8p0keV_d0p0mm_n10_intensity_intensity_2D.pdf}}\hspace{0.1cm}
+        % \subfloat[vertical caustics]{\includegraphics[height=3.5cm]{figures/thesis_figs/Be_CDn_LF_8p0keV_d0p0mm_n10_intensity_cstc_X_cstc_2D.pdf}}\\\caption*{Simulations using the Zernike circle polynomials}
+
+\end{figure}
+\end{document}
+
+

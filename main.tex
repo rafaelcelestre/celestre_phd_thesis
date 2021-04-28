@@ -133,15 +133,22 @@
 \pagestyle{empty}				% no header or footers
 \input{cover/firstpage}		    % INCLUDE: all titlepages
 \cleardoublepage
+
+\pagestyle{plain}				% display just page numbers
+\input{misc/declaration}
+\cleardoublepage
+
+\pagestyle{plain}				% display just page numbers
+\input{misc/acknowledgement}   
+\cleardoublepage
+
 \pagestyle{plain}				% display just page numbers
 \input{misc/abstract_FR}
 \cleardoublepage
 \pagestyle{plain}				% display just page numbers
 \input{misc/abstract_EN}
 \cleardoublepage
-\pagestyle{plain}				% display just page numbers
-\input{misc/acknowledgement}   
-\cleardoublepage
+
 
 \setcounter{tocdepth}{4}		% define depth of toc
 \setcounter{secnumdepth}{2}
@@ -174,7 +181,7 @@
 \input{chapters/conclusion_fr} \cleardoublepage
 
 \input{apendices/publications}\cleardoublepage
-\input{misc/declaration}
+% \input{misc/declaration}
 \pagebreak
 \input{cover/lastpage}
 % \clearpage
