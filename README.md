@@ -1,7 +1,10 @@
+![alt text](https://github.com/rafaelcelestre/celestre_phd_thesis/blob/master/cover.png)
+
+
 Investigations of the effect of optical imperfections on partially coherent X-ray beam by combining optical simulations with wavefront sensing experiments
 ====================================================
 
-#### by Rafael CELESTRE
+#### PhD thesis presented by Rafael CELESTRE (01/02/2021)
 
 ###### Key-words: Optical simulations, X-ray lenses, CRL, at-wavelengh metrology, speckle-tracking, physical optics
 
